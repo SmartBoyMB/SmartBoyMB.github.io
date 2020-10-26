@@ -6,7 +6,7 @@
   <link href="https://github.com/SmartBoyMB.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/SmartBoyMB.github.io/"/>
-  <updated>2020-10-26T12:17:44.077Z</updated>
+  <updated>2020-10-26T12:21:52.805Z</updated>
   <id>https://github.com/SmartBoyMB.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://github.com/SmartBoyMB.github.io/2020/10/26/KnowledgeGraphLearning1/"/>
     <id>https://github.com/SmartBoyMB.github.io/2020/10/26/KnowledgeGraphLearning1/</id>
     <published>2020-10-26T03:04:42.933Z</published>
-    <updated>2020-10-26T12:17:44.077Z</updated>
+    <updated>2020-10-26T12:21:52.805Z</updated>
     
     <content type="html"><![CDATA[<h1 id="知识图谱学习"><a href="#知识图谱学习" class="headerlink" title="知识图谱学习"></a>知识图谱学习</h1><p>这里将介绍有关知识图谱学习的第一部分，主要是知识图谱的一个概述。</p><a id="more"></a><h2 id="1-知识的定义"><a href="#1-知识的定义" class="headerlink" title="1.知识的定义"></a>1.知识的定义</h2><h3 id="陈述性知识（描述性知识）"><a href="#陈述性知识（描述性知识）" class="headerlink" title="陈述性知识（描述性知识）"></a><strong>陈述性知识</strong>（描述性知识）</h3><p>描述客观事物的性状等静态信息，主要分为事物、概念、命题三个层次。</p><h4 id="（1）事物"><a href="#（1）事物" class="headerlink" title="（1）事物"></a>（1）事物</h4><p>特定的事和物。</p><h4 id="（2）概念"><a href="#（2）概念" class="headerlink" title="（2）概念"></a>（2）概念</h4><p>对一类事物本质特性的反映。</p><h4 id="（3）命题"><a href="#（3）命题" class="headerlink" title="（3）命题"></a>（3）命题</h4><p>对事物之间的陈述。分为非概括性命题和概括性命题。</p><p>A.非概括性命题：特定的事物之间的关系。</p><p>B.概括性命题：概念之间的普遍关系。</p><h3 id="过程性知识（程序性知识）"><a href="#过程性知识（程序性知识）" class="headerlink" title="过程性知识（程序性知识）"></a><strong>过程性知识</strong>（程序性知识）</h3><p>描述问题如何求解等动态信息，分为规则和控制结构两种类型。</p><h5 id="（1）规则"><a href="#（1）规则" class="headerlink" title="（1）规则"></a>（1）规则</h5><p>描述事物的因果关系。</p><h5 id="（2）控制结构"><a href="#（2）控制结构" class="headerlink" title="（2）控制结构"></a>（2）控制结构</h5><p>描述问题的求解步骤。</p><h2 id="2-知识图谱的定义"><a href="#2-知识图谱的定义" class="headerlink" title="2.知识图谱的定义"></a>2.知识图谱的定义</h2><p>图是一种能有效表示数据之间结构的表达形式，因此，人们考虑把数据中蕴含的知识用图的结构进行形式化表示。<strong>数据的结构化并和以后的结构化数据进行关联，就构成了知识图谱</strong>。<br><img src="/images/knowledgegraphsample.png" alt="1"></p><h2 id="3-知识和结构化数据的表示和存储"><a href="#3-知识和结构化数据的表示和存储" class="headerlink" title="3.知识和结构化数据的表示和存储"></a>3.知识和结构化数据的表示和存储</h2><p>在计算机科学领域，对知识和结构化数据的表示和存储具有不同的技术路线，最典型的包括<strong>本体</strong>（Ontology）和<strong>数据库</strong>（Database）两类。</p><h3 id="本体"><a href="#本体" class="headerlink" title="本体"></a>本体</h3><p>在人工只能领域，<strong>本体</strong>是通过<strong>对象类型、属性类型以及关系类型</strong>对领域知识进行形式化描述的模型。<strong>本体</strong>强调<strong>抽象</strong>的概念表示，因此只对数据的定义进行了描述，而没有描述具体的实例数据。</p><h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3><p><strong>数据库</strong>是计算机科学家为了电脑表示和存储计算机应用中需要的数据而设计开发的产品。不同类型的数据库（<strong>关系数据库、面向对象数据库、非关系型数据库等</strong>），一般用于存储数据，这些数据可以进行传递和交换。<strong>数据库</strong>对于数据的描述和数据本身的操作提供了不同的描述语言，因此我们认为，数据库系统对数据描述和数据记录的表示和存储采用了不同的机制。</p><h2 id="3-知识图谱的数据描述"><a href="#3-知识图谱的数据描述" class="headerlink" title="3.知识图谱的数据描述"></a>3.知识图谱的数据描述</h2><p>实际上，人工智能应用中不仅需要具体的知识实例数据，数据的描述和定义也非常关键，例如<strong>概念上下位知识</strong>（‘大熊猫’是一种‘熊科动物’）、<strong>属性之间的关系</strong>（‘子女’与‘父母’是逆关系）、<strong>属性的约束</strong>（一个‘人’的‘父母’只有‘2个’）等。</p><p><strong>知识图谱</strong>用统一的形式对知识实例数据的定义和具体知识数据进行描述，即用三元组形式（二元关系）对知识系统进行资源描述和存储。例如：WIkidata中不仅用&lt;Max Planck, instance of ,human&gt;表达具体的实例数据，也用&lt;place of birth, value type constraint, geographical object&gt;等三元组对相关知识结构进行了描述。</p><p><strong>实例数据</strong>只有在满足系统约定的‘<strong>框架</strong>’约束下运用才能体现为‘知识’，其中“框架”（元知识）就是对知识的描述和定义，知识框架和实例数据共同构成一个完整的知识系统。<br>—-待续—–</p>]]></content>
     
@@ -30,6 +30,10 @@
     
     
     
+    <category term="学习" scheme="https://github.com/SmartBoyMB.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="知识图谱" scheme="https://github.com/SmartBoyMB.github.io/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/"/>
     
   </entry>
   
