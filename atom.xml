@@ -3,11 +3,11 @@
   <title>Myblog</title>
   
   
-  <link href="https://github.com/SmartBoyMB/MeiBiao.github.io/atom.xml" rel="self"/>
+  <link href="https://github.com/SmartBoyMB.github.io/atom.xml" rel="self"/>
   
-  <link href="https://github.com/SmartBoyMB/MeiBiao.github.io/"/>
+  <link href="https://github.com/SmartBoyMB.github.io/"/>
   <updated>2020-10-11T16:06:37.851Z</updated>
-  <id>https://github.com/SmartBoyMB/MeiBiao.github.io/</id>
+  <id>https://github.com/SmartBoyMB.github.io/</id>
   
   <author>
     <name>Mei Biao</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>LateXLearning</title>
-    <link href="https://github.com/SmartBoyMB/MeiBiao.github.io/2020/10/11/LateXLearning/"/>
-    <id>https://github.com/SmartBoyMB/MeiBiao.github.io/2020/10/11/LateXLearning/</id>
+    <link href="https://github.com/SmartBoyMB.github.io/2020/10/11/LateXLearning/"/>
+    <id>https://github.com/SmartBoyMB.github.io/2020/10/11/LateXLearning/</id>
     <published>2020-10-11T15:59:56.000Z</published>
     <updated>2020-10-11T16:06:37.851Z</updated>
     
@@ -33,17 +33,17 @@
     
     
     
-    <category term="学习" scheme="https://github.com/SmartBoyMB/MeiBiao.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    <category term="学习" scheme="https://github.com/SmartBoyMB.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="-工具" scheme="https://github.com/SmartBoyMB/MeiBiao.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    <category term="-工具" scheme="https://github.com/SmartBoyMB.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title>Hello my blog life</title>
-    <link href="https://github.com/SmartBoyMB/MeiBiao.github.io/2020/10/09/mainpage/"/>
-    <id>https://github.com/SmartBoyMB/MeiBiao.github.io/2020/10/09/mainpage/</id>
+    <link href="https://github.com/SmartBoyMB.github.io/2020/10/09/mainpage/"/>
+    <id>https://github.com/SmartBoyMB.github.io/2020/10/09/mainpage/</id>
     <published>2020-10-09T11:06:06.000Z</published>
     <updated>2020-10-11T16:06:43.266Z</updated>
     
@@ -57,12 +57,12 @@
     
     
     
-    <category term="学习" scheme="https://github.com/SmartBoyMB/MeiBiao.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    <category term="学习" scheme="https://github.com/SmartBoyMB.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="生活" scheme="https://github.com/SmartBoyMB/MeiBiao.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
+    <category term="生活" scheme="https://github.com/SmartBoyMB.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="工具" scheme="https://github.com/SmartBoyMB/MeiBiao.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    <category term="工具" scheme="https://github.com/SmartBoyMB.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
