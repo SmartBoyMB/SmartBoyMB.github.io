@@ -24,11 +24,11 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://github.com/SmartBoyMB.github.io/null">
 <meta property="article:published_time" content="2020-11-04T09:26:46.889Z">
-<meta property="article:modified_time" content="2020-11-04T12:35:58.559Z">
+<meta property="article:modified_time" content="2020-11-04T12:41:02.268Z">
 <meta property="article:author" content="Mei Biao">
-<meta property="article:tag" content="mathjax">
 <meta property="article:tag" content="hexo">
 <meta property="article:tag" content="blog">
+<meta property="article:tag" content="mathjax">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://github.com/SmartBoyMB.github.io/null">
 <meta name="twitter:site" content="@Candiinya">
@@ -255,7 +255,7 @@ mjx-container[display="true"] + br {
                         <i class="fa fa-edit"></i> 
                         
                         
-                            1382
+                            1414
                         
                         字
                         
@@ -274,21 +274,21 @@ mjx-container[display="true"] + br {
 <h2 id="使用hexo-filter-mathjax代替hexo-math">使用hexo-filter-mathjax代替hexo-math</h2>
 <p>其实直接使用<strong>hexo-math</strong>是可以直接对公式进行渲染的，<strong>hexo-math</strong>通过标签插件将<strong>KaTeX</strong>和<strong>MathJax</strong>嵌入到<strong>Hexo</strong>帖子/页面中，方程在<strong>Hexo</strong>（服务器端）中呈现，因此不需要浏览器端javascript库，应将其删除，CSS样式是默认包含的。具体方法参考<a href="https://github.com/hexojs/hexo-math" class="uri">https://github.com/hexojs/hexo-math</a></p>
 <p>但是不可避免，语法上hexo-math对于<strong>KaTeX</strong>和<strong>MathJax</strong>是分别使用下面两种格式的。</p>
-<pre><code>&#123;% katex'&#123;options&#125;'%&#125;
-    content
-&#123;% endkatex %&#125;
+<pre><code>    &#123;% katex'&#123;options&#125;'%&#125;
+        content
+    &#123;% endkatex %&#125;
 
-&#123;% mathjax'&#123;options&#125;'%&#125;
-    content
-&#123;% endmathjax %&#125;</code></pre>
+    &#123;% mathjax'&#123;options&#125;'%&#125;
+        content
+    &#123;% endmathjax %&#125;</code></pre>
 <p>这与我们常使用的LaTex语法不同，并且更加复杂。所以用<strong>hexo-filter-mathjax</strong>插件可以直接编写LaTex语句。关于<strong>hexo-filter-mathjax</strong>插件安装与设置的具体方法参照<a href="https://github.com/next-theme/hexo-filter-mathjax" class="uri">https://github.com/next-theme/hexo-filter-mathjax</a></p>
 <h2 id="解决hexo与mathjax渲染冲突问题">解决Hexo与MathJax渲染冲突问题</h2>
 <p>添加MathJax后，出现了部分渲染失败的问题，尤其是对有下划线'_'的公式。这是由于Hexo默认使用<strong>hexo-renderer-marked</strong>引擎渲染MarkDown，再交给MathjaX渲染，<strong>hexo-renderer-marked</strong>会吧一些特殊的markdown符号转换成相应的html标签，比如在markdown语法中，下划线_代表斜体，会被转化为&lt;em&gt;标签,所以MathJax引擎在渲染数学公式的时候就会出错。</p>
 <p>在这里有人使用了<strong>hexo-renderer-kramed</strong>引擎替代，但我没有做尝试，而是使用了<strong>hexo-renderer-pandoc</strong>替代，他可以将Pandoc的markdown转换为HTML。</p>
 <p>首先要确保安装了<strong>Pandoc</strong>，因为该渲染器是基于<strong>Pandoc</strong>上运行的。安装包下载地址为<a target="_blank" rel="noopener" href="https://pandoc.org/installing.html" class="uri">https://pandoc.org/installing.html</a></p>
 <p>安装完后运行下述的两个命令卸载<strong>hexo-renderer-marked</strong>和安装<strong>hexo-renderer-pandoc</strong></p>
-<pre><code>$npm uninstall hexo-renderer-marked --save
-$npm install hexo-renderer-pandoc --save</code></pre>
+<pre><code>    $npm uninstall hexo-renderer-marked --save
+    $npm install hexo-renderer-pandoc --save</code></pre>
 <p>其他的配置请参考地址<a href="https://github.com/wzpan/hexo-renderer-pandoc" class="uri">https://github.com/wzpan/hexo-renderer-pandoc</a></p>
 
             </div>
@@ -431,7 +431,7 @@ hexo本身并不支持LaTex格式的数学公式的渲染，一般都是通过ma
   <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
     <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
       <div class="tag-clouds">
-        <a href="/SmartBoyMB.github.io/tags/blog/" style="font-size: 0.6em;">blog</a> <a href="/SmartBoyMB.github.io/tags/hexo/" style="font-size: 0.6em;">hexo</a> <a href="/SmartBoyMB.github.io/tags/mathjax/" style="font-size: 0.6em;">mathjax</a> <a href="/SmartBoyMB.github.io/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 0.8em;">工具</a> <a href="/SmartBoyMB.github.io/tags/%E6%A6%82%E5%BF%B5/" style="font-size: 0.8em;">概念</a> <a href="/SmartBoyMB.github.io/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 0.6em;">生活</a> <a href="/SmartBoyMB.github.io/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/" style="font-size: 0.8em;">知识图谱</a>
+        <a href="/SmartBoyMB.github.io/tags/blog/" style="font-size: 0.8em;">blog</a> <a href="/SmartBoyMB.github.io/tags/hexo/" style="font-size: 0.8em;">hexo</a> <a href="/SmartBoyMB.github.io/tags/mathjax/" style="font-size: 0.6em;">mathjax</a> <a href="/SmartBoyMB.github.io/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 0.6em;">工具</a> <a href="/SmartBoyMB.github.io/tags/%E6%A6%82%E5%BF%B5/" style="font-size: 0.8em;">概念</a> <a href="/SmartBoyMB.github.io/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/" style="font-size: 0.8em;">知识图谱</a>
       </div>
   </aside>
 

@@ -6,7 +6,7 @@
   <link href="https://github.com/SmartBoyMB.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/SmartBoyMB.github.io/"/>
-  <updated>2020-11-04T12:35:58.559Z</updated>
+  <updated>2020-11-04T12:41:02.268Z</updated>
   <id>https://github.com/SmartBoyMB.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://github.com/SmartBoyMB.github.io/2020/11/04/howtosetmathjax/"/>
     <id>https://github.com/SmartBoyMB.github.io/2020/11/04/howtosetmathjax/</id>
     <published>2020-11-04T09:26:46.889Z</published>
-    <updated>2020-11-04T12:35:58.559Z</updated>
+    <updated>2020-11-04T12:41:02.268Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="使用hexo为主题配置mathjax渲染latex数学公式">使用hexo为主题配置mathjax渲染LaTex数学公式</h2><p>hexo本身并不支持LaTex格式的数学公式的渲染，一般都是通过mathjax插件来实现的，我查阅了很多资料，大部分都是针对于NEXT主题的一个设置，或者安装hexo-math工具包，以及手动配置mathjax.js等策略，很多都是复制粘贴，甚至代码都有错误。但经过实际操作，忙活了两天后，我分享一下我实现的方法。</p><h2 id="使用hexo-filter-mathjax代替hexo-math">使用hexo-filter-mathjax代替hexo-math</h2><p>其实直接使用<strong>hexo-math</strong>是可以直接对公式进行渲染的，<strong>hexo-math</strong>通过标签插件将<strong>KaTeX</strong>和<strong>MathJax</strong>嵌入到<strong>Hexo</strong>帖子/页面中，方程在<strong>Hexo</strong>（服务器端）中呈现，因此不需要浏览器端javascript库，应将其删除，CSS样式是默认包含的。具体方法参考<a href="https://github.com/hexojs/hexo-math" class="uri">https://github.com/hexojs/hexo-math</a></p><p>但是不可避免，语法上hexo-math对于<strong>KaTeX</strong>和<strong>MathJax</strong>是分别使用下面两种格式的。</p><pre><code>&#123;% katex'&#123;options&#125;'%&#125;    content&#123;% endkatex %&#125;&#123;% mathjax'&#123;options&#125;'%&#125;    content&#123;% endmathjax %&#125;</code></pre><p>这与我们常使用的LaTex语法不同，并且更加复杂。所以用<strong>hexo-filter-mathjax</strong>插件可以直接编写LaTex语句。关于<strong>hexo-filter-mathjax</strong>插件安装与设置的具体方法参照<a href="https://github.com/next-theme/hexo-filter-mathjax" class="uri">https://github.com/next-theme/hexo-filter-mathjax</a></p><h2 id="解决hexo与mathjax渲染冲突问题">解决Hexo与MathJax渲染冲突问题</h2><p>添加MathJax后，出现了部分渲染失败的问题，尤其是对有下划线'_'的公式。这是由于Hexo默认使用<strong>hexo-renderer-marked</strong>引擎渲染MarkDown，再交给MathjaX渲染，<strong>hexo-renderer-marked</strong>会吧一些特殊的markdown符号转换成相应的html标签，比如在markdown语法中，下划线_代表斜体，会被转化为&lt;em&gt;标签,所以MathJax引擎在渲染数学公式的时候就会出错。</p><p>在这里有人使用了<strong>hexo-renderer-kramed</strong>引擎替代，但我没有做尝试，而是使用了<strong>hexo-renderer-pandoc</strong>替代，他可以将Pandoc的markdown转换为HTML。</p><p>首先要确保安装了<strong>Pandoc</strong>，因为该渲染器是基于<strong>Pandoc</strong>上运行的。安装包下载地址为<a href="https://pandoc.org/installing.html" class="uri">https://pandoc.org/installing.html</a></p><p>安装完后运行下述的两个命令卸载<strong>hexo-renderer-marked</strong>和安装<strong>hexo-renderer-pandoc</strong></p><pre><code>$npm uninstall hexo-renderer-marked --save$npm install hexo-renderer-pandoc --save</code></pre><p>其他的配置请参考地址<a href="https://github.com/wzpan/hexo-renderer-pandoc" class="uri">https://github.com/wzpan/hexo-renderer-pandoc</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="使用hexo为主题配置mathjax渲染latex数学公式">使用hexo为主题配置mathjax渲染LaTex数学公式</h2><p>hexo本身并不支持LaTex格式的数学公式的渲染，一般都是通过mathjax插件来实现的，我查阅了很多资料，大部分都是针对于NEXT主题的一个设置，或者安装hexo-math工具包，以及手动配置mathjax.js等策略，很多都是复制粘贴，甚至代码都有错误。但经过实际操作，忙活了两天后，我分享一下我实现的方法。</p><h2 id="使用hexo-filter-mathjax代替hexo-math">使用hexo-filter-mathjax代替hexo-math</h2><p>其实直接使用<strong>hexo-math</strong>是可以直接对公式进行渲染的，<strong>hexo-math</strong>通过标签插件将<strong>KaTeX</strong>和<strong>MathJax</strong>嵌入到<strong>Hexo</strong>帖子/页面中，方程在<strong>Hexo</strong>（服务器端）中呈现，因此不需要浏览器端javascript库，应将其删除，CSS样式是默认包含的。具体方法参考<a href="https://github.com/hexojs/hexo-math" class="uri">https://github.com/hexojs/hexo-math</a></p><p>但是不可避免，语法上hexo-math对于<strong>KaTeX</strong>和<strong>MathJax</strong>是分别使用下面两种格式的。</p><pre><code>    &#123;% katex'&#123;options&#125;'%&#125;        content    &#123;% endkatex %&#125;    &#123;% mathjax'&#123;options&#125;'%&#125;        content    &#123;% endmathjax %&#125;</code></pre><p>这与我们常使用的LaTex语法不同，并且更加复杂。所以用<strong>hexo-filter-mathjax</strong>插件可以直接编写LaTex语句。关于<strong>hexo-filter-mathjax</strong>插件安装与设置的具体方法参照<a href="https://github.com/next-theme/hexo-filter-mathjax" class="uri">https://github.com/next-theme/hexo-filter-mathjax</a></p><h2 id="解决hexo与mathjax渲染冲突问题">解决Hexo与MathJax渲染冲突问题</h2><p>添加MathJax后，出现了部分渲染失败的问题，尤其是对有下划线'_'的公式。这是由于Hexo默认使用<strong>hexo-renderer-marked</strong>引擎渲染MarkDown，再交给MathjaX渲染，<strong>hexo-renderer-marked</strong>会吧一些特殊的markdown符号转换成相应的html标签，比如在markdown语法中，下划线_代表斜体，会被转化为&lt;em&gt;标签,所以MathJax引擎在渲染数学公式的时候就会出错。</p><p>在这里有人使用了<strong>hexo-renderer-kramed</strong>引擎替代，但我没有做尝试，而是使用了<strong>hexo-renderer-pandoc</strong>替代，他可以将Pandoc的markdown转换为HTML。</p><p>首先要确保安装了<strong>Pandoc</strong>，因为该渲染器是基于<strong>Pandoc</strong>上运行的。安装包下载地址为<a href="https://pandoc.org/installing.html" class="uri">https://pandoc.org/installing.html</a></p><p>安装完后运行下述的两个命令卸载<strong>hexo-renderer-marked</strong>和安装<strong>hexo-renderer-pandoc</strong></p><pre><code>    $npm uninstall hexo-renderer-marked --save    $npm install hexo-renderer-pandoc --save</code></pre><p>其他的配置请参考地址<a href="https://github.com/wzpan/hexo-renderer-pandoc" class="uri">https://github.com/wzpan/hexo-renderer-pandoc</a></p>]]></content>
     
     
       
@@ -37,11 +37,11 @@
     <category term="学习" scheme="https://github.com/SmartBoyMB.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="mathjax" scheme="https://github.com/SmartBoyMB.github.io/tags/mathjax/"/>
-    
     <category term="hexo" scheme="https://github.com/SmartBoyMB.github.io/tags/hexo/"/>
     
     <category term="blog" scheme="https://github.com/SmartBoyMB.github.io/tags/blog/"/>
+    
+    <category term="mathjax" scheme="https://github.com/SmartBoyMB.github.io/tags/mathjax/"/>
     
   </entry>
   
@@ -132,7 +132,7 @@
     <link href="https://github.com/SmartBoyMB.github.io/2020/10/09/Hellpmyblog/"/>
     <id>https://github.com/SmartBoyMB.github.io/2020/10/09/Hellpmyblog/</id>
     <published>2020-10-09T11:06:06.000Z</published>
-    <updated>2020-10-27T12:41:22.158Z</updated>
+    <updated>2020-11-04T12:40:03.995Z</updated>
     
     <content type="html"><![CDATA[<h2 id="start-my-blog-life">start my blog life</h2><p>从今天开始就开始编写自己blog来记录自己的学习经历啦！！！ <a id="more"></a> ## 如何来搭建一个博客</p><p>首先我是基于<strong>github</strong>平台，使用<strong>Hexo</strong>工具来搭建我的个人博客的。在这里不详细的说明整个搭建的过程，网络上有非常多且详细的教程来指导博客的搭建，这篇博客主要是说明我搭建时的<strong>部分内容</strong>和遇到的<strong>难题</strong>。</p><p>这是我搭建时参考的视频教程：<a href="https://www.bilibili.com/video/BV1cW411A7Jx" class="uri">https://www.bilibili.com/video/BV1cW411A7Jx</a></p><h2 id="github仓库的设置">GitHub仓库的设置</h2><p>在创建github仓库时，需要将仓库名命名为<strong>yourname.github.io</strong>，并且进入setting界面，下滑到GitHub Pages选项，设置source下的Branch为你博客部署的分支，<strong>并点击save保存</strong>。</p><h2 id="github测试访问博客时404问题">GitHub测试访问博客时404问题</h2><p>在设置好后，如果按照视频教程中通过仓库名作为网址（README文件内网址）测试访问博客网址，会出现页面404的问题。这个问题难为了我很久，查询了资料才发现这个问题出现在我们创建github账号以后，<strong>创建的github的博客域名和自己的账号不一样导致的</strong>。如果直接通过仓库名作为网址访问的话，博客域名和账号名字要一样，不然会404。但是，如果名字不一样，就需要通过setting界面下GitHub Pages选项下的site网址访问。</p><h2 id="hexo工具部署博客到github参数设置问题">Hexo工具部署博客到GitHub参数设置问题</h2><p>Hexo文档地址：https://hexo.io</p><p>在部署时，_config.yml文件的一些参数设置</p><table><thead><tr class="header"><th style="text-align: center;">参数</th><th style="text-align: left;">描述</th></tr></thead><tbody><tr class="odd"><td style="text-align: center;">url</td><td style="text-align: left;">setting界面下GitHub Pages选项下的site地址。</td></tr><tr class="even"><td style="text-align: center;">root</td><td style="text-align: left;">/yourname.github.io/(两个斜杠不能去省略)</td></tr><tr class="odd"><td style="text-align: center;">deploy：type</td><td style="text-align: left;">git（可以是其他方式)</td></tr><tr class="even"><td style="text-align: center;">deploy：repo</td><td style="text-align: left;">仓库的git地址(也可以是其他方式的地址)</td></tr><tr class="odd"><td style="text-align: center;">deploy：branch</td><td style="text-align: left;">对应在setting界面，下滑到GitHub Pages选项，设置source下的Branch名称</td></tr></tbody></table><h2 id="主题的下载和设置">主题的下载和设置</h2><p>主题下载地址：<a href="https://hexo.io/themes" class="uri">https://hexo.io/themes</a></p><p>首先在该地址浏览找到自己喜欢的主题，并通过提供的github链接下载文件放置在Hexo工具创建的博客文件的themes文件夹下。下一步在_config.yml文件内改变themes的参数为新主题名。其他的设置参照给的thems内的README文件内的说明进行设置。</p>]]></content>
     
@@ -145,9 +145,9 @@
     <category term="学习" scheme="https://github.com/SmartBoyMB.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="生活" scheme="https://github.com/SmartBoyMB.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
+    <category term="hexo" scheme="https://github.com/SmartBoyMB.github.io/tags/hexo/"/>
     
-    <category term="工具" scheme="https://github.com/SmartBoyMB.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    <category term="blog" scheme="https://github.com/SmartBoyMB.github.io/tags/blog/"/>
     
   </entry>
   
