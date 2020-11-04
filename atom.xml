@@ -6,7 +6,7 @@
   <link href="https://github.com/SmartBoyMB.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/SmartBoyMB.github.io/"/>
-  <updated>2020-11-04T12:41:02.268Z</updated>
+  <updated>2020-11-04T13:02:29.162Z</updated>
   <id>https://github.com/SmartBoyMB.github.io/</id>
   
   <author>
@@ -17,13 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>少样本知识图谱推理</title>
+    <link href="https://github.com/SmartBoyMB.github.io/2020/11/04/xiaoyangbenzhishitupu/"/>
+    <id>https://github.com/SmartBoyMB.github.io/2020/11/04/xiaoyangbenzhishitupu/</id>
+    <published>2020-11-04T12:52:30.853Z</published>
+    <updated>2020-11-04T13:02:29.162Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="section"></h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;section&quot;&gt;&lt;/h2&gt;
+</summary>
+      
+    
+    
+    
+    <category term="学习" scheme="https://github.com/SmartBoyMB.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="知识图谱" scheme="https://github.com/SmartBoyMB.github.io/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/"/>
+    
+    <category term="论文学习" scheme="https://github.com/SmartBoyMB.github.io/tags/%E8%AE%BA%E6%96%87%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>hexo 主题使用mathjax插件渲染LaTeX数学公式的问题</title>
     <link href="https://github.com/SmartBoyMB.github.io/2020/11/04/howtosetmathjax/"/>
     <id>https://github.com/SmartBoyMB.github.io/2020/11/04/howtosetmathjax/</id>
     <published>2020-11-04T09:26:46.889Z</published>
-    <updated>2020-11-04T12:41:02.268Z</updated>
+    <updated>2020-11-04T12:51:25.580Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="使用hexo为主题配置mathjax渲染latex数学公式">使用hexo为主题配置mathjax渲染LaTex数学公式</h2><p>hexo本身并不支持LaTex格式的数学公式的渲染，一般都是通过mathjax插件来实现的，我查阅了很多资料，大部分都是针对于NEXT主题的一个设置，或者安装hexo-math工具包，以及手动配置mathjax.js等策略，很多都是复制粘贴，甚至代码都有错误。但经过实际操作，忙活了两天后，我分享一下我实现的方法。</p><h2 id="使用hexo-filter-mathjax代替hexo-math">使用hexo-filter-mathjax代替hexo-math</h2><p>其实直接使用<strong>hexo-math</strong>是可以直接对公式进行渲染的，<strong>hexo-math</strong>通过标签插件将<strong>KaTeX</strong>和<strong>MathJax</strong>嵌入到<strong>Hexo</strong>帖子/页面中，方程在<strong>Hexo</strong>（服务器端）中呈现，因此不需要浏览器端javascript库，应将其删除，CSS样式是默认包含的。具体方法参考<a href="https://github.com/hexojs/hexo-math" class="uri">https://github.com/hexojs/hexo-math</a></p><p>但是不可避免，语法上hexo-math对于<strong>KaTeX</strong>和<strong>MathJax</strong>是分别使用下面两种格式的。</p><pre><code>    &#123;% katex'&#123;options&#125;'%&#125;        content    &#123;% endkatex %&#125;    &#123;% mathjax'&#123;options&#125;'%&#125;        content    &#123;% endmathjax %&#125;</code></pre><p>这与我们常使用的LaTex语法不同，并且更加复杂。所以用<strong>hexo-filter-mathjax</strong>插件可以直接编写LaTex语句。关于<strong>hexo-filter-mathjax</strong>插件安装与设置的具体方法参照<a href="https://github.com/next-theme/hexo-filter-mathjax" class="uri">https://github.com/next-theme/hexo-filter-mathjax</a></p><h2 id="解决hexo与mathjax渲染冲突问题">解决Hexo与MathJax渲染冲突问题</h2><p>添加MathJax后，出现了部分渲染失败的问题，尤其是对有下划线'_'的公式。这是由于Hexo默认使用<strong>hexo-renderer-marked</strong>引擎渲染MarkDown，再交给MathjaX渲染，<strong>hexo-renderer-marked</strong>会吧一些特殊的markdown符号转换成相应的html标签，比如在markdown语法中，下划线_代表斜体，会被转化为&lt;em&gt;标签,所以MathJax引擎在渲染数学公式的时候就会出错。</p><p>在这里有人使用了<strong>hexo-renderer-kramed</strong>引擎替代，但我没有做尝试，而是使用了<strong>hexo-renderer-pandoc</strong>替代，他可以将Pandoc的markdown转换为HTML。</p><p>首先要确保安装了<strong>Pandoc</strong>，因为该渲染器是基于<strong>Pandoc</strong>上运行的。安装包下载地址为<a href="https://pandoc.org/installing.html" class="uri">https://pandoc.org/installing.html</a></p><p>安装完后运行下述的两个命令卸载<strong>hexo-renderer-marked</strong>和安装<strong>hexo-renderer-pandoc</strong></p><pre><code>    $npm uninstall hexo-renderer-marked --save    $npm install hexo-renderer-pandoc --save</code></pre><p>其他的配置请参考地址<a href="https://github.com/wzpan/hexo-renderer-pandoc" class="uri">https://github.com/wzpan/hexo-renderer-pandoc</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="使用hexo为主题配置mathjax渲染latex数学公式">使用hexo为主题配置mathjax渲染LaTex数学公式</h2><p>hexo本身并不支持LaTex格式的数学公式的渲染，一般都是通过mathjax插件来实现的，我查阅了很多资料，大部分都是针对于NEXT主题的一个设置，或者安装hexo-math工具包，以及手动配置mathjax.js等策略，很多都是复制粘贴，甚至代码都有错误。但经过实际操作，忙活了两天后，我分享一下我实现的方法。</p><h2 id="使用hexo-filter-mathjax代替hexo-math">使用hexo-filter-mathjax代替hexo-math</h2><p>其实直接使用<strong>hexo-math</strong>是可以直接对公式进行渲染的，<strong>hexo-math</strong>通过标签插件将<strong>KaTeX</strong>和<strong>MathJax</strong>嵌入到<strong>Hexo</strong>帖子/页面中，方程在<strong>Hexo</strong>（服务器端）中呈现，因此不需要浏览器端javascript库，应将其删除，CSS样式是默认包含的。具体方法参考<a href="https://github.com/hexojs/hexo-math" class="uri">https://github.com/hexojs/hexo-math</a></p><p>但是不可避免，语法上hexo-math对于<strong>KaTeX</strong>和<strong>MathJax</strong>是分别使用下面两种格式的。</p><pre><code>&#123;% katex'&#123;options&#125;'%&#125;    content&#123;% endkatex %&#125;&#123;% mathjax'&#123;options&#125;'%&#125;    content&#123;% endmathjax %&#125;</code></pre><p>这与我们常使用的LaTex语法不同，并且更加复杂。所以用<strong>hexo-filter-mathjax</strong>插件可以直接编写LaTex语句。关于<strong>hexo-filter-mathjax</strong>插件安装与设置的具体方法参照<a href="https://github.com/next-theme/hexo-filter-mathjax" class="uri">https://github.com/next-theme/hexo-filter-mathjax</a></p><h2 id="解决hexo与mathjax渲染冲突问题">解决Hexo与MathJax渲染冲突问题</h2><p>添加MathJax后，出现了部分渲染失败的问题，尤其是对有下划线'_'的公式。这是由于Hexo默认使用<strong>hexo-renderer-marked</strong>引擎渲染MarkDown，再交给MathjaX渲染，<strong>hexo-renderer-marked</strong>会吧一些特殊的markdown符号转换成相应的html标签，比如在markdown语法中，下划线_代表斜体，会被转化为&lt;em&gt;标签,所以MathJax引擎在渲染数学公式的时候就会出错。</p><p>在这里有人使用了<strong>hexo-renderer-kramed</strong>引擎替代，但我没有做尝试，而是使用了<strong>hexo-renderer-pandoc</strong>替代，他可以将Pandoc的markdown转换为HTML。</p><p>首先要确保安装了<strong>Pandoc</strong>，因为该渲染器是基于<strong>Pandoc</strong>上运行的。安装包下载地址为<a href="https://pandoc.org/installing.html" class="uri">https://pandoc.org/installing.html</a></p><p>安装完后运行下述的两个命令卸载<strong>hexo-renderer-marked</strong>和安装<strong>hexo-renderer-pandoc</strong></p><pre><code>    $npm uninstall hexo-renderer-marked --save    $npm install hexo-renderer-pandoc --save</code></pre><p>其他的配置请参考地址<a href="https://github.com/wzpan/hexo-renderer-pandoc" class="uri">https://github.com/wzpan/hexo-renderer-pandoc</a></p>]]></content>
     
     
       
@@ -110,7 +137,7 @@
     <link href="https://github.com/SmartBoyMB.github.io/2020/10/11/LateXLearning/"/>
     <id>https://github.com/SmartBoyMB.github.io/2020/10/11/LateXLearning/</id>
     <published>2020-10-11T15:59:56.000Z</published>
-    <updated>2020-10-27T08:12:04.492Z</updated>
+    <updated>2020-11-04T12:45:27.720Z</updated>
     
     <content type="html"><![CDATA[<h2 id="latex-learning-life">LaTex Learning Life</h2><p>在这里我会记录一些在学习LaTeX工具过程中遇到的一些问题和坑。 <a id="more"></a> ## 编写伪代码</p><p>编写伪代码需要导入包<strong>algorithm</strong>、<strong>algorithmic</strong>、<strong>algpseudocode</strong>，但在实践中发现导入包<strong>algorithm</strong>后不要再导入<strong>algorithmic</strong>，否则会因为冲突报错，报错形式为<strong>Missing inserted</strong>。</p>]]></content>
     
@@ -123,7 +150,7 @@
     <category term="学习" scheme="https://github.com/SmartBoyMB.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="工具" scheme="https://github.com/SmartBoyMB.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    <category term="LaTeX" scheme="https://github.com/SmartBoyMB.github.io/tags/LaTeX/"/>
     
   </entry>
   
