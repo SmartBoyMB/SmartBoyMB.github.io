@@ -182,6 +182,34 @@
   </entry>
   
   <entry>
+    <title>文档路径问题</title>
+    <link href="https://github.com/SmartBoyMB.github.io/2020/10/09/Folderload/"/>
+    <id>https://github.com/SmartBoyMB.github.io/2020/10/09/Folderload/</id>
+    <published>2020-10-09T11:06:06.000Z</published>
+    <updated>2020-12-30T13:35:20.764Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="文档路径编写问题">文档路径编写问题</h2><p>“./”：代表目前所在的目录。与不加是一个效果</p><p>“…/”：代表上一层目录。</p><p>“/”：代表根目录。</p><p>例如， http://www.baidu.com/folder/</p><p>URI 以一个 / 结尾，表示 folder 是一个目录，我们要访问的是这个目录下的文件，但是又没有说明是这个目录下的哪个文件，此时依然是采用该目录下 index.html 或者 default.html 一类的文件。</p><p>即 folder 后面没有 /，此时会先将 folder 当作一个资源去访问(比如一个名为 folder 的 Servlet )，如果没有名为 folder 的资源，那么浏览器会自动在 folder 后面加上一个 /</p><p>不加的话系统会有一个重定向的申请，可能会影响到request的一些功能。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;文档路径编写问题&quot;&gt;文档路径编写问题&lt;/h2&gt;
+&lt;p&gt;“./”：代表目前所在的目录。与不加是一个效果&lt;/p&gt;
+&lt;p&gt;“…/”：代表上一层目录。&lt;/p&gt;
+&lt;p&gt;“/”：代表根目录。&lt;/p&gt;
+&lt;p&gt;例如， http://www.baidu.com/folder</summary>
+      
+    
+    
+    
+    <category term="学习" scheme="https://github.com/SmartBoyMB.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="folder" scheme="https://github.com/SmartBoyMB.github.io/tags/folder/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello my blog life</title>
     <link href="https://github.com/SmartBoyMB.github.io/2020/10/09/Hellpmyblog/"/>
     <id>https://github.com/SmartBoyMB.github.io/2020/10/09/Hellpmyblog/</id>
