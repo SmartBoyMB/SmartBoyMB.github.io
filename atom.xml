@@ -6,7 +6,7 @@
   <link href="https://github.com/SmartBoyMB.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/SmartBoyMB.github.io/"/>
-  <updated>2020-11-06T05:11:29.597Z</updated>
+  <updated>2022-06-09T12:47:01.964Z</updated>
   <id>https://github.com/SmartBoyMB.github.io/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MachineLearning</title>
+    <link href="https://github.com/SmartBoyMB.github.io/2021/05/10/MachineLearning/"/>
+    <id>https://github.com/SmartBoyMB.github.io/2021/05/10/MachineLearning/</id>
+    <published>2021-05-10T05:08:10.000Z</published>
+    <updated>2022-06-09T12:47:01.964Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="机器学习的分类">机器学习的分类</h2><h3 id="监督学习分类">监督学习分类</h3><p>回归（regression）和分类（classification）。 在回归问题中，我们会预测一个连续值。也就是说我们试图将输入变量和输出用一个连续函数对应起来；比如通过房地产市场的数据，预测一个给定面积的房屋的价格就是一个回归问题。这里我们可以把价格看成是面积的函数，它是一个连续的输出值。而在分类问题中，我们会预测一个离散值，我们试图将输入变量与离散的类别对应起来。比如：给定医学数据，通过肿瘤的大小来预测该肿瘤是恶性瘤还是良性瘤(课程中给的是乳腺癌的例子)，这就是一个分类问题，它的输出是0或者1两个离散的值。(0代表良性，1代表恶性)。分类问题的输出可以多于两个，比如在该例子中可以有{0,1,2,3}四种输出，分别对应{良性, 第一类肿瘤, 第二类肿瘤, 第三类肿瘤}。</p><h3 id="无监督学习">无监督学习</h3><p>在无监督学习中，我们基本上不知道结果会是什么样子，但我们可以通过聚类的方式从数据中提取一个特殊的 结构。在无监督学习中给定的数据是和监督学习中给定的数据是不一样的。在无监督学习中给定的数据没有任 何标签或者说只有同一种标签。GAN就是一种无监督学习</p><h3 id="无监督学习与监督学习的区别">无监督学习与监督学习的区别</h3><p>有监督学习方法必须要有训练集与测试样本。在训练集中找规律，而对测试样本使用这种规律。而非监督学习没有训练集，只有一组数据，在该组数据集内寻找规律。</p><p>有监督学习的方法就是识别事物，识别的结果表现在给待识别数据加上了标签。因此训练样本集必须由带标签的样本组成。而非监督学习方法只有要分析的数据集的本身，预先没有什么标签。如果发现数据集呈现某种聚集性，则可按自然的聚集性分类，但不予以某种预先分类标签对上号为目的。</p><p>非监督学习方法在寻找数据集中的规律性，这种规律性并不一定要达到划分数据集的目的，也就是说不一定要“分类”。</p><h3 id="半监督学习">半监督学习</h3><p>所给的数据有的是有标签的，而有的是没有标签的。常见的两种半监督的学习方式是直推学习（Transductive learning）和归纳学习（Inductive learning）。</p><ul><li>直推学习（Transductive learning）：没有标记的数据是测试数据，这个时候可以用test的数据进行训练。这里需要注意，这里只是用了test数据中的feature而没有用label，所以并不是一种欺骗的方法。</li><li>归纳学习（Inductive learning）：没有标签的数据不是测试集。</li></ul><h3 id="迁移学习">迁移学习</h3><p>随着越来越多的机器学习应用场景的出现，而现有表现比较好的监督学习需要大量的标注数据，标注数据是一项枯燥无味且花费巨大的任务，所以迁移学习受到越来越多的关注。Transfer Learning 的定义是：Ability of a system to recognize and apply knowledge and skills learned in previous domains/tasks to novel domains/tasks。将某个领域或任务上学习到的知识或模式应用到不同但相关的领域或问题中为目标。</p><h3 id="增强学习reinforcement-learning">增强学习（reinforcement learning）</h3><p>reinforcement learning的特点: agent是从环境中去学习,不是data中，是基于环境的,angent需要从环境中获得大量的信息来学习和采取行动action，目标是学习从环境状态到行为的映射，使得agent选择的行为能够获得环境最大的奖励，reinforcement learning中的奖励来自于环境中的反馈。</p><p>强化学习的关键要素有：environment，reward，action 和 state。有了这些要素我们就能建立一个强化学习模型。强化学习解决的问题是，针对一个具体问题得到一个最优的policy，使得在该策略下获得的reward最大。所谓的policy其实就是一系列action。也就是sequential data。</p><p>强化学习可用下图来刻画，都是要先从要完成的任务提取一个环境，从中抽象出状态(state) 、动作(action)、以及执行该动作所接受的瞬时奖赏(reward)。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;机器学习的分类&quot;&gt;机器学习的分类&lt;/h2&gt;
+&lt;h3 id=&quot;监督学习分类&quot;&gt;监督学习分类&lt;/h3&gt;
+&lt;p&gt;回归（regression）和分类（classification）。 在回归问题中，我们会预测一个连续值。也就是说我们试图将输入变量和输出用一个连续函数对</summary>
+      
+    
+    
+    
+    <category term="学习" scheme="https://github.com/SmartBoyMB.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="机器学习" scheme="https://github.com/SmartBoyMB.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>pythonLearning</title>
+    <link href="https://github.com/SmartBoyMB.github.io/2020/11/21/pythonLearning/"/>
+    <id>https://github.com/SmartBoyMB.github.io/2020/11/21/pythonLearning/</id>
+    <published>2020-11-21T12:40:54.000Z</published>
+    <updated>2022-06-09T12:39:32.801Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="import-和-from-...-import-的区别">import 和 from ... import 的区别</h2><p>import导入的文件，在引用内部类或者函数时，仍然需要标注文件名。 from...import导入的文件，在引用时可不需要标注文件名。</p><p><strong>未完待续</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;import-和-from-...-import-的区别&quot;&gt;import 和 from ... import 的区别&lt;/h2&gt;
+&lt;p&gt;import导入的文件，在引用内部类或者函数时，仍然需要标注文件名。 from...import导入的文件，在引用时可不需要标注</summary>
+      
+    
+    
+    
+    <category term="学习" scheme="https://github.com/SmartBoyMB.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="python" scheme="https://github.com/SmartBoyMB.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>long tail Relation</title>
@@ -164,9 +215,9 @@
     <link href="https://github.com/SmartBoyMB.github.io/2020/10/11/LateXLearning/"/>
     <id>https://github.com/SmartBoyMB.github.io/2020/10/11/LateXLearning/</id>
     <published>2020-10-11T15:59:56.000Z</published>
-    <updated>2020-11-04T12:45:27.720Z</updated>
+    <updated>2022-06-09T11:11:31.316Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="latex-learning-life">LaTex Learning Life</h2><p>在这里我会记录一些在学习LaTeX工具过程中遇到的一些问题和坑。 <a id="more"></a> ## 编写伪代码</p><p>编写伪代码需要导入包<strong>algorithm</strong>、<strong>algorithmic</strong>、<strong>algpseudocode</strong>，但在实践中发现导入包<strong>algorithm</strong>后不要再导入<strong>algorithmic</strong>，否则会因为冲突报错，报错形式为<strong>Missing inserted</strong>。</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="latex-learning-life">LaTex Learning Life</h2><p>在这里我会记录一些在学习LaTeX工具过程中遇到的一些问题和坑。 <a id="more"></a></p><h2 id="编写伪代码">编写伪代码</h2><p>编写伪代码需要导入包<strong>algorithm</strong>、<strong>algorithmic</strong>、<strong>algpseudocode</strong>，但在实践中发现导入包<strong>algorithm</strong>后不要再导入<strong>algorithmic</strong>，否则会因为冲突报错，报错形式为<strong>Missing inserted</strong>。</p><h2 id="符号用法">符号用法</h2><p>发现大部分人只回答大于等于号、小于等于号的写法，而没有说大于、小于号的分别写法。 （大于小于号并非公式规范内的写法，可写于公式外） 大于号：</p><p>小于号： </p><p>（下面是公式内可以用的写法） 下面的后面要加空格，否则会识别错误</p><p>大于等于：</p><p>小于等于：</p>]]></content>
     
     
     <summary type="html">&lt;h2 id=&quot;latex-learning-life&quot;&gt;LaTex Learning Life&lt;/h2&gt;
@@ -178,6 +229,30 @@
     
     
     <category term="LaTeX" scheme="https://github.com/SmartBoyMB.github.io/tags/LaTeX/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello my blog life</title>
+    <link href="https://github.com/SmartBoyMB.github.io/2020/10/09/Hellpmyblog/"/>
+    <id>https://github.com/SmartBoyMB.github.io/2020/10/09/Hellpmyblog/</id>
+    <published>2020-10-09T11:06:06.000Z</published>
+    <updated>2020-11-04T12:40:03.995Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="start-my-blog-life">start my blog life</h2><p>从今天开始就开始编写自己blog来记录自己的学习经历啦！！！ <a id="more"></a> ## 如何来搭建一个博客</p><p>首先我是基于<strong>github</strong>平台，使用<strong>Hexo</strong>工具来搭建我的个人博客的。在这里不详细的说明整个搭建的过程，网络上有非常多且详细的教程来指导博客的搭建，这篇博客主要是说明我搭建时的<strong>部分内容</strong>和遇到的<strong>难题</strong>。</p><p>这是我搭建时参考的视频教程：<a href="https://www.bilibili.com/video/BV1cW411A7Jx" class="uri">https://www.bilibili.com/video/BV1cW411A7Jx</a></p><h2 id="github仓库的设置">GitHub仓库的设置</h2><p>在创建github仓库时，需要将仓库名命名为<strong>yourname.github.io</strong>，并且进入setting界面，下滑到GitHub Pages选项，设置source下的Branch为你博客部署的分支，<strong>并点击save保存</strong>。</p><h2 id="github测试访问博客时404问题">GitHub测试访问博客时404问题</h2><p>在设置好后，如果按照视频教程中通过仓库名作为网址（README文件内网址）测试访问博客网址，会出现页面404的问题。这个问题难为了我很久，查询了资料才发现这个问题出现在我们创建github账号以后，<strong>创建的github的博客域名和自己的账号不一样导致的</strong>。如果直接通过仓库名作为网址访问的话，博客域名和账号名字要一样，不然会404。但是，如果名字不一样，就需要通过setting界面下GitHub Pages选项下的site网址访问。</p><h2 id="hexo工具部署博客到github参数设置问题">Hexo工具部署博客到GitHub参数设置问题</h2><p>Hexo文档地址：https://hexo.io</p><p>在部署时，_config.yml文件的一些参数设置</p><table><thead><tr class="header"><th style="text-align: center;">参数</th><th style="text-align: left;">描述</th></tr></thead><tbody><tr class="odd"><td style="text-align: center;">url</td><td style="text-align: left;">setting界面下GitHub Pages选项下的site地址。</td></tr><tr class="even"><td style="text-align: center;">root</td><td style="text-align: left;">/yourname.github.io/(两个斜杠不能去省略)</td></tr><tr class="odd"><td style="text-align: center;">deploy：type</td><td style="text-align: left;">git（可以是其他方式)</td></tr><tr class="even"><td style="text-align: center;">deploy：repo</td><td style="text-align: left;">仓库的git地址(也可以是其他方式的地址)</td></tr><tr class="odd"><td style="text-align: center;">deploy：branch</td><td style="text-align: left;">对应在setting界面，下滑到GitHub Pages选项，设置source下的Branch名称</td></tr></tbody></table><h2 id="主题的下载和设置">主题的下载和设置</h2><p>主题下载地址：<a href="https://hexo.io/themes" class="uri">https://hexo.io/themes</a></p><p>首先在该地址浏览找到自己喜欢的主题，并通过提供的github链接下载文件放置在Hexo工具创建的博客文件的themes文件夹下。下一步在_config.yml文件内改变themes的参数为新主题名。其他的设置参照给的thems内的README文件内的说明进行设置。</p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;start-my-blog-life&quot;&gt;start my blog life&lt;/h2&gt;
+&lt;p&gt;从今天开始就开始编写自己blog来记录自己的学习经历啦！！！</summary>
+    
+    
+    
+    <category term="学习" scheme="https://github.com/SmartBoyMB.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="hexo" scheme="https://github.com/SmartBoyMB.github.io/tags/hexo/"/>
+    
+    <category term="blog" scheme="https://github.com/SmartBoyMB.github.io/tags/blog/"/>
     
   </entry>
   
@@ -206,30 +281,6 @@
     
     
     <category term="folder" scheme="https://github.com/SmartBoyMB.github.io/tags/folder/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello my blog life</title>
-    <link href="https://github.com/SmartBoyMB.github.io/2020/10/09/Hellpmyblog/"/>
-    <id>https://github.com/SmartBoyMB.github.io/2020/10/09/Hellpmyblog/</id>
-    <published>2020-10-09T11:06:06.000Z</published>
-    <updated>2020-11-04T12:40:03.995Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="start-my-blog-life">start my blog life</h2><p>从今天开始就开始编写自己blog来记录自己的学习经历啦！！！ <a id="more"></a> ## 如何来搭建一个博客</p><p>首先我是基于<strong>github</strong>平台，使用<strong>Hexo</strong>工具来搭建我的个人博客的。在这里不详细的说明整个搭建的过程，网络上有非常多且详细的教程来指导博客的搭建，这篇博客主要是说明我搭建时的<strong>部分内容</strong>和遇到的<strong>难题</strong>。</p><p>这是我搭建时参考的视频教程：<a href="https://www.bilibili.com/video/BV1cW411A7Jx" class="uri">https://www.bilibili.com/video/BV1cW411A7Jx</a></p><h2 id="github仓库的设置">GitHub仓库的设置</h2><p>在创建github仓库时，需要将仓库名命名为<strong>yourname.github.io</strong>，并且进入setting界面，下滑到GitHub Pages选项，设置source下的Branch为你博客部署的分支，<strong>并点击save保存</strong>。</p><h2 id="github测试访问博客时404问题">GitHub测试访问博客时404问题</h2><p>在设置好后，如果按照视频教程中通过仓库名作为网址（README文件内网址）测试访问博客网址，会出现页面404的问题。这个问题难为了我很久，查询了资料才发现这个问题出现在我们创建github账号以后，<strong>创建的github的博客域名和自己的账号不一样导致的</strong>。如果直接通过仓库名作为网址访问的话，博客域名和账号名字要一样，不然会404。但是，如果名字不一样，就需要通过setting界面下GitHub Pages选项下的site网址访问。</p><h2 id="hexo工具部署博客到github参数设置问题">Hexo工具部署博客到GitHub参数设置问题</h2><p>Hexo文档地址：https://hexo.io</p><p>在部署时，_config.yml文件的一些参数设置</p><table><thead><tr class="header"><th style="text-align: center;">参数</th><th style="text-align: left;">描述</th></tr></thead><tbody><tr class="odd"><td style="text-align: center;">url</td><td style="text-align: left;">setting界面下GitHub Pages选项下的site地址。</td></tr><tr class="even"><td style="text-align: center;">root</td><td style="text-align: left;">/yourname.github.io/(两个斜杠不能去省略)</td></tr><tr class="odd"><td style="text-align: center;">deploy：type</td><td style="text-align: left;">git（可以是其他方式)</td></tr><tr class="even"><td style="text-align: center;">deploy：repo</td><td style="text-align: left;">仓库的git地址(也可以是其他方式的地址)</td></tr><tr class="odd"><td style="text-align: center;">deploy：branch</td><td style="text-align: left;">对应在setting界面，下滑到GitHub Pages选项，设置source下的Branch名称</td></tr></tbody></table><h2 id="主题的下载和设置">主题的下载和设置</h2><p>主题下载地址：<a href="https://hexo.io/themes" class="uri">https://hexo.io/themes</a></p><p>首先在该地址浏览找到自己喜欢的主题，并通过提供的github链接下载文件放置在Hexo工具创建的博客文件的themes文件夹下。下一步在_config.yml文件内改变themes的参数为新主题名。其他的设置参照给的thems内的README文件内的说明进行设置。</p>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;start-my-blog-life&quot;&gt;start my blog life&lt;/h2&gt;
-&lt;p&gt;从今天开始就开始编写自己blog来记录自己的学习经历啦！！！</summary>
-    
-    
-    
-    <category term="学习" scheme="https://github.com/SmartBoyMB.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="hexo" scheme="https://github.com/SmartBoyMB.github.io/tags/hexo/"/>
-    
-    <category term="blog" scheme="https://github.com/SmartBoyMB.github.io/tags/blog/"/>
     
   </entry>
   
