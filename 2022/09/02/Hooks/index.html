@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  <link rel="icon" href="">
+  <title>沅湘</title>
+  <meta name="author" content="Mei Biao" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="" />
+  
+  <meta name="description" content="react Hooks 介绍 Hooks 是让你从函数组件中“钩入”React 状态和生命周期特性的函数。Hooks 在类中不起作用——它们让你在没有类的情况下使用 React。 理解：函数组件没有办法存储react的状态和状态转移的操作，于是加入了钩子（Hook）来提供React的状态和对React操作的接口。 使用规则 Hooks 是 JavaScript 函数，但它们强加了两个额外">
+<meta property="og:type" content="article">
+<meta property="og:title" content="沅湘">
+<meta property="og:url" content="https://github.com/SmartBoyMB.github.io/2022/09/02/Hooks/index.html">
+<meta property="og:site_name" content="沅湘">
+<meta property="og:description" content="react Hooks 介绍 Hooks 是让你从函数组件中“钩入”React 状态和生命周期特性的函数。Hooks 在类中不起作用——它们让你在没有类的情况下使用 React。 理解：函数组件没有办法存储react的状态和状态转移的操作，于是加入了钩子（Hook）来提供React的状态和对React操作的接口。 使用规则 Hooks 是 JavaScript 函数，但它们强加了两个额外">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://github.com/SmartBoyMB.github.io/null">
+<meta property="article:published_time" content="2022-09-02T15:48:09.515Z">
+<meta property="article:modified_time" content="2022-09-02T15:49:36.122Z">
+<meta property="article:author" content="Mei Biao">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/SmartBoyMB.github.io/null">
+<meta name="twitter:site" content="@Candiinya">
+  
+  <!-- 站点验证相关 -->
+  
+    
+    
+    
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kratosr.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="highlight-css" href="/css/highlight.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="fontawe-css" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="nprogress-css" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" type="text/css" media="all">
+  
+  
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  
+    <link rel="stylesheet" id="darkmode-css" href="/css/kr-dark.min.css" type="text/css" media="all">
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/qrcode_js@1.0.0/qrcode.min.js"></script>
+  
+  
+<meta name="generator" content="Hexo 5.2.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style><link rel="alternate" href="/SmartBoyMB.github.io/atom.xml" title="沅湘" type="application/atom+xml">
+</head>
+
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <div class="nav-toggle"><a class="kratos-nav-toggle js-kratos-nav-toggle"><i></i></a></div>
+            <header id="kratos-header-section">
+                <div class="container">
+                    <div class="nav-header">
+                        <div class="color-logo"><a href="/">沅湘</a></div>
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                                    
+                                        <li><a href="/SmartBoyMB.github.io/"><i class="fa fa-home"></i>首页</a></li>
+                                    
+                                
+                                    
+                                        <li><a href="/SmartBoyMB.github.io/archives/"><i class="fa fa-file"></i>档案馆</a></li>
+                                    
+                                
+                                    
+                                        <li>
+                                            <a><i class="fa fa-link"></i>链接</a>
+                                            <ul class="sub-menu">
+                                                
+                                                    
+                                                
+                                                    
+                                                        <li><a target="_blank" rel="noopener" href="https://candinya.com">作者博客</a></li>
+                                                    
+                                                
+                                                    
+                                                        <li><a href="https://github.com/Candinya/Kratos-Rebirth">项目链接</a></li>
+                                                    
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/SmartBoyMB.github.io/">
+                        <h2>沅湘</h2> <br />
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div class="row">
+                    
+        <div id="main">
+            <section class="col-md-8">
+    <article>
+        <div class="kratos-hentry kratos-post-inner clearfix">
+            <header class="kratos-entry-header">
+                <h1 class="kratos-entry-title text-center"></h1>
+                
+                <div class="kratos-post-meta text-center">
+                    <span>
+                        <i class="fa fa-calendar"></i> 2022-09-02
+                        <i class="fa fa-folder"></i> 分类于 
+                        <i class="fa fa-user"></i> 作者 Mei Biao
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~10.68K
+                        
+                        字
+                        
+                    </span>
+                </div>
+            </header>
+            <div class="kratos-post-content">
+                
+                <hr />
+                <h1 id="react-hooks">react Hooks</h1>
+<h2 id="介绍">介绍</h2>
+<p>Hooks 是让你从函数组件中“钩入”React 状态和生命周期特性的函数。Hooks 在类中不起作用——它们让你在没有类的情况下使用 React。</p>
+<p><strong>理解</strong>：函数组件没有办法存储react的状态和状态转移的操作，于是加入了钩子（Hook）来提供React的状态和对React操作的接口。</p>
+<h2 id="使用规则">使用规则</h2>
+<p>Hooks 是 JavaScript 函数，但它们强加了两个额外的规则：</p>
+<ul>
+<li><p>只在顶层调用 Hooks 。不要在循环、条件或嵌套函数中调用 Hook。</p></li>
+<li><p>仅从 React 函数组件调用 Hooks 。不要从常规 JavaScript 函数调用 Hooks。（还有一个有效的地方可以调用 Hooks——你自己的自定义 Hooks。我们稍后会了解它们。）</p></li>
+<li><p>可以建立自定义的Hook，但是记住用use开头，否则检查规则会不通过。</p></li>
+<li><p>详细规则：<a target="_blank" rel="noopener" href="https://reactjs.org/docs/hooks-rules.html">Hooks 规则</a></p></li>
+</ul>
+<h2 id="basic-hooks">Basic Hooks</h2>
+<ul>
+<li><p><strong>useState</strong>: <code>const [state,setState] = useState(initialState);</code></p>
+<ul>
+<li><p>返回一个有状态的值，以及一个更新它的函数。</p></li>
+<li><p>在初始渲染期间，返回的状态 ( state) 与作为第一个参数 ( initialState) 传递的值相同。</p></li>
+<li><p>该setState函数用于更新状态。它接受一个新的状态值并将组件的重新渲染排入队列。</p></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Counter</span>(<span class="params">&#123;initialCount&#125;</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> [count, setCount] = useState(initialCount);</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">      &lt;&gt;</span><br><span class="line">          Count: &#123;count&#125;</span><br><span class="line">          &lt;button onClick=&#123;<span class="function">() =&gt;</span> setCount(initialCount)&#125;&gt;</span><br><span class="line">              Reset</span><br><span class="line">          &lt;/button&gt;</span><br><span class="line">          &lt;button onClick=&#123;<span class="function">() =&gt;</span> setCount(<span class="function"><span class="params">prevCount</span> =&gt;</span> prevCount - <span class="number">1</span>)&#125;&gt;</span><br><span class="line">              -</span><br><span class="line">          &lt;/button&gt;</span><br><span class="line">          &lt;button onClick=&#123;<span class="function">() =&gt;</span> setCount(<span class="function"><span class="params">prevCount</span> =&gt;</span> prevCount + <span class="number">1</span>)&#125;&gt;</span><br><span class="line">              +</span><br><span class="line">          &lt;/button&gt;</span><br><span class="line">      &lt;/&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><strong>useEffect</strong>: <code>useEffect(didUpdate);</code>
+<ul>
+<li><p>接受包含命令式的、可能有效的代码的函数。</p></li>
+<li><p>函数组件的主体（称为 React 的渲染阶段）中不允许突变、订阅、计时器、日志记录和其他副作用。 这样做会导致 UI 中出现令人困惑的错误和不一致。</p></li>
+<li><p>传递给 useEffect 的函数将在渲染提交到屏幕后运行。</p></li>
+<li><p>默认情况下，效果会在每次完成渲染后运行，但您可以选择仅在某些值发生更改时触发它们。渲染前触发使用useLayoutEffect。</p></li>
+<li><p>传递给的函数useEffect可以返回一个清理函数，在组件从DOM中卸载时调用。 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//返回清理函数</span></span><br><span class="line">useEffect(<span class="function">() =&gt;</span> &#123;</span><br><span class="line"><span class="keyword">const</span> subscription = props.source.subscribe();</span><br><span class="line"><span class="keyword">return</span> <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// Clean up the subscription</span></span><br><span class="line">    subscription.unsubscribe();</span><br><span class="line">&#125;;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//条件触发，第二个参数改变时会触发</span></span><br><span class="line">useEffect(</span><br><span class="line">() =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> subscription = props.source.subscribe();</span><br><span class="line">    <span class="keyword">return</span> <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    subscription.unsubscribe();</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;,</span><br><span class="line">[props.source],</span><br><span class="line">);</span><br></pre></td></tr></table></figure></p></li>
+</ul></li>
+<li><p><strong>useContext</strong>: <code>const value = useContext(MyContext);</code></p>
+<ul>
+<li><p>接受一个上下文对象（从 React.createContext 返回的值）并返回该上下文的当前上下文值。 当前上下文值由树中调用组件上方最近的 &lt;MyContext.Provider&gt; 的 value prop 确定。</p></li>
+<li><p>当组件上方最近的 &lt;MyContext.Provider&gt; 更新时，此 Hook 将触发重新渲染，并将最新的上下文值传递给该 MyContext 提供程序。 即使祖先使用 React.memo 或 shouldComponentUpdate，仍然会使用 useContext 从组件本身开始重新渲染。</p></li>
+<li><p>参数 MyContext必须是上下文对象本身：</p>
+<ul>
+<li><p><strong>正确的</strong>： useContext(MyContext)</p></li>
+<li><p><strong>不正确</strong>： useContext(MyContext.Consumer)</p></li>
+<li><p><strong>不正确</strong>： useContext(MyContext.Provider) <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> themes = &#123;</span><br><span class="line">    light: &#123;</span><br><span class="line">        foreground: <span class="string">&quot;#000000&quot;</span>,</span><br><span class="line">        background: <span class="string">&quot;#eeeeee&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    dark: &#123;</span><br><span class="line">        foreground: <span class="string">&quot;#ffffff&quot;</span>,</span><br><span class="line">        background: <span class="string">&quot;#222222&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> ThemeContext = React.createContext(themes.light);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        &lt;ThemeContext.Provider value=&#123;themes.dark&#125;&gt;</span><br><span class="line">        &lt;Toolbar /&gt;</span><br><span class="line">        &lt;/ThemeContext.Provider&gt;</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Toolbar</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">        &lt;ThemedButton /&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ThemedButton</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> theme = useContext(ThemeContext);</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        &lt;button style=&#123;&#123; <span class="attr">background</span>: theme.background, <span class="attr">color</span>: theme.foreground &#125;&#125;&gt;</span><br><span class="line">        I am styled by theme context!</span><br><span class="line">        &lt;/button&gt;</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="additional-hooks">Additional Hooks</h2>
+<ul>
+<li><strong>useReducer</strong>: <code>const [state, dispatch] = useReducer(reducer, initialArg, init);</code>
+<ul>
+<li><p>useState的替代方法，接受一个（state，action）=&gt; newState 类型的reducer，并返回与调度方法配对的当前状态。</p></li>
+<li><p>当具有涉及多个子值的复杂状态逻辑或下一个状态取决于前一个状态时，useReducer比useState更优秀。useReducer还可以优化触发深度更新的组件的性能，因为可以传递dispatch而不是回调。</p></li>
+<li>设定指定状态：
+<ul>
+<li><p>最简单的方法是将初始状态作为第二个参数传递。</p></li>
+<li><p>也可以迟钝地创建初始状态：传递一个init函数作为第三个参数。初始状态将设置为init(initialArg)。</p></li>
+</ul></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//指定初始状态</span></span><br><span class="line"><span class="keyword">const</span> initialState = &#123;<span class="attr">count</span>: <span class="number">0</span>&#125;;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">reducer</span>(<span class="params">state, action</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">switch</span> (action.type) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;increment&#x27;</span>:</span><br><span class="line">      <span class="keyword">return</span> &#123;<span class="attr">count</span>: state.count + <span class="number">1</span>&#125;;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;decrement&#x27;</span>:</span><br><span class="line">      <span class="keyword">return</span> &#123;<span class="attr">count</span>: state.count - <span class="number">1</span>&#125;;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">      <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Counter</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> [state, dispatch] = useReducer(reducer, initialState);</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;&gt;</span><br><span class="line">      Count: &#123;state.count&#125;</span><br><span class="line">      &lt;button onClick=&#123;<span class="function">() =&gt;</span> dispatch(&#123;<span class="attr">type</span>: <span class="string">&#x27;decrement&#x27;</span>&#125;)&#125;&gt;-&lt;/button&gt;</span><br><span class="line">      &lt;button onClick=&#123;<span class="function">() =&gt;</span> dispatch(&#123;<span class="attr">type</span>: <span class="string">&#x27;increment&#x27;</span>&#125;)&#125;&gt;+&lt;/button&gt;</span><br><span class="line">    &lt;/&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//延迟设定状态</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">init</span>(<span class="params">initialCount</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;<span class="attr">count</span>: initialCount&#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">reducer</span>(<span class="params">state, action</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">switch</span> (action.type) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;increment&#x27;</span>:</span><br><span class="line">      <span class="keyword">return</span> &#123;<span class="attr">count</span>: state.count + <span class="number">1</span>&#125;;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;decrement&#x27;</span>:</span><br><span class="line">      <span class="keyword">return</span> &#123;<span class="attr">count</span>: state.count - <span class="number">1</span>&#125;;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;reset&#x27;</span>:</span><br><span class="line">      <span class="keyword">return</span> init(action.payload);</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">      <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Counter</span>(<span class="params">&#123;initialCount&#125;</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> [state, dispatch] = useReducer(reducer, initialCount, init);</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;&gt;</span><br><span class="line">      Count: &#123;state.count&#125;</span><br><span class="line">      &lt;button</span><br><span class="line">        onClick=&#123;<span class="function">() =&gt;</span> dispatch(&#123;<span class="attr">type</span>: <span class="string">&#x27;reset&#x27;</span>, <span class="attr">payload</span>: initialCount&#125;)&#125;&gt;</span><br><span class="line">        Reset</span><br><span class="line">      &lt;/button&gt;</span><br><span class="line">      &lt;button onClick=&#123;<span class="function">() =&gt;</span> dispatch(&#123;<span class="attr">type</span>: <span class="string">&#x27;decrement&#x27;</span>&#125;)&#125;&gt;-&lt;/button&gt;</span><br><span class="line">      &lt;button onClick=&#123;<span class="function">() =&gt;</span> dispatch(&#123;<span class="attr">type</span>: <span class="string">&#x27;increment&#x27;</span>&#125;)&#125;&gt;+&lt;/button&gt;</span><br><span class="line">    &lt;/&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><strong>useCallback</strong>: <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> memoizedCallback = useCallback(</span><br><span class="line">  () =&gt; &#123;</span><br><span class="line">    doSomething(a, b);</span><br><span class="line">  &#125;,</span><br><span class="line">  [a, b],</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>返回一个记忆化的回调。</p></li>
+<li><p>传递一个内联回调和一组依赖项。useCallback将返回回调的记忆版本，仅当依赖项之一发生更改时才会更改。这在将回调传递给依赖引用相等以防止不必要的渲染的优化子组件时（例如shouldComponentUpdate）很有用。</p></li>
+<li><p><strong>useCallback(fn, deps)相当于useMemo(() =&gt; fn, deps)</strong>。</p></li>
+</ul></li>
+<li><strong>useMemo</strong>: <code>const memoizedValue = useMemo(() =&gt; computeExpensiveValue(a, b), [a, b]);</code>
+<ul>
+<li><p>返回一个记忆值。</p></li>
+<li><p>传递一个“create”函数和一个依赖数组。useMemo仅当依赖项之一发生更改时才会重新计算记忆值。这种优化有助于避免在每次渲染时进行昂贵的计算。<strong>请记住，传递给的函数useMemo在渲染期间运行。不要在那里做任何你在渲染时通常不会做的事情。例如，副作用属于useEffect，而不是useMemo。</strong></p></li>
+<li><p>如果没有提供数组，则每次渲染都会计算一个新值。您可以依赖useMemo作为性能优化，而不是作为语义保证。将来，React 可能会选择“忘记”一些先前记忆的值并在下一次渲染时重新计算它们，例如为屏幕外组件释放内存。编写你的代码，让它在没有的情况下仍然可以工作useMemo——然后添加它以优化性能。</p></li>
+</ul></li>
+<li><strong>useRef</strong>: <code>const refContainer = useRef(initialValue);</code>
+<ul>
+<li><p>useRef返回一个可变 ref 对象，其.current属性初始化为传递的参数 ( initialValue)。返回的对象将在组件的整个生命周期内持续存在。</p></li>
+<li><p>有些情况下，我们需要保证函数组件每次 render 之后，某些变量不会被重复申明，比如说 Dom 节点，定时器的 id 等等。</p></li>
+<li><p>在类组件中，我们完全可以通过给类添加一个自定义属性来保留，比如说 this.xxx， 但是函数组件没有 this，我们就需要使用 useRef 来实现。</p></li>
+</ul>
+<p>与useState的对比：</p>
+<ul>
+<li><p>useState的值更新触发重新渲染，useRef的值更新不触发渲染。</p></li>
+<li><p>useState的是异步更新react的，useRef是同步更新的。</p></li>
+</ul></li>
+<li><strong>useImpeativeHandle</strong>: <code>useImperativeHandle(ref, createHandle, [deps])</code>
+<ul>
+<li><p>子组件利用useImperativeHandle可以呈现方法或者属性给让父组件调用，可以控制显示的视野有多少。</p></li>
+<li><p>ref:需要被赋值的ref对象。</p></li>
+<li><p>createHandle: createHandle函数的返回值作为ref.current的值。</p></li>
+<li><p>[deps]: 依赖数组，依赖发生变化会重新执行createHandle函数。</p></li>
+<li><p>建议useImperativeHandle和forwardRef同时使用，减少暴露给父组件的属性，避免使用<strong>ref</strong>这样的命令式代码。</p></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;  useRef,forwardRef,MutableRefObject,useImperativeHandle,Ref&#125; <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line">​</span><br><span class="line"><span class="comment">//只暴露value、getType、focus给父级</span></span><br><span class="line"><span class="keyword">const</span> InputEl = forwardRef((props: &#123;&#125;, <span class="attr">ref</span>: Ref&lt;any&gt;): JSX.Element=&gt;&#123;</span><br><span class="line">    <span class="keyword">const</span> inputEl: MutableRefObject&lt;any&gt; = useRef();</span><br><span class="line">​</span><br><span class="line">    useImperativeHandle(ref, <span class="function">()=&gt;</span>(&#123;<span class="comment">//第一个参数：暴露哪个ref；第二个参数：暴露什么</span></span><br><span class="line">        value: (inputEl.current <span class="keyword">as</span> HTMLInputElement).value,</span><br><span class="line">        getType: <span class="function">() =&gt;</span> (inputEl.current <span class="keyword">as</span> HTMLInputElement).type,</span><br><span class="line">        focus: <span class="function">() =&gt;</span> (inputEl.current <span class="keyword">as</span> HTMLInputElement).focus()</span><br><span class="line">    &#125;));</span><br><span class="line">​</span><br><span class="line">    <span class="keyword">return</span>(</span><br><span class="line">        &lt;input ref=&#123;inputEl&#125; type=<span class="string">&quot;text&quot;</span> &#123;...props&#125;/&gt;</span><br><span class="line">    )</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//暴露整个input节点给父级</span></span><br><span class="line"><span class="keyword">const</span> InputEl = forwardRef((props: &#123;&#125;, <span class="attr">ref</span>: Ref&lt;any&gt;): JSX.Element=&gt;&#123;</span><br><span class="line">    <span class="keyword">return</span>(</span><br><span class="line">        &lt;input ref=&#123;ref&#125; type=<span class="string">&quot;text&quot;</span> &#123;...props&#125;/&gt;</span><br><span class="line">    )</span><br><span class="line">&#125;);</span><br><span class="line">​</span><br><span class="line"><span class="comment">//父级</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">InputWithFocusButton</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> inputEl: MutableRefObject&lt;any&gt; = useRef(<span class="literal">null</span>);</span><br><span class="line">​</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">onButtonClick</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;子组件input的对象:&#x27;</span>, inputEl.current);</span><br><span class="line">        inputEl.current.focus();</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        &lt;&gt;</span><br><span class="line">            &lt;InputEl ref=&#123;inputEl&#125; /&gt;</span><br><span class="line">            &lt;button onClick=&#123;onButtonClick&#125;&gt;Focus the input&lt;/button&gt;</span><br><span class="line">        &lt;/&gt;</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p><strong>useLayoutEffect</strong>:</p>
+<ul>
+<li><p>模板与 useEffect 相同，但它在所有 DOM 突变后同步触发。 使用它从 DOM 中读取布局并同步重新渲染。 在 useLayoutEffect 中安排的更新将在浏览器有机会绘制之前同步刷新。</p></li>
+<li><p>尽可能首选标准 useEffect 以避免阻塞视觉更新。</p></li>
+</ul></li>
+<li><p><strong>useDebugValue</strong>: <code>useDebugValue(value)</code></p>
+<p>useDebugValue可用于在 React DevTools 中显示自定义钩子的标签。</p>
+<p>例如，考虑在“构建您自己的 Hooks”中描述的 useFriendStatus 自定义 Hook。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">useFriendStatus</span>(<span class="params">friendID</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> [isOnline, setIsOnline] = useState(<span class="literal">null</span>);</span><br><span class="line">​</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">​</span><br><span class="line">  <span class="comment">// Show a label in DevTools next to this Hook</span></span><br><span class="line">  <span class="comment">// e.g. &quot;FriendStatus: Online&quot;</span></span><br><span class="line">  useDebugValue(isOnline ? <span class="string">&#x27;Online&#x27;</span> : <span class="string">&#x27;Offline&#x27;</span>);</span><br><span class="line">​</span><br><span class="line">  <span class="keyword">return</span> isOnline;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p><strong>useTransition</strong>: <code>const [isPending, startTransition] = useTransition();</code></p>
+<p>返回转换的挂起状态的有状态值，以及启动它的函数。</p>
+<ul>
+<li><p>startTransition 将提供的回调中的更新标记为转换。</p></li>
+<li>isPending 指示转换何时处于活动状态。 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> [isPending, startTransition] = useTransition();</span><br><span class="line">  <span class="keyword">const</span> [count, setCount] = useState(<span class="number">0</span>);</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">handleClick</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    startTransition(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      setCount(<span class="function"><span class="params">c</span> =&gt;</span> c + <span class="number">1</span>);</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">​</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &#123;isPending &amp;&amp; <span class="xml"><span class="tag">&lt;<span class="name">Spinner</span> /&gt;</span></span>&#125;</span><br><span class="line">      &lt;button onClick=&#123;handleClick&#125;&gt;&#123;count&#125;&lt;/button&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul></li>
+<li><p><strong>useId</strong>: <code>const id = useId();</code></p>
+<ul>
+<li><p>useId是一个钩子，用于生成在服务器和客户端之间稳定的唯一 ID，同时避免水合不匹配。</p></li>
+<li><p>useId不适用于在列表中生成<strong>键</strong>。密钥应该从您的数据中生成。</p></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//单个ID，将id直接传递给需要它的元素</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Checkbox</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> id = useId();</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;&gt;</span><br><span class="line">      &lt;label htmlFor=&#123;id&#125;&gt;Do you like React?&lt;/label&gt;</span><br><span class="line">      &lt;input id=&#123;id&#125; type=<span class="string">&quot;checkbox&quot;</span> name=<span class="string">&quot;react&quot;</span>/&gt;</span><br><span class="line">    &lt;/&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//多个ID，对于同一组件中的多个 ID，请使用相同的 附加后缀id：</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">NameFields</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> id = useId();</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;label htmlFor=&#123;id + <span class="string">&#x27;-firstName&#x27;</span>&#125;&gt;First Name&lt;/label&gt;</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;input id=&#123;id + <span class="string">&#x27;-firstName&#x27;</span>&#125; type=<span class="string">&quot;text&quot;</span> /&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">      &lt;label htmlFor=&#123;id + <span class="string">&#x27;-lastName&#x27;</span>&#125;&gt;Last Name&lt;/label&gt;</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;input id=&#123;id + <span class="string">&#x27;-lastName&#x27;</span>&#125; type=<span class="string">&quot;text&quot;</span> /&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="library-hooks为库作者提供的">Library Hooks(为库作者提供的)</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">名称</th>
+<th style="text-align: center;">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">useSyncExternalStore</td>
+<td style="text-align: center;">https://reactjs.org/docs/hooks-reference.html#library-hooks</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">useInsertionEffect</td>
+<td style="text-align: center;">https://reactjs.org/docs/hooks-reference.html#useinsertioneffect</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+
+            </div>
+            
+                <div class="kratos-copyright text-center clearfix">
+                    <h5>本作品采用 <a rel="license nofollow" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
+                </div>
+            
+            <footer class="kratos-entry-footer clearfix">
+                
+                    <div class="post-like-donate text-center clearfix" id="post-like-donate">
+                    
+                    
+                        <a class="share" href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
+                        <div class="share-wrap" style="display: none;">
+    <div class="share-group">
+        <a href="javascript:;" class="share-plain qq" onclick="share('qq');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-qq"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain qzone" onclick="share('qzone');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-star"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weixin pop style-plain" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weixin"></i>
+            </div>
+            <div class="share-int">
+                <div class="qrcode" id="wechat-qr"></div>
+                <p>打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</p>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weibo" onclick="share('weibo');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weibo"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain facebook style-plain" onclick="share('facebook');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-facebook"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain twitter style-plain" onclick="share('twitter');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-twitter"></i>
+            </div>
+        </a>
+    </div>
+    <script type="text/javascript">
+        $(()=>{
+            new QRCode("wechat-qr", {
+                text: "https://github.com/SmartBoyMB.github.io/2022/09/02/Hooks/",
+                width: 150,
+                height: 150,
+                correctLevel : QRCode.CorrectLevel.H
+            });
+        });
+        function share(dest) {
+            const qqBase        = "https://connect.qq.com/widget/shareqq/index.html?";
+            const weiboBase     = "https://service.weibo.com/share/share.php?";
+            const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
+            const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
+            const twitterBase   = "https://twitter.com/intent/tweet?";
+            const hostUrl       = "https://github.com/SmartBoyMB.github.io/2022/09/02/Hooks/";
+            const title         = "「」";
+            const excerpt       = `react Hooks
+介绍
+Hooks 是让你从函数组件中“钩入”React 状态和生命周期特性的函数。Hooks 在类中不起作用——它们让你在没有类的情况下使用 React。
+理解：函数组件没有办法存储react的状态和状态...`;
+            let _URL;
+            switch (dest) {
+                case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
+                case "weibo"    : _URL = weiboBase+"url="+hostUrl+"&title="+title+excerpt;                                 break;
+                case "qzone"    : _URL = qzoneBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";  break;
+                case "facebook" : _URL = facebookBase+"u="+hostUrl;                                                        break;
+                case "twitter"  : _URL = twitterBase+"text="+title+excerpt+"&url="+hostUrl;                                break;
+            }
+            window.open(_URL);
+        };
+    </script>
+</div>
+                    
+                    </div>
+                
+                <div class="footer-tag clearfix">
+                    <div class="pull-left">
+                    <i class="fa fa-tags"></i>
+                        
+                    </div>
+                    <div class="pull-date">
+                    <span>最后编辑：2022-09-02</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        
+            <nav class="navigation post-navigation clearfix" role="navigation">
+                
+                <div class="nav-previous clearfix">
+                    <a title=" (no title)" href="/SmartBoyMB.github.io/2022/09/02/npm下载react项目时发生的错误/">&lt; 上一篇</a>
+                </div>
+                
+                
+                <div class="nav-next clearfix">
+                    <a title=" (no title)" href="/SmartBoyMB.github.io/2022/09/02/React基础知识/">下一篇 &gt;</a>
+                </div>
+                
+            </nav>
+        
+        
+    </article>
+</section>
+        </div>
+                
+            <section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+                
+                    <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="https://s.gravatar.com/avatar/8bdf15a341bdc59bbbe2cdb1eb781eb4?s=80" />
+        </div>
+    </div>
+    <div class="textwidget">
+        
+            <p class="text-center">沅湘是清水</p>
+        
+    </div>
+</aside>
+                
+                    <!-- Moved to about.ejs -->
+                
+                    
+  <aside id="krw-categories" class="widget widget-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">10</span></li></ul>
+  </aside>
+
+
+                
+                    
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/SmartBoyMB.github.io/tags/LaTeX/" style="font-size: 0.6em;">LaTeX</a> <a href="/SmartBoyMB.github.io/tags/blog/" style="font-size: 0.67em;">blog</a> <a href="/SmartBoyMB.github.io/tags/folder/" style="font-size: 0.6em;">folder</a> <a href="/SmartBoyMB.github.io/tags/hexo/" style="font-size: 0.67em;">hexo</a> <a href="/SmartBoyMB.github.io/tags/mathjax/" style="font-size: 0.6em;">mathjax</a> <a href="/SmartBoyMB.github.io/tags/python/" style="font-size: 0.6em;">python</a> <a href="/SmartBoyMB.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 0.6em;">机器学习</a> <a href="/SmartBoyMB.github.io/tags/%E6%A6%82%E5%BF%B5/" style="font-size: 0.73em;">概念</a> <a href="/SmartBoyMB.github.io/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/" style="font-size: 0.8em;">知识图谱</a> <a href="/SmartBoyMB.github.io/tags/%E8%AE%BA%E6%96%87%E5%AD%A6%E4%B9%A0/" style="font-size: 0.6em;">论文学习</a>
+      </div>
+  </aside>
+
+                
+                    
+  <aside id="krw-posts" class="widget widget-kratos-poststab">
+  <h4 class="widget-title"><i class="fa fa-file"></i>最新文章</h4>
+  <div class="tab-content">
+      <ul class="list-group">
+        
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            <a class="list-group-item" href="/SmartBoyMB.github.io/2021/05/10/MachineLearning/"><i class="fa  fa-book"></i> MachineLearning</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/SmartBoyMB.github.io/2020/11/21/pythonLearning/"><i class="fa  fa-book"></i> pythonLearning</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/SmartBoyMB.github.io/2020/11/06/longtailrelation/"><i class="fa  fa-book"></i> long tail Relation</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/SmartBoyMB.github.io/2020/11/04/xiaoyangbenzhishitupu/"><i class="fa  fa-book"></i> 少样本知识图谱推理</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/SmartBoyMB.github.io/2020/11/04/howtosetmathjax/"><i class="fa  fa-book"></i> hexo 主题使用mathjax插件渲染LaTeX数学公式的问题</a>
+            
+          
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+      </ul>
+  </div>
+  </aside>
+
+                
+            </section>
+        
+        </div>
+    </div>
+</div>
+<footer>
+    <div id="footer">
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/SmartBoyMB.github.io/search/">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="box theme-box" id="darkmode-switch">
+                        <span class="fa fa-adjust"></span>
+                    </div>
+                
+                
+            </div>
+            <div class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                        
+                        <li><a target="_blank" rel="nofollow" href="https://t.me/CandyUnion"><i class="fa fa-telegram"></i></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://twitter.com/Candiinya"><i class="fa fa-twitter"></i></a></li>
+                        
+                        
+                        
+                        <li><a target="_blank" rel="nofollow" href="https://github.com/SmartBoyMB"><i class="fa fa-github"></i></a></li>
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2022 Mei Biao 版权所有.</li>
+                            <li>本站已运行<span id="span_dt">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
+                            <li>Made with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by <a href="https://candinya.com" target="_blank" rel="nofollow">Candinya</a>.</li>
+                        </div>
+                        <div>
+                            <li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
+                            <li>Hosted on <a href="https://github.io" target="_blank">Github Pages</a></li>
+                        </div>
+                        <div>
+                            
+                            
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.4/dist/js/bootstrap.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
+<script>const notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));</script>
+
+    <div>
+        <canvas id="snow"></canvas>
+        <script async type="text/javascript" src="/js/snow.min.js"></script>
+    </div>
+
+<script async src="/js/candy.min.js"></script>
+
+
+    <script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script defer src="/js/kratosr.min.js"></script>
+<script defer src="/js/pjax.min.js"></script>
+
+
+    <script defer src="/js/kr-dark.min.js"></script>
+
+
+    </body>
+</html>

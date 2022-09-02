@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  <link rel="icon" href="">
+  <title>沅湘</title>
+  <meta name="author" content="Mei Biao" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="" />
+  
+  <meta name="description" content="培训课程学习 以业务为中心  技术应该为业务服务，业务的形态决定了技术的形态。学习技术应该向业务靠拢，既能有学习动力，也方便于现实中能有快速产出。 积极了解业务，以业务为导向，不要闭门造车。在设计时，一定要去积极了解业务，才能对需求有比较准确的定位，不能自己一拍脑袋决定，而是要积极沟通，详细了解用户痛点，才能更好的把握需求。 识别核心的需求，避免过度设计，舍大取小。对于需求的优先级要有概">
+<meta property="og:type" content="article">
+<meta property="og:title" content="沅湘">
+<meta property="og:url" content="https://github.com/SmartBoyMB.github.io/2022/09/02/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="沅湘">
+<meta property="og:description" content="培训课程学习 以业务为中心  技术应该为业务服务，业务的形态决定了技术的形态。学习技术应该向业务靠拢，既能有学习动力，也方便于现实中能有快速产出。 积极了解业务，以业务为导向，不要闭门造车。在设计时，一定要去积极了解业务，才能对需求有比较准确的定位，不能自己一拍脑袋决定，而是要积极沟通，详细了解用户痛点，才能更好的把握需求。 识别核心的需求，避免过度设计，舍大取小。对于需求的优先级要有概">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://github.com/SmartBoyMB.github.io/null">
+<meta property="article:published_time" content="2022-09-02T15:43:04.151Z">
+<meta property="article:modified_time" content="2022-09-02T15:46:17.717Z">
+<meta property="article:author" content="Mei Biao">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/SmartBoyMB.github.io/null">
+<meta name="twitter:site" content="@Candiinya">
+  
+  <!-- 站点验证相关 -->
+  
+    
+    
+    
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kratosr.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="highlight-css" href="/css/highlight.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="fontawe-css" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="nprogress-css" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" type="text/css" media="all">
+  
+  
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  
+    <link rel="stylesheet" id="darkmode-css" href="/css/kr-dark.min.css" type="text/css" media="all">
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/qrcode_js@1.0.0/qrcode.min.js"></script>
+  
+  
+<meta name="generator" content="Hexo 5.2.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style><link rel="alternate" href="/SmartBoyMB.github.io/atom.xml" title="沅湘" type="application/atom+xml">
+</head>
+
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <div class="nav-toggle"><a class="kratos-nav-toggle js-kratos-nav-toggle"><i></i></a></div>
+            <header id="kratos-header-section">
+                <div class="container">
+                    <div class="nav-header">
+                        <div class="color-logo"><a href="/">沅湘</a></div>
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                                    
+                                        <li><a href="/SmartBoyMB.github.io/"><i class="fa fa-home"></i>首页</a></li>
+                                    
+                                
+                                    
+                                        <li><a href="/SmartBoyMB.github.io/archives/"><i class="fa fa-file"></i>档案馆</a></li>
+                                    
+                                
+                                    
+                                        <li>
+                                            <a><i class="fa fa-link"></i>链接</a>
+                                            <ul class="sub-menu">
+                                                
+                                                    
+                                                
+                                                    
+                                                        <li><a target="_blank" rel="noopener" href="https://candinya.com">作者博客</a></li>
+                                                    
+                                                
+                                                    
+                                                        <li><a href="https://github.com/Candinya/Kratos-Rebirth">项目链接</a></li>
+                                                    
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/SmartBoyMB.github.io/">
+                        <h2>沅湘</h2> <br />
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div class="row">
+                    
+        <div id="main">
+            <section class="col-md-8">
+    <article>
+        <div class="kratos-hentry kratos-post-inner clearfix">
+            <header class="kratos-entry-header">
+                <h1 class="kratos-entry-title text-center"></h1>
+                
+                <div class="kratos-post-meta text-center">
+                    <span>
+                        <i class="fa fa-calendar"></i> 2022-09-02
+                        <i class="fa fa-folder"></i> 分类于 
+                        <i class="fa fa-user"></i> 作者 Mei Biao
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~1.90K
+                        
+                        字
+                        
+                    </span>
+                </div>
+            </header>
+            <div class="kratos-post-content">
+                
+                <hr />
+                <h1 id="培训课程学习">培训课程学习</h1>
+<h2 id="以业务为中心">以业务为中心</h2>
+<ul>
+<li><p>技术应该为业务服务，业务的形态决定了技术的形态。学习技术应该向业务靠拢，既能有学习动力，也方便于现实中能有快速产出。</p></li>
+<li><p>积极了解业务，以业务为导向，不要闭门造车。在设计时，一定要去积极了解业务，才能对需求有比较准确的定位，不能自己一拍脑袋决定，而是要积极沟通，详细了解用户痛点，才能更好的把握需求。</p></li>
+<li><p>识别核心的需求，避免过度设计，舍大取小。对于需求的优先级要有概念，对于优先级高的能解决核心问题的需求才是最需要关注的点，而不是花大量的时间在目前不太需要的需求，或者付出与受益比例小的需求上。</p></li>
+</ul>
+<h2 id="在工作中的态度">在工作中的态度</h2>
+<ul>
+<li><p><strong>主人翁思想</strong>：对事情应该自我驱动，为自己的工作负责，主动去思考，而不是被动去接受业务。提高自己的主观能动性是提升自己能力的好方法。</p></li>
+<li><p><strong>追求卓越</strong>：对于问题的根本原因要有探究精神，了解逻辑底层和问题本质会在未来的工作中起到很关键的作用，表面上多花费了时间，但是积累下来，未来会减少很多弯路和不必要的时间浪费，能提升自己的效率。</p></li>
+<li><p><strong>持续学习</strong>：学无止境，一是学习时间无止境，而是学习范围无止境，在深度拓宽的同时也要拓宽自己的知识广度，要做到大体上了解，有方向上精通。</p></li>
+<li><p><strong>心态开放</strong>：敢于发言也敢于提出建议，也敢于接受不足接受建议。同时也要能为对方思考，理解对方的想法和不同。</p></li>
+</ul>
+<h2 id="学习到的方法论">学习到的方法论</h2>
+<ul>
+<li><p><strong>5Why</strong>：挖掘问题的深度，五层以上大概率就是根本原因，要积极学习积极挖掘，但也要避免浪费精力，控制时间，亦如学习，学到新知识中又有新知识，也需要保证不会浪费太多时间去追求广度。</p></li>
+<li><p><strong>效率至上四步走</strong>：自动化一切，复杂问题简单化，简单问题标准化，标准问题流程化，流程问题自动化。实际上自动化问题的过程也就是总结自己方法，以及拆分问题细化处理的过程，应当总结出自己应对问题的方法论，这样效率有很大的提升。</p></li>
+<li><p><strong>KISS原则</strong>：快速迭代的思想，保证目的是一目了然的，也就是说要逐步迭代演技，小步快跑的思想，每次迭代应该目的单一且不复杂，保证新的一轮迭代的目的是明确的严谨的，会更好的规范迭代的过程。</p></li>
+</ul>
+<h2 id="保证质量的核心思想">保证质量的核心思想</h2>
+<ul>
+<li><p><strong>风险前置</strong>：对于风险应该从始至终提前考虑，也是贯彻于软件开发整个生命周期，这样修复的代价就会越小，避免后期人力的浪费。</p></li>
+<li><p><strong>测试</strong>：保证质量应该重心在设计，不能依赖于最后的测试，测试也是抽样的，并不是万全之策，要记住测试只是最后的兜底保障。</p></li>
+<li><p><strong>历史代码</strong>：自己要在前人的代码上进行开发，也要交付给别人进行维护，自己的代码规范很重要，但也要学会如何高效的在质量低的代码上进行开发。</p></li>
+<li><p><strong>协作</strong>：大的需求的项目开发，往往任务划分和交互会很复杂，协作很重要，也很有挑战。</p></li>
+</ul>
+<h2 id="代码编写">代码编写</h2>
+<ul>
+<li><p>代码原则： 避免直接、简单直接、和团队内要保持一致</p></li>
+<li><p>命名： 命名带有含义并且表达准确，长度适中，不要有字面量直接作为参数。</p></li>
+<li><p>函数结构： 参数三个以下，超过要封装成对象；一个函数内的内容抽象层级要在一个层级；功能应该专一，不要有其他的副作用；用异常代替返回码</p></li>
+<li><p>注释： 代码就是最好的注释；注释意图（why），而不是注释实现；好代码永远大于坏代码+好注释；</p></li>
+<li><p>日志： 保持打日志的习惯；注意日志的分级：ERROR，WARN，INFO（一般用在关键业务核心路径处理结果），DEBUG，TRACE；</p></li>
+<li><p>异常： 早throw，晚catch的原则，异常的处理层往往在抛出层之上。不能忽略异常，并记得关闭资源。异常处理的性能成本非常高，要慎重。</p></li>
+</ul>
+<h2 id="整体开发流程">整体开发流程</h2>
+<p><strong>需求-&gt;设计-&gt;开发-&gt;测试-&gt;集成-&gt;集成测试-&gt;灰度-&gt;全量&amp;线上运维</strong></p>
+<h2 id="项目管理的重点">项目管理的重点</h2>
+<p><strong>项目等级：</strong> * 等级：S/A/B/迭代</p>
+<ul>
+<li><p>根据项目重要性和复杂性分级，不等于优先级</p></li>
+<li><p>要事第一原则</p></li>
+</ul>
+<p><strong>接受项目初期：</strong> * 查看立项报告（根据模版：了解为什么要做，做什么，目标是什么，怎么做，评估方式，需要的资源等问题。</p>
+<ul>
+<li>了解项目机制：包括整体管理策略、项目相关方、沟通管理机制、问题处理机制、风险管理机制、知识管理机制等。</li>
+</ul>
+<p><strong>如何保障交付：</strong> * 工作拆分WBS：复杂工作简单化，分层拆分，不重不漏，颗粒度要小，每一条任务都要时间规定和负责人。</p>
+<ul>
+<li><p>责任分配RACI：任务都要有负责人（R）、当责者（A）、咨询方（C）、告知者（I）。</p></li>
+<li><p>进度计划：做好甘特图管理项目各项任务的进度。</p></li>
+<li><p>质量管理：准备好的定义标准（DoR），完成的定义标准（DoD）</p></li>
+<li><p>参与复盘：开放心态，持续反思，不断进步。</p></li>
+</ul>
+<h2 id="资料">资料：</h2>
+<p>《clean code》 <img src="/images/实习收获/课程总结资料-1.png" /></p>
+
+            </div>
+            
+                <div class="kratos-copyright text-center clearfix">
+                    <h5>本作品采用 <a rel="license nofollow" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
+                </div>
+            
+            <footer class="kratos-entry-footer clearfix">
+                
+                    <div class="post-like-donate text-center clearfix" id="post-like-donate">
+                    
+                    
+                        <a class="share" href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
+                        <div class="share-wrap" style="display: none;">
+    <div class="share-group">
+        <a href="javascript:;" class="share-plain qq" onclick="share('qq');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-qq"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain qzone" onclick="share('qzone');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-star"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weixin pop style-plain" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weixin"></i>
+            </div>
+            <div class="share-int">
+                <div class="qrcode" id="wechat-qr"></div>
+                <p>打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</p>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weibo" onclick="share('weibo');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weibo"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain facebook style-plain" onclick="share('facebook');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-facebook"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain twitter style-plain" onclick="share('twitter');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-twitter"></i>
+            </div>
+        </a>
+    </div>
+    <script type="text/javascript">
+        $(()=>{
+            new QRCode("wechat-qr", {
+                text: "https://github.com/SmartBoyMB.github.io/2022/09/02/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/",
+                width: 150,
+                height: 150,
+                correctLevel : QRCode.CorrectLevel.H
+            });
+        });
+        function share(dest) {
+            const qqBase        = "https://connect.qq.com/widget/shareqq/index.html?";
+            const weiboBase     = "https://service.weibo.com/share/share.php?";
+            const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
+            const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
+            const twitterBase   = "https://twitter.com/intent/tweet?";
+            const hostUrl       = "https://github.com/SmartBoyMB.github.io/2022/09/02/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/";
+            const title         = "「」";
+            const excerpt       = `培训课程学习
+以业务为中心
+
+技术应该为业务服务，业务的形态决定了技术的形态。学习技术应该向业务靠拢，既能有学习动力，也方便于现实中能有快速产出。
+积极了解业务，以业务为导向，不要闭门造车。在设计时，一定要去积极了解业务，才能...`;
+            let _URL;
+            switch (dest) {
+                case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
+                case "weibo"    : _URL = weiboBase+"url="+hostUrl+"&title="+title+excerpt;                                 break;
+                case "qzone"    : _URL = qzoneBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";  break;
+                case "facebook" : _URL = facebookBase+"u="+hostUrl;                                                        break;
+                case "twitter"  : _URL = twitterBase+"text="+title+excerpt+"&url="+hostUrl;                                break;
+            }
+            window.open(_URL);
+        };
+    </script>
+</div>
+                    
+                    </div>
+                
+                <div class="footer-tag clearfix">
+                    <div class="pull-left">
+                    <i class="fa fa-tags"></i>
+                        
+                    </div>
+                    <div class="pull-date">
+                    <span>最后编辑：2022-09-02</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        
+            <nav class="navigation post-navigation clearfix" role="navigation">
+                
+                <div class="nav-previous clearfix">
+                    <a title=" (no title)" href="/SmartBoyMB.github.io/2022/09/02/RN知识问答/">&lt; 上一篇</a>
+                </div>
+                
+                
+                <div class="nav-next clearfix">
+                    <a title=" (no title)" href="/SmartBoyMB.github.io/2022/09/02/npm下载react项目时发生的错误/">下一篇 &gt;</a>
+                </div>
+                
+            </nav>
+        
+        
+    </article>
+</section>
+        </div>
+                
+            <section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+                
+                    <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="https://s.gravatar.com/avatar/8bdf15a341bdc59bbbe2cdb1eb781eb4?s=80" />
+        </div>
+    </div>
+    <div class="textwidget">
+        
+            <p class="text-center">沅湘是清水</p>
+        
+    </div>
+</aside>
+                
+                    <!-- Moved to about.ejs -->
+                
+                    
+  <aside id="krw-categories" class="widget widget-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">10</span></li></ul>
+  </aside>
+
+
+                
+                    
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/SmartBoyMB.github.io/tags/LaTeX/" style="font-size: 0.6em;">LaTeX</a> <a href="/SmartBoyMB.github.io/tags/blog/" style="font-size: 0.67em;">blog</a> <a href="/SmartBoyMB.github.io/tags/folder/" style="font-size: 0.6em;">folder</a> <a href="/SmartBoyMB.github.io/tags/hexo/" style="font-size: 0.67em;">hexo</a> <a href="/SmartBoyMB.github.io/tags/mathjax/" style="font-size: 0.6em;">mathjax</a> <a href="/SmartBoyMB.github.io/tags/python/" style="font-size: 0.6em;">python</a> <a href="/SmartBoyMB.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 0.6em;">机器学习</a> <a href="/SmartBoyMB.github.io/tags/%E6%A6%82%E5%BF%B5/" style="font-size: 0.73em;">概念</a> <a href="/SmartBoyMB.github.io/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/" style="font-size: 0.8em;">知识图谱</a> <a href="/SmartBoyMB.github.io/tags/%E8%AE%BA%E6%96%87%E5%AD%A6%E4%B9%A0/" style="font-size: 0.6em;">论文学习</a>
+      </div>
+  </aside>
+
+                
+                    
+  <aside id="krw-posts" class="widget widget-kratos-poststab">
+  <h4 class="widget-title"><i class="fa fa-file"></i>最新文章</h4>
+  <div class="tab-content">
+      <ul class="list-group">
+        
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            <a class="list-group-item" href="/SmartBoyMB.github.io/2021/05/10/MachineLearning/"><i class="fa  fa-book"></i> MachineLearning</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/SmartBoyMB.github.io/2020/11/21/pythonLearning/"><i class="fa  fa-book"></i> pythonLearning</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/SmartBoyMB.github.io/2020/11/06/longtailrelation/"><i class="fa  fa-book"></i> long tail Relation</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/SmartBoyMB.github.io/2020/11/04/xiaoyangbenzhishitupu/"><i class="fa  fa-book"></i> 少样本知识图谱推理</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/SmartBoyMB.github.io/2020/11/04/howtosetmathjax/"><i class="fa  fa-book"></i> hexo 主题使用mathjax插件渲染LaTeX数学公式的问题</a>
+            
+          
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+      </ul>
+  </div>
+  </aside>
+
+                
+            </section>
+        
+        </div>
+    </div>
+</div>
+<footer>
+    <div id="footer">
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/SmartBoyMB.github.io/search/">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="box theme-box" id="darkmode-switch">
+                        <span class="fa fa-adjust"></span>
+                    </div>
+                
+                
+            </div>
+            <div class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                        
+                        <li><a target="_blank" rel="nofollow" href="https://t.me/CandyUnion"><i class="fa fa-telegram"></i></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://twitter.com/Candiinya"><i class="fa fa-twitter"></i></a></li>
+                        
+                        
+                        
+                        <li><a target="_blank" rel="nofollow" href="https://github.com/SmartBoyMB"><i class="fa fa-github"></i></a></li>
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2022 Mei Biao 版权所有.</li>
+                            <li>本站已运行<span id="span_dt">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
+                            <li>Made with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by <a href="https://candinya.com" target="_blank" rel="nofollow">Candinya</a>.</li>
+                        </div>
+                        <div>
+                            <li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
+                            <li>Hosted on <a href="https://github.io" target="_blank">Github Pages</a></li>
+                        </div>
+                        <div>
+                            
+                            
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.4/dist/js/bootstrap.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
+<script>const notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));</script>
+
+    <div>
+        <canvas id="snow"></canvas>
+        <script async type="text/javascript" src="/js/snow.min.js"></script>
+    </div>
+
+<script async src="/js/candy.min.js"></script>
+
+
+    <script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script defer src="/js/kratosr.min.js"></script>
+<script defer src="/js/pjax.min.js"></script>
+
+
+    <script defer src="/js/kr-dark.min.js"></script>
+
+
+    </body>
+</html>
