@@ -4,7 +4,7 @@
   <!-- 元数据 -->
   <meta charset="utf-8">
   <link rel="icon" href="">
-  <title>沅湘</title>
+  <title>React Native 存在的问题 | 沅湘</title>
   <meta name="author" content="Mei Biao" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -13,19 +13,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="" />
+    <meta name="keywords" content="problems" />
   
-  <meta name="description" content="problems 官方配置链接 官网RN环境配置 JDK版本不兼容问题 报错信息： Android Studio Error &quot;Unsupported class file major version 62&quot; 原因： jdk版本过高，编译的类文件不匹配，&quot;version 62&quot;是指 jdk 18。 解决方法：  使用低版本的jdk，And">
+  <meta name="description" content="官方配置链接 官网RN环境配置 JDK版本不兼容问题 报错信息： Android Studio Error &quot;Unsupported class file major version 62&quot; 原因： jdk版本过高，编译的类文件不匹配，&quot;version 62&quot;是指 jdk 18。 解决方法：  使用低版本的jdk，Android 工具链仅支">
 <meta property="og:type" content="article">
-<meta property="og:title" content="沅湘">
+<meta property="og:title" content="React Native 存在的问题">
 <meta property="og:url" content="https://github.com/SmartBoyMB.github.io/2022/09/02/RN_problems/index.html">
 <meta property="og:site_name" content="沅湘">
-<meta property="og:description" content="problems 官方配置链接 官网RN环境配置 JDK版本不兼容问题 报错信息： Android Studio Error &quot;Unsupported class file major version 62&quot; 原因： jdk版本过高，编译的类文件不匹配，&quot;version 62&quot;是指 jdk 18。 解决方法：  使用低版本的jdk，And">
+<meta property="og:description" content="官方配置链接 官网RN环境配置 JDK版本不兼容问题 报错信息： Android Studio Error &quot;Unsupported class file major version 62&quot; 原因： jdk版本过高，编译的类文件不匹配，&quot;version 62&quot;是指 jdk 18。 解决方法：  使用低版本的jdk，Android 工具链仅支">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://github.com/SmartBoyMB.github.io/null">
 <meta property="article:published_time" content="2022-09-02T15:49:30.058Z">
-<meta property="article:modified_time" content="2022-09-02T15:33:03.258Z">
+<meta property="article:modified_time" content="2022-09-02T16:18:36.968Z">
 <meta property="article:author" content="Mei Biao">
+<meta property="article:tag" content="problems">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://github.com/SmartBoyMB.github.io/null">
 <meta name="twitter:site" content="@Candiinya">
@@ -242,17 +243,17 @@ mjx-container[display="true"] + br {
     <article>
         <div class="kratos-hentry kratos-post-inner clearfix">
             <header class="kratos-entry-header">
-                <h1 class="kratos-entry-title text-center"></h1>
+                <h1 class="kratos-entry-title text-center">React Native 存在的问题</h1>
                 
                 <div class="kratos-post-meta text-center">
                     <span>
                         <i class="fa fa-calendar"></i> 2022-09-02
-                        <i class="fa fa-folder"></i> 分类于 
+                        <i class="fa fa-folder"></i> 分类于 <a class="label-link" href="/SmartBoyMB.github.io/categories/React-Native/">React Native</a>, <a class="label-link" href="/SmartBoyMB.github.io/categories/React-Native/%E5%AD%A6%E4%B9%A0/">学习</a>
                         <i class="fa fa-user"></i> 作者 Mei Biao
                         <i class="fa fa-edit"></i> 
                         
                         
-                            ~3.88K
+                            ~3.87K
                         
                         字
                         
@@ -261,9 +262,12 @@ mjx-container[display="true"] + br {
             </header>
             <div class="kratos-post-content">
                 
+                    <div class="kratos-post-inner-toc">
+                        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%98%E6%96%B9%E9%85%8D%E7%BD%AE%E9%93%BE%E6%8E%A5"><span class="toc-number">1.</span> <span class="toc-text">官方配置链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jdk%E7%89%88%E6%9C%AC%E4%B8%8D%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98"><span class="toc-number">2.</span> <span class="toc-text">JDK版本不兼容问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%A5%E9%94%99%E4%BF%A1%E6%81%AF"><span class="toc-number">2.1.</span> <span class="toc-text">报错信息：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E5%9B%A0"><span class="toc-number">2.2.</span> <span class="toc-text">原因：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="toc-number">2.3.</span> <span class="toc-text">解决方法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B8%E5%85%B3%E9%93%BE%E6%8E%A5"><span class="toc-number">2.4.</span> <span class="toc-text">相关链接：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vscode%E8%B0%83%E8%AF%95%E6%97%B6%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">3.</span> <span class="toc-text">VSCode调试时的问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%A5%E9%94%99%E4%BF%A1%E6%81%AF-1"><span class="toc-number">3.1.</span> <span class="toc-text">报错信息：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E5%9B%A0-1"><span class="toc-number">3.2.</span> <span class="toc-text">原因：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95"><span class="toc-number">3.3.</span> <span class="toc-text">解决办法：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E6%9E%84%E5%BB%BAts%E6%A8%A1%E6%9D%BFreact-native%E9%A1%B9%E7%9B%AE%E9%97%AE%E9%A2%98"><span class="toc-number">4.</span> <span class="toc-text">初始化构建TS模板React Native项目问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%A5%E9%94%99%E4%BF%A1%E6%81%AF-2"><span class="toc-number">4.1.</span> <span class="toc-text">报错信息：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E5%9B%A0-2"><span class="toc-number">4.2.</span> <span class="toc-text">原因：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95-1"><span class="toc-number">4.3.</span> <span class="toc-text">解决方法：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%951"><span class="toc-number">4.3.1.</span> <span class="toc-text">方法1:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%952%E6%96%B9%E6%B3%951%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%952%E5%B9%B6%E6%9C%AA%E5%B0%9D%E8%AF%95"><span class="toc-number">4.3.2.</span> <span class="toc-text">方法2：（方法1成功解决，方法2并未尝试）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#andorid-app-%E5%AE%89%E8%A3%85%E7%BC%BA%E5%B0%91%E5%AF%86%E9%92%A5%E5%BA%93%E9%97%AE%E9%A2%98"><span class="toc-number">5.</span> <span class="toc-text">Andorid App 安装缺少密钥库问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%A5%E9%94%99%E4%BF%A1%E6%81%AF-3"><span class="toc-number">5.1.</span> <span class="toc-text">报错信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E5%9B%A0-3"><span class="toc-number">5.2.</span> <span class="toc-text">原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-number">5.3.</span> <span class="toc-text">解决方案</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%A7%8D"><span class="toc-number">5.3.1.</span> <span class="toc-text">第一种：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%A7%8D"><span class="toc-number">5.3.2.</span> <span class="toc-text">第二种：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rn-fetch%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98"><span class="toc-number">6.</span> <span class="toc-text">RN fetch()网络请求失败问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF"><span class="toc-number">6.1.</span> <span class="toc-text">错误信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E5%9B%A0-4"><span class="toc-number">6.2.</span> <span class="toc-text">原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95-2"><span class="toc-number">6.3.</span> <span class="toc-text">解决方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#react-nagivation-%E7%89%88%E6%9C%AC%E9%97%AE%E9%A2%98"><span class="toc-number">7.</span> <span class="toc-text">React-Nagivation 版本问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF-1"><span class="toc-number">7.1.</span> <span class="toc-text">错误信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E5%9B%A0-5"><span class="toc-number">7.2.</span> <span class="toc-text">原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95-1"><span class="toc-number">7.3.</span> <span class="toc-text">解决办法</span></a></li></ol></li></ol>
+                    </div>
+                
                 <hr />
-                <h1 id="problems">problems</h1>
-<h2 id="官方配置链接">官方配置链接</h2>
+                <h2 id="官方配置链接">官方配置链接</h2>
 <p><a target="_blank" rel="noopener" href="https://www.react-native.cn/docs/environment-setup">官网RN环境配置</a></p>
 <h2 id="jdk版本不兼容问题">JDK版本不兼容问题</h2>
 <h3 id="报错信息">报错信息：</h3>
@@ -404,13 +408,14 @@ mjx-container[display="true"] + br {
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
             const hostUrl       = "https://github.com/SmartBoyMB.github.io/2022/09/02/RN_problems/";
-            const title         = "「」";
-            const excerpt       = `problems
-官方配置链接
+            const title         = "「React Native 存在的问题」";
+            const excerpt       = `官方配置链接
 官网RN环境配置
 JDK版本不兼容问题
 报错信息：
-Android Studio Error &quot;Unsupported class file major version 62&quo...`;
+Android Studio Error &quot;Unsupported class file major version 62&quot;
+原因：
+j...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -429,10 +434,10 @@ Android Studio Error &quot;Unsupported class file major version 62&quo...`;
                 <div class="footer-tag clearfix">
                     <div class="pull-left">
                     <i class="fa fa-tags"></i>
-                        
+                        <a class="tag-none-link" href="/SmartBoyMB.github.io/tags/problems/" rel="tag">problems</a>
                     </div>
                     <div class="pull-date">
-                    <span>最后编辑：2022-09-02</span>
+                    <span>最后编辑：2022-09-03</span>
                     </div>
                 </div>
             </footer>
@@ -441,12 +446,12 @@ Android Studio Error &quot;Unsupported class file major version 62&quo...`;
             <nav class="navigation post-navigation clearfix" role="navigation">
                 
                 <div class="nav-previous clearfix">
-                    <a title=" (no title)" href="/SmartBoyMB.github.io/2022/09/02/FlexBox布局/">&lt; 上一篇</a>
+                    <a title=" FlexBox 布局" href="/SmartBoyMB.github.io/2022/09/02/FlexBox布局/">&lt; 上一篇</a>
                 </div>
                 
                 
                 <div class="nav-next clearfix">
-                    <a title=" (no title)" href="/SmartBoyMB.github.io/2022/09/02/手势交互/">下一篇 &gt;</a>
+                    <a title=" React Native的手势交互" href="/SmartBoyMB.github.io/2022/09/02/手势交互/">下一篇 &gt;</a>
                 </div>
                 
             </nav>
@@ -468,7 +473,7 @@ Android Studio Error &quot;Unsupported class file major version 62&quo...`;
     </div>
     <div class="textwidget">
         
-            <p class="text-center">沅湘是清水</p>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%98%E6%96%B9%E9%85%8D%E7%BD%AE%E9%93%BE%E6%8E%A5"><span class="toc-number">1.</span> <span class="toc-text">官方配置链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jdk%E7%89%88%E6%9C%AC%E4%B8%8D%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98"><span class="toc-number">2.</span> <span class="toc-text">JDK版本不兼容问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%A5%E9%94%99%E4%BF%A1%E6%81%AF"><span class="toc-number">2.1.</span> <span class="toc-text">报错信息：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E5%9B%A0"><span class="toc-number">2.2.</span> <span class="toc-text">原因：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="toc-number">2.3.</span> <span class="toc-text">解决方法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B8%E5%85%B3%E9%93%BE%E6%8E%A5"><span class="toc-number">2.4.</span> <span class="toc-text">相关链接：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vscode%E8%B0%83%E8%AF%95%E6%97%B6%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">3.</span> <span class="toc-text">VSCode调试时的问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%A5%E9%94%99%E4%BF%A1%E6%81%AF-1"><span class="toc-number">3.1.</span> <span class="toc-text">报错信息：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E5%9B%A0-1"><span class="toc-number">3.2.</span> <span class="toc-text">原因：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95"><span class="toc-number">3.3.</span> <span class="toc-text">解决办法：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E6%9E%84%E5%BB%BAts%E6%A8%A1%E6%9D%BFreact-native%E9%A1%B9%E7%9B%AE%E9%97%AE%E9%A2%98"><span class="toc-number">4.</span> <span class="toc-text">初始化构建TS模板React Native项目问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%A5%E9%94%99%E4%BF%A1%E6%81%AF-2"><span class="toc-number">4.1.</span> <span class="toc-text">报错信息：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E5%9B%A0-2"><span class="toc-number">4.2.</span> <span class="toc-text">原因：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95-1"><span class="toc-number">4.3.</span> <span class="toc-text">解决方法：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%951"><span class="toc-number">4.3.1.</span> <span class="toc-text">方法1:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%952%E6%96%B9%E6%B3%951%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%952%E5%B9%B6%E6%9C%AA%E5%B0%9D%E8%AF%95"><span class="toc-number">4.3.2.</span> <span class="toc-text">方法2：（方法1成功解决，方法2并未尝试）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#andorid-app-%E5%AE%89%E8%A3%85%E7%BC%BA%E5%B0%91%E5%AF%86%E9%92%A5%E5%BA%93%E9%97%AE%E9%A2%98"><span class="toc-number">5.</span> <span class="toc-text">Andorid App 安装缺少密钥库问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%A5%E9%94%99%E4%BF%A1%E6%81%AF-3"><span class="toc-number">5.1.</span> <span class="toc-text">报错信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E5%9B%A0-3"><span class="toc-number">5.2.</span> <span class="toc-text">原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-number">5.3.</span> <span class="toc-text">解决方案</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%A7%8D"><span class="toc-number">5.3.1.</span> <span class="toc-text">第一种：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%A7%8D"><span class="toc-number">5.3.2.</span> <span class="toc-text">第二种：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rn-fetch%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98"><span class="toc-number">6.</span> <span class="toc-text">RN fetch()网络请求失败问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF"><span class="toc-number">6.1.</span> <span class="toc-text">错误信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E5%9B%A0-4"><span class="toc-number">6.2.</span> <span class="toc-text">原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95-2"><span class="toc-number">6.3.</span> <span class="toc-text">解决方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#react-nagivation-%E7%89%88%E6%9C%AC%E9%97%AE%E9%A2%98"><span class="toc-number">7.</span> <span class="toc-text">React-Nagivation 版本问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF-1"><span class="toc-number">7.1.</span> <span class="toc-text">错误信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E5%9B%A0-5"><span class="toc-number">7.2.</span> <span class="toc-text">原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95-1"><span class="toc-number">7.3.</span> <span class="toc-text">解决办法</span></a></li></ol></li></ol>
         
     </div>
 </aside>
@@ -478,7 +483,7 @@ Android Studio Error &quot;Unsupported class file major version 62&quo...`;
                     
   <aside id="krw-categories" class="widget widget-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">10</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/Android-Studio/">Android Studio</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/Android-Studio/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/JavaScript/">JavaScript</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/JavaScript/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/React/">React</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/React/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/React-Native/">React Native</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/React-Native/Navigater/">Navigater</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/React-Native/Navigater/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/React-Native/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/TypeScript/">TypeScript</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/TypeScript/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">12</span></li></ul>
   </aside>
 
 
@@ -487,7 +492,7 @@ Android Studio Error &quot;Unsupported class file major version 62&quo...`;
   <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
     <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
       <div class="tag-clouds">
-        <a href="/SmartBoyMB.github.io/tags/LaTeX/" style="font-size: 0.6em;">LaTeX</a> <a href="/SmartBoyMB.github.io/tags/blog/" style="font-size: 0.67em;">blog</a> <a href="/SmartBoyMB.github.io/tags/folder/" style="font-size: 0.6em;">folder</a> <a href="/SmartBoyMB.github.io/tags/hexo/" style="font-size: 0.67em;">hexo</a> <a href="/SmartBoyMB.github.io/tags/mathjax/" style="font-size: 0.6em;">mathjax</a> <a href="/SmartBoyMB.github.io/tags/python/" style="font-size: 0.6em;">python</a> <a href="/SmartBoyMB.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 0.6em;">机器学习</a> <a href="/SmartBoyMB.github.io/tags/%E6%A6%82%E5%BF%B5/" style="font-size: 0.73em;">概念</a> <a href="/SmartBoyMB.github.io/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/" style="font-size: 0.8em;">知识图谱</a> <a href="/SmartBoyMB.github.io/tags/%E8%AE%BA%E6%96%87%E5%AD%A6%E4%B9%A0/" style="font-size: 0.6em;">论文学习</a>
+        <a href="/SmartBoyMB.github.io/tags/Hooks/" style="font-size: 0.6em;">Hooks</a> <a href="/SmartBoyMB.github.io/tags/LaTeX/" style="font-size: 0.6em;">LaTeX</a> <a href="/SmartBoyMB.github.io/tags/Q-A/" style="font-size: 0.6em;">Q&A</a> <a href="/SmartBoyMB.github.io/tags/blog/" style="font-size: 0.67em;">blog</a> <a href="/SmartBoyMB.github.io/tags/flexbox/" style="font-size: 0.6em;">flexbox</a> <a href="/SmartBoyMB.github.io/tags/folder/" style="font-size: 0.6em;">folder</a> <a href="/SmartBoyMB.github.io/tags/hexo/" style="font-size: 0.67em;">hexo</a> <a href="/SmartBoyMB.github.io/tags/mathjax/" style="font-size: 0.6em;">mathjax</a> <a href="/SmartBoyMB.github.io/tags/problem/" style="font-size: 0.6em;">problem</a> <a href="/SmartBoyMB.github.io/tags/problems/" style="font-size: 0.67em;">problems</a> <a href="/SmartBoyMB.github.io/tags/python/" style="font-size: 0.6em;">python</a> <a href="/SmartBoyMB.github.io/tags/%E4%BA%A4%E4%BA%92/" style="font-size: 0.6em;">交互</a> <a href="/SmartBoyMB.github.io/tags/%E4%BC%98%E5%8C%96/" style="font-size: 0.6em;">优化</a> <a href="/SmartBoyMB.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 0.73em;">基础知识</a> <a href="/SmartBoyMB.github.io/tags/%E5%AE%9E%E4%B9%A0/" style="font-size: 0.67em;">实习</a> <a href="/SmartBoyMB.github.io/tags/%E5%AE%A2%E6%88%B7%E7%AB%AF/" style="font-size: 0.8em;">客户端</a> <a href="/SmartBoyMB.github.io/tags/%E5%AF%BC%E8%88%AA%E5%99%A8/" style="font-size: 0.6em;">导航器</a> <a href="/SmartBoyMB.github.io/tags/%E5%B8%83%E5%B1%80/" style="font-size: 0.6em;">布局</a>
       </div>
   </aside>
 
@@ -501,79 +506,64 @@ Android Studio Error &quot;Unsupported class file major version 62&quo...`;
         
           
           
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            <a class="list-group-item" href="/SmartBoyMB.github.io/2021/05/10/MachineLearning/"><i class="fa  fa-book"></i> MachineLearning</a>
+            <a class="list-group-item" href="/SmartBoyMB.github.io/2022/09/02/%E7%BB%84%E4%BB%B6%E5%9F%BA%E7%A1%80/"><i class="fa  fa-book"></i> React Native的基础组件</a>
             
           
         
           
           
-            <a class="list-group-item" href="/SmartBoyMB.github.io/2020/11/21/pythonLearning/"><i class="fa  fa-book"></i> pythonLearning</a>
+            <a class="list-group-item" href="/SmartBoyMB.github.io/2022/09/02/%E4%BC%98%E5%8C%96%E6%80%A7%E8%83%BD/"><i class="fa  fa-book"></i> React Native的性能优化</a>
             
           
         
           
           
-            <a class="list-group-item" href="/SmartBoyMB.github.io/2020/11/06/longtailrelation/"><i class="fa  fa-book"></i> long tail Relation</a>
+            <a class="list-group-item" href="/SmartBoyMB.github.io/2022/09/02/%E9%A1%B5%E9%9D%A2%E5%AF%BC%E8%88%AA/"><i class="fa  fa-book"></i> React Native的页面导航</a>
             
           
         
           
           
-            <a class="list-group-item" href="/SmartBoyMB.github.io/2020/11/04/xiaoyangbenzhishitupu/"><i class="fa  fa-book"></i> 少样本知识图谱推理</a>
+            <a class="list-group-item" href="/SmartBoyMB.github.io/2022/09/02/%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1/"><i class="fa  fa-book"></i> React Native的网络通信</a>
             
           
         
           
           
-            <a class="list-group-item" href="/SmartBoyMB.github.io/2020/11/04/howtosetmathjax/"><i class="fa  fa-book"></i> hexo 主题使用mathjax插件渲染LaTeX数学公式的问题</a>
+            <a class="list-group-item" href="/SmartBoyMB.github.io/2022/09/02/%E6%89%8B%E5%8A%BF%E4%BA%A4%E4%BA%92/"><i class="fa  fa-book"></i> React Native的手势交互</a>
             
           
         
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
           
             
           

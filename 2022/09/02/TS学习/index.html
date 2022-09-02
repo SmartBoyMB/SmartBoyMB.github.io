@@ -4,7 +4,7 @@
   <!-- 元数据 -->
   <meta charset="utf-8">
   <link rel="icon" href="">
-  <title>沅湘</title>
+  <title>TS基础知识 | 沅湘</title>
   <meta name="author" content="Mei Biao" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -13,19 +13,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="" />
+    <meta name="keywords" content="基础知识" />
   
-  <meta name="description" content="TS 基础 类型标注  类型的标注主要通过类型后置语法来实现：“变量：类型” 接口的作用就是为类型命名和为代码或第三方代码定义契约  类  基于类的程序设计中一种最基本的模式是允许使用继承来扩展现有的类  模块导入和导出  任何声明（比如变量，函数，类，类型别名或接口）都能够添加export关键字导出（使用as可以给声明导出为别名） 使用import对模块进行导入，也可以">
+  <meta name="description" content="JS数据类型 类型标注  类型的标注主要通过类型后置语法来实现：“变量：类型” 接口的作用就是为类型命名和为代码或第三方代码定义契约  类  基于类的程序设计中一种最基本的模式是允许使用继承来扩展现有的类  模块导入和导出  任何声明（比如变量，函数，类，类型别名或接口）都能够添加export关键字导出（使用as可以给声明导出为别名） 使用import对模块进行导入，也可">
 <meta property="og:type" content="article">
-<meta property="og:title" content="沅湘">
+<meta property="og:title" content="TS基础知识">
 <meta property="og:url" content="https://github.com/SmartBoyMB.github.io/2022/09/02/TS%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="沅湘">
-<meta property="og:description" content="TS 基础 类型标注  类型的标注主要通过类型后置语法来实现：“变量：类型” 接口的作用就是为类型命名和为代码或第三方代码定义契约  类  基于类的程序设计中一种最基本的模式是允许使用继承来扩展现有的类  模块导入和导出  任何声明（比如变量，函数，类，类型别名或接口）都能够添加export关键字导出（使用as可以给声明导出为别名） 使用import对模块进行导入，也可以">
+<meta property="og:description" content="JS数据类型 类型标注  类型的标注主要通过类型后置语法来实现：“变量：类型” 接口的作用就是为类型命名和为代码或第三方代码定义契约  类  基于类的程序设计中一种最基本的模式是允许使用继承来扩展现有的类  模块导入和导出  任何声明（比如变量，函数，类，类型别名或接口）都能够添加export关键字导出（使用as可以给声明导出为别名） 使用import对模块进行导入，也可">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://github.com/SmartBoyMB.github.io/null">
 <meta property="article:published_time" content="2022-09-02T15:37:03.645Z">
-<meta property="article:modified_time" content="2022-09-02T15:47:36.217Z">
+<meta property="article:modified_time" content="2022-09-02T16:17:32.412Z">
 <meta property="article:author" content="Mei Biao">
+<meta property="article:tag" content="基础知识">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://github.com/SmartBoyMB.github.io/null">
 <meta name="twitter:site" content="@Candiinya">
@@ -242,12 +243,12 @@ mjx-container[display="true"] + br {
     <article>
         <div class="kratos-hentry kratos-post-inner clearfix">
             <header class="kratos-entry-header">
-                <h1 class="kratos-entry-title text-center"></h1>
+                <h1 class="kratos-entry-title text-center">TS基础知识</h1>
                 
                 <div class="kratos-post-meta text-center">
                     <span>
                         <i class="fa fa-calendar"></i> 2022-09-02
-                        <i class="fa fa-folder"></i> 分类于 
+                        <i class="fa fa-folder"></i> 分类于 <a class="label-link" href="/SmartBoyMB.github.io/categories/TypeScript/">TypeScript</a>, <a class="label-link" href="/SmartBoyMB.github.io/categories/TypeScript/%E5%AD%A6%E4%B9%A0/">学习</a>
                         <i class="fa fa-user"></i> 作者 Mei Biao
                         <i class="fa fa-edit"></i> 
                         
@@ -261,8 +262,12 @@ mjx-container[display="true"] + br {
             </header>
             <div class="kratos-post-content">
                 
+                    <div class="kratos-post-inner-toc">
+                        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#js%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">JS数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E6%A0%87%E6%B3%A8"><span class="toc-number">2.</span> <span class="toc-text">类型标注</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB"><span class="toc-number">3.</span> <span class="toc-text">类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E5%9D%97%E5%AF%BC%E5%85%A5%E5%92%8C%E5%AF%BC%E5%87%BA"><span class="toc-number">4.</span> <span class="toc-text">模块导入和导出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">5.</span> <span class="toc-text">核心配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">6.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">7.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8Ejs%E7%9A%84%E6%AF%94%E8%BE%83"><span class="toc-number">8.</span> <span class="toc-text">与JS的比较</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%A2%9E-any"><span class="toc-number">8.1.</span> <span class="toc-text">新增 any</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%B9%E8%BF%9B-string"><span class="toc-number">8.2.</span> <span class="toc-text">改进 string</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E7%B1%BB%E5%9E%8B%E5%88%86%E7%B1%BB"><span class="toc-number">8.3.</span> <span class="toc-text">数组类型分类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ts%E5%87%BD%E6%95%B0"><span class="toc-number">9.</span> <span class="toc-text">TS函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E6%A0%BC%E5%BC%8F"><span class="toc-number">9.1.</span> <span class="toc-text">基础格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E6%95%B0"><span class="toc-number">9.2.</span> <span class="toc-text">参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-number">9.3.</span> <span class="toc-text">其他</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#number%E5%AF%B9%E8%B1%A1"><span class="toc-number">10.</span> <span class="toc-text">Number对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7"><span class="toc-number">10.1.</span> <span class="toc-text">属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95"><span class="toc-number">10.2.</span> <span class="toc-text">方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E7%BB%93%E6%9E%84"><span class="toc-number">11.</span> <span class="toc-text">数组结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ts-map"><span class="toc-number">12.</span> <span class="toc-text">TS Map</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ts-%E8%81%94%E5%90%88%E7%B1%BB%E5%9E%8B"><span class="toc-number">13.</span> <span class="toc-text">TS 联合类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#keyof"><span class="toc-number">13.1.</span> <span class="toc-text">keyof</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ts%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="toc-number">14.</span> <span class="toc-text">TS修饰符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#randonly"><span class="toc-number">14.1.</span> <span class="toc-text">randonly</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%B8%AD%E5%AD%90%E7%B1%BB%E5%9E%8Bduck-typing"><span class="toc-number">14.2.</span> <span class="toc-text">鸭子类型(Duck Typing)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ts%E6%A8%A1%E5%9D%97"><span class="toc-number">15.</span> <span class="toc-text">TS模块</span></a></li></ol>
+                    </div>
+                
                 <hr />
-                <h1 id="ts-基础">TS 基础</h1>
+                <h2 id="js数据类型">JS数据类型</h2>
 <h2 id="类型标注">类型标注</h2>
 <ul>
 <li><p>类型的标注主要通过类型后置语法来实现：“变量：类型”</p></li>
@@ -471,8 +476,8 @@ never 是其它类型（包括 null 和 undefined）的子类型，代表从不�
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
             const hostUrl       = "https://github.com/SmartBoyMB.github.io/2022/09/02/TS%E5%AD%A6%E4%B9%A0/";
-            const title         = "「」";
-            const excerpt       = `TS 基础
+            const title         = "「TS基础知识」";
+            const excerpt       = `JS数据类型
 类型标注
 
 类型的标注主要通过类型后置语法来实现：“变量：类型”
@@ -482,7 +487,7 @@ never 是其它类型（包括 null 和 undefined）的子类型，代表从不�
 
 基于类的程序设计中一种最基本的模式是允许使用继承来扩展现有的类
 
-模块导入...`;
+模块导...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -501,10 +506,10 @@ never 是其它类型（包括 null 和 undefined）的子类型，代表从不�
                 <div class="footer-tag clearfix">
                     <div class="pull-left">
                     <i class="fa fa-tags"></i>
-                        
+                        <a class="tag-none-link" href="/SmartBoyMB.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag">基础知识</a>
                     </div>
                     <div class="pull-date">
-                    <span>最后编辑：2022-09-02</span>
+                    <span>最后编辑：2022-09-03</span>
                     </div>
                 </div>
             </footer>
@@ -513,12 +518,12 @@ never 是其它类型（包括 null 和 undefined）的子类型，代表从不�
             <nav class="navigation post-navigation clearfix" role="navigation">
                 
                 <div class="nav-previous clearfix">
-                    <a title=" (no title)" href="/SmartBoyMB.github.io/2022/09/02/JS学习/">&lt; 上一篇</a>
+                    <a title=" JS基础知识" href="/SmartBoyMB.github.io/2022/09/02/JS学习/">&lt; 上一篇</a>
                 </div>
                 
                 
                 <div class="nav-next clearfix">
-                    <a title=" (no title)" href="/SmartBoyMB.github.io/2022/09/02/Android Studio problem/">下一篇 &gt;</a>
+                    <a title=" Android Studio模拟器安装APK问题" href="/SmartBoyMB.github.io/2022/09/02/Android Studio problem/">下一篇 &gt;</a>
                 </div>
                 
             </nav>
@@ -540,7 +545,7 @@ never 是其它类型（包括 null 和 undefined）的子类型，代表从不�
     </div>
     <div class="textwidget">
         
-            <p class="text-center">沅湘是清水</p>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#js%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">JS数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E6%A0%87%E6%B3%A8"><span class="toc-number">2.</span> <span class="toc-text">类型标注</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB"><span class="toc-number">3.</span> <span class="toc-text">类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E5%9D%97%E5%AF%BC%E5%85%A5%E5%92%8C%E5%AF%BC%E5%87%BA"><span class="toc-number">4.</span> <span class="toc-text">模块导入和导出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">5.</span> <span class="toc-text">核心配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">6.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">7.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8Ejs%E7%9A%84%E6%AF%94%E8%BE%83"><span class="toc-number">8.</span> <span class="toc-text">与JS的比较</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%A2%9E-any"><span class="toc-number">8.1.</span> <span class="toc-text">新增 any</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%B9%E8%BF%9B-string"><span class="toc-number">8.2.</span> <span class="toc-text">改进 string</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E7%B1%BB%E5%9E%8B%E5%88%86%E7%B1%BB"><span class="toc-number">8.3.</span> <span class="toc-text">数组类型分类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ts%E5%87%BD%E6%95%B0"><span class="toc-number">9.</span> <span class="toc-text">TS函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E6%A0%BC%E5%BC%8F"><span class="toc-number">9.1.</span> <span class="toc-text">基础格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E6%95%B0"><span class="toc-number">9.2.</span> <span class="toc-text">参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-number">9.3.</span> <span class="toc-text">其他</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#number%E5%AF%B9%E8%B1%A1"><span class="toc-number">10.</span> <span class="toc-text">Number对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7"><span class="toc-number">10.1.</span> <span class="toc-text">属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95"><span class="toc-number">10.2.</span> <span class="toc-text">方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E7%BB%93%E6%9E%84"><span class="toc-number">11.</span> <span class="toc-text">数组结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ts-map"><span class="toc-number">12.</span> <span class="toc-text">TS Map</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ts-%E8%81%94%E5%90%88%E7%B1%BB%E5%9E%8B"><span class="toc-number">13.</span> <span class="toc-text">TS 联合类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#keyof"><span class="toc-number">13.1.</span> <span class="toc-text">keyof</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ts%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="toc-number">14.</span> <span class="toc-text">TS修饰符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#randonly"><span class="toc-number">14.1.</span> <span class="toc-text">randonly</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%B8%AD%E5%AD%90%E7%B1%BB%E5%9E%8Bduck-typing"><span class="toc-number">14.2.</span> <span class="toc-text">鸭子类型(Duck Typing)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ts%E6%A8%A1%E5%9D%97"><span class="toc-number">15.</span> <span class="toc-text">TS模块</span></a></li></ol>
         
     </div>
 </aside>
@@ -550,7 +555,7 @@ never 是其它类型（包括 null 和 undefined）的子类型，代表从不�
                     
   <aside id="krw-categories" class="widget widget-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">10</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/Android-Studio/">Android Studio</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/Android-Studio/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/JavaScript/">JavaScript</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/JavaScript/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/React/">React</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/React/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/React-Native/">React Native</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/React-Native/Navigater/">Navigater</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/React-Native/Navigater/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/React-Native/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/TypeScript/">TypeScript</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/TypeScript/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">12</span></li></ul>
   </aside>
 
 
@@ -559,7 +564,7 @@ never 是其它类型（包括 null 和 undefined）的子类型，代表从不�
   <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
     <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
       <div class="tag-clouds">
-        <a href="/SmartBoyMB.github.io/tags/LaTeX/" style="font-size: 0.6em;">LaTeX</a> <a href="/SmartBoyMB.github.io/tags/blog/" style="font-size: 0.67em;">blog</a> <a href="/SmartBoyMB.github.io/tags/folder/" style="font-size: 0.6em;">folder</a> <a href="/SmartBoyMB.github.io/tags/hexo/" style="font-size: 0.67em;">hexo</a> <a href="/SmartBoyMB.github.io/tags/mathjax/" style="font-size: 0.6em;">mathjax</a> <a href="/SmartBoyMB.github.io/tags/python/" style="font-size: 0.6em;">python</a> <a href="/SmartBoyMB.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 0.6em;">机器学习</a> <a href="/SmartBoyMB.github.io/tags/%E6%A6%82%E5%BF%B5/" style="font-size: 0.73em;">概念</a> <a href="/SmartBoyMB.github.io/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/" style="font-size: 0.8em;">知识图谱</a> <a href="/SmartBoyMB.github.io/tags/%E8%AE%BA%E6%96%87%E5%AD%A6%E4%B9%A0/" style="font-size: 0.6em;">论文学习</a>
+        <a href="/SmartBoyMB.github.io/tags/Hooks/" style="font-size: 0.6em;">Hooks</a> <a href="/SmartBoyMB.github.io/tags/LaTeX/" style="font-size: 0.6em;">LaTeX</a> <a href="/SmartBoyMB.github.io/tags/Q-A/" style="font-size: 0.6em;">Q&A</a> <a href="/SmartBoyMB.github.io/tags/blog/" style="font-size: 0.67em;">blog</a> <a href="/SmartBoyMB.github.io/tags/flexbox/" style="font-size: 0.6em;">flexbox</a> <a href="/SmartBoyMB.github.io/tags/folder/" style="font-size: 0.6em;">folder</a> <a href="/SmartBoyMB.github.io/tags/hexo/" style="font-size: 0.67em;">hexo</a> <a href="/SmartBoyMB.github.io/tags/mathjax/" style="font-size: 0.6em;">mathjax</a> <a href="/SmartBoyMB.github.io/tags/problem/" style="font-size: 0.6em;">problem</a> <a href="/SmartBoyMB.github.io/tags/problems/" style="font-size: 0.67em;">problems</a> <a href="/SmartBoyMB.github.io/tags/python/" style="font-size: 0.6em;">python</a> <a href="/SmartBoyMB.github.io/tags/%E4%BA%A4%E4%BA%92/" style="font-size: 0.6em;">交互</a> <a href="/SmartBoyMB.github.io/tags/%E4%BC%98%E5%8C%96/" style="font-size: 0.6em;">优化</a> <a href="/SmartBoyMB.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 0.73em;">基础知识</a> <a href="/SmartBoyMB.github.io/tags/%E5%AE%9E%E4%B9%A0/" style="font-size: 0.67em;">实习</a> <a href="/SmartBoyMB.github.io/tags/%E5%AE%A2%E6%88%B7%E7%AB%AF/" style="font-size: 0.8em;">客户端</a> <a href="/SmartBoyMB.github.io/tags/%E5%AF%BC%E8%88%AA%E5%99%A8/" style="font-size: 0.6em;">导航器</a> <a href="/SmartBoyMB.github.io/tags/%E5%B8%83%E5%B1%80/" style="font-size: 0.6em;">布局</a>
       </div>
   </aside>
 
@@ -573,79 +578,64 @@ never 是其它类型（包括 null 和 undefined）的子类型，代表从不�
         
           
           
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            <a class="list-group-item" href="/SmartBoyMB.github.io/2021/05/10/MachineLearning/"><i class="fa  fa-book"></i> MachineLearning</a>
+            <a class="list-group-item" href="/SmartBoyMB.github.io/2022/09/02/%E7%BB%84%E4%BB%B6%E5%9F%BA%E7%A1%80/"><i class="fa  fa-book"></i> React Native的基础组件</a>
             
           
         
           
           
-            <a class="list-group-item" href="/SmartBoyMB.github.io/2020/11/21/pythonLearning/"><i class="fa  fa-book"></i> pythonLearning</a>
+            <a class="list-group-item" href="/SmartBoyMB.github.io/2022/09/02/%E4%BC%98%E5%8C%96%E6%80%A7%E8%83%BD/"><i class="fa  fa-book"></i> React Native的性能优化</a>
             
           
         
           
           
-            <a class="list-group-item" href="/SmartBoyMB.github.io/2020/11/06/longtailrelation/"><i class="fa  fa-book"></i> long tail Relation</a>
+            <a class="list-group-item" href="/SmartBoyMB.github.io/2022/09/02/%E9%A1%B5%E9%9D%A2%E5%AF%BC%E8%88%AA/"><i class="fa  fa-book"></i> React Native的页面导航</a>
             
           
         
           
           
-            <a class="list-group-item" href="/SmartBoyMB.github.io/2020/11/04/xiaoyangbenzhishitupu/"><i class="fa  fa-book"></i> 少样本知识图谱推理</a>
+            <a class="list-group-item" href="/SmartBoyMB.github.io/2022/09/02/%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1/"><i class="fa  fa-book"></i> React Native的网络通信</a>
             
           
         
           
           
-            <a class="list-group-item" href="/SmartBoyMB.github.io/2020/11/04/howtosetmathjax/"><i class="fa  fa-book"></i> hexo 主题使用mathjax插件渲染LaTeX数学公式的问题</a>
+            <a class="list-group-item" href="/SmartBoyMB.github.io/2022/09/02/%E6%89%8B%E5%8A%BF%E4%BA%A4%E4%BA%92/"><i class="fa  fa-book"></i> React Native的手势交互</a>
             
           
         
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
           
             
           

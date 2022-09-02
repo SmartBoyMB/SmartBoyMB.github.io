@@ -240,608 +240,219 @@ mjx-container[display="true"] + br {
         <section class="col-md-8">
             
                 
-                    <article class="kratos-hentry kratos-entry-border-new clearfix">
-                        <div class="kratos-status">
+                    <article class="kratos-hentry clearfix">
+                        <div class="kratos-entry-border-new clearfix">
                             
-                                <i class="fa fa-refresh"></i>
-                            
-                            <div class="kratos-status-inner">
-                                <div class="kratos-status-content">
+                            <div class="kratos-entry-thumb-new">
+                                <a href="/SmartBoyMB.github.io/2022/09/02/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/">
                                     
-                                        <h1 id="培训课程学习">培训课程学习</h1>
-<h2 id="以业务为中心">以业务为中心</h2>
-<ul>
-<li><p>技术应该为业务服务，业务的形态决定了技术的形态。学习技术应该向业务靠拢，既能有学习动力，也方便于现实中能有快速产出。</p></li>
-<li><p>积极了解业务，以业务为导向，不要闭门造车。在设计时，一定要去积极了解业务，才能对需求有比较准确的定位，不能自己一拍脑袋决定，而是要积极沟通，详细了解用户痛点，才能更好的把握需求。</p></li>
-<li><p>识别核心的需求，避免过度设计，舍大取小。对于需求的优先级要有概念，对于优先级高的能解决核心问题的需求才是最需要关注的点，而不是花大量的时间在目前不太需要的需求，或者付出与受益比例小的需求上。</p></li>
-</ul>
-<h2 id="在工作中的态度">在工作中的态度</h2>
-<ul>
-<li><p><strong>主人翁思想</strong>：对事情应该自我驱动，为自己的工作负责，主动去思考，而不是被动去接受业务。提高自己的主观能动性是提升自己能力的好方法。</p></li>
-<li><p><strong>追求卓越</strong>：对于问题的根本原因要有探究精神，了解逻辑底层和问题本质会在未来的工作中起到很关键的作用，表面上多花费了时间，但是积累下来，未来会减少很多弯路和不必要的时间浪费，能提升自己的效率。</p></li>
-<li><p><strong>持续学习</strong>：学无止境，一是学习时间无止境，而是学习范围无止境，在深度拓宽的同时也要拓宽自己的知识广度，要做到大体上了解，有方向上精通。</p></li>
-<li><p><strong>心态开放</strong>：敢于发言也敢于提出建议，也敢于接受不足接受建议。同时也要能为对方思考，理解对方的想法和不同。</p></li>
-</ul>
-<h2 id="学习到的方法论">学习到的方法论</h2>
-<ul>
-<li><p><strong>5Why</strong>：挖掘问题的深度，五层以上大概率就是根本原因，要积极学习积极挖掘，但也要避免浪费精力，控制时间，亦如学习，学到新知识中又有新知识，也需要保证不会浪费太多时间去追求广度。</p></li>
-<li><p><strong>效率至上四步走</strong>：自动化一切，复杂问题简单化，简单问题标准化，标准问题流程化，流程问题自动化。实际上自动化问题的过程也就是总结自己方法，以及拆分问题细化处理的过程，应当总结出自己应对问题的方法论，这样效率有很大的提升。</p></li>
-<li><p><strong>KISS原则</strong>：快速迭代的思想，保证目的是一目了然的，也就是说要逐步迭代演技，小步快跑的思想，每次迭代应该目的单一且不复杂，保证新的一轮迭代的目的是明确的严谨的，会更好的规范迭代的过程。</p></li>
-</ul>
-<h2 id="保证质量的核心思想">保证质量的核心思想</h2>
-<ul>
-<li><p><strong>风险前置</strong>：对于风险应该从始至终提前考虑，也是贯彻于软件开发整个生命周期，这样修复的代价就会越小，避免后期人力的浪费。</p></li>
-<li><p><strong>测试</strong>：保证质量应该重心在设计，不能依赖于最后的测试，测试也是抽样的，并不是万全之策，要记住测试只是最后的兜底保障。</p></li>
-<li><p><strong>历史代码</strong>：自己要在前人的代码上进行开发，也要交付给别人进行维护，自己的代码规范很重要，但也要学会如何高效的在质量低的代码上进行开发。</p></li>
-<li><p><strong>协作</strong>：大的需求的项目开发，往往任务划分和交互会很复杂，协作很重要，也很有挑战。</p></li>
-</ul>
-<h2 id="代码编写">代码编写</h2>
-<ul>
-<li><p>代码原则： 避免直接、简单直接、和团队内要保持一致</p></li>
-<li><p>命名： 命名带有含义并且表达准确，长度适中，不要有字面量直接作为参数。</p></li>
-<li><p>函数结构： 参数三个以下，超过要封装成对象；一个函数内的内容抽象层级要在一个层级；功能应该专一，不要有其他的副作用；用异常代替返回码</p></li>
-<li><p>注释： 代码就是最好的注释；注释意图（why），而不是注释实现；好代码永远大于坏代码+好注释；</p></li>
-<li><p>日志： 保持打日志的习惯；注意日志的分级：ERROR，WARN，INFO（一般用在关键业务核心路径处理结果），DEBUG，TRACE；</p></li>
-<li><p>异常： 早throw，晚catch的原则，异常的处理层往往在抛出层之上。不能忽略异常，并记得关闭资源。异常处理的性能成本非常高，要慎重。</p></li>
-</ul>
-<h2 id="整体开发流程">整体开发流程</h2>
-<p><strong>需求-&gt;设计-&gt;开发-&gt;测试-&gt;集成-&gt;集成测试-&gt;灰度-&gt;全量&amp;线上运维</strong></p>
-<h2 id="项目管理的重点">项目管理的重点</h2>
-<p><strong>项目等级：</strong> * 等级：S/A/B/迭代</p>
-<ul>
-<li><p>根据项目重要性和复杂性分级，不等于优先级</p></li>
-<li><p>要事第一原则</p></li>
-</ul>
-<p><strong>接受项目初期：</strong> * 查看立项报告（根据模版：了解为什么要做，做什么，目标是什么，怎么做，评估方式，需要的资源等问题。</p>
-<ul>
-<li>了解项目机制：包括整体管理策略、项目相关方、沟通管理机制、问题处理机制、风险管理机制、知识管理机制等。</li>
-</ul>
-<p><strong>如何保障交付：</strong> * 工作拆分WBS：复杂工作简单化，分层拆分，不重不漏，颗粒度要小，每一条任务都要时间规定和负责人。</p>
-<ul>
-<li><p>责任分配RACI：任务都要有负责人（R）、当责者（A）、咨询方（C）、告知者（I）。</p></li>
-<li><p>进度计划：做好甘特图管理项目各项任务的进度。</p></li>
-<li><p>质量管理：准备好的定义标准（DoR），完成的定义标准（DoD）</p></li>
-<li><p>参与复盘：开放心态，持续反思，不断进步。</p></li>
-</ul>
-<h2 id="资料">资料：</h2>
-<p>《clean code》 <img src="/images/实习收获/课程总结资料-1.png" /></p>
+                                        <img class="kratos-entry-thumb-new-img">
+                                    
+                                </a>
+                            </div>
+                            <div class="kratos-post-inner-new">
+                                <header class="kratos-entry-header-new">
+                                        <a class="label-link" href="/SmartBoyMB.github.io/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
+                                    <h2 class="kratos-entry-title-new"><a href="/SmartBoyMB.github.io/2022/09/02/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/">培训课程学习</a>
+                                </header>
+                                <div class="kratos-entry-content-new">
+                                    <p>
+                                        
+                                            以业务为中心
 
-                                    
+技术应该为业务服务，业务的形态决定了技术的形态。学习技术应该向业务靠拢，既能有学习动力，也方便于现实中能有快速产出。
+积极了解业务，以业务为导向，不要闭门造车。在设计时，一定要去积极了解业务，才能对需求有比较准确...
+                                        
+                                    </p>
                                 </div>
                             </div>
-                        </div>
-                        
                             <footer class="kratos-post-meta-new">
                                 <span class="pull-left">
                                     <a><i class="fa fa-calendar"></i></a><a>2022-09-02</a>
                                     <a><i class="fa fa-tags"></i></a>
-                                    
+                                    <a class="tag-none-link" href="/SmartBoyMB.github.io/tags/%E5%AE%9E%E4%B9%A0/" rel="tag">实习</a>, <a class="tag-none-link" href="/SmartBoyMB.github.io/tags/%E5%BF%83%E5%BE%97/" rel="tag">心得</a>
                                 </span>
                                 <span class="pull-right">
                                     <a class="read-more" href="/SmartBoyMB.github.io/2022/09/02/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
                                 </span>
                             </footer>
-                        
+                        </div>
                     </article>
                 
             
                 
-                    <article class="kratos-hentry kratos-entry-border-new clearfix">
-                        <div class="kratos-status">
+                    <article class="kratos-hentry clearfix">
+                        <div class="kratos-entry-border-new clearfix">
                             
-                                <i class="fa fa-refresh"></i>
-                            
-                            <div class="kratos-status-inner">
-                                <div class="kratos-status-content">
+                            <div class="kratos-entry-thumb-new">
+                                <a href="/SmartBoyMB.github.io/2022/09/02/RN%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94/">
                                     
-                                        <h1 id="rn知识问答">RN知识问答</h1>
-<h2 id="qa">Q&amp;A</h2>
-<p>Q1:：对于react-redux的理解，是否在项目中使用</p>
-<p>reward：基本熟悉逻辑，但是对于api还是不了解</p>
-<p>Q2：flatList主要属性，使用到的属性</p>
-<p>reward：一些属性的作用记的不牢，比如keyExtra， 分配key其实是为了提高更新时效率</p>
-<p>Q3：react组件的生命周期，当props和state更新时的生命周期</p>
-<p>rewart：主要的生命周期和函数顺序了解，但中间还有一些函数还需要掌握</p>
-<p>Q4：多个设备的样式如何保持一致，字体的适配方式</p>
-<p>不太了解</p>
-<p>Q5：一段文字内不同的颜色怎么处理，字体超长在中间打点应该怎么做</p>
-<p>没有了解过，可以去了解，超长打点跟style有关</p>
-<p>Q6：物理的返回键了解过吗怎么使用，在flatList内不同的items怎么渲染</p>
-<p>物理返回键不太了解，不同items直接放入data内也可以渲染，可以去看更好的方式</p>
-<p>Q7：setState的代码问题</p>
-<p>四次log输出的日志分别是多少 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>() &#123;</span><br><span class="line">    <span class="built_in">super</span>();</span><br><span class="line">    <span class="built_in">this</span>.state = &#123;</span><br><span class="line">      val: <span class="number">0</span></span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  componentDidMount() &#123;</span><br><span class="line">    <span class="built_in">this</span>.setState(&#123;<span class="attr">val</span>: <span class="built_in">this</span>.state.val + <span class="number">1</span>&#125;);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>.state.val);    <span class="comment">// 第 1 次 log</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">this</span>.setState(&#123;<span class="attr">val</span>: <span class="built_in">this</span>.state.val + <span class="number">1</span>&#125;);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>.state.val);    <span class="comment">// 第 2 次 log</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">this</span>.setState(&#123;<span class="attr">val</span>: <span class="built_in">this</span>.state.val + <span class="number">1</span>&#125;);</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="built_in">this</span>.state.val);  <span class="comment">// 第 3 次 log</span></span><br><span class="line"></span><br><span class="line">      <span class="built_in">this</span>.setState(&#123;<span class="attr">val</span>: <span class="built_in">this</span>.state.val + <span class="number">1</span>&#125;);</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="built_in">this</span>.state.val);  <span class="comment">// 第 4 次 log</span></span><br><span class="line">    &#125;, <span class="number">0</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure> 提醒点：</p>
-<p>setState()涉及到UI更新时是否立刻执行？（异步还是同步执行？）</p>
-<p>执行setState不都是异步的。当没有前置batchedUpdate时，setState立马生效( 同步 )；当存在前置batchedUpdate时，setState会先放在'缓存'中，等到某时刻再执行( 异步 )</p>
-<p>前两次 setState 并不是失效，而是他们被 batch update 了，可以被理解为两次 setState 被缓存了，因此没有立即生效。所以第 2 次 log 的时候，val 还是 0。但是在第 3 次调 this.setState 时，前两次被「缓存」的 setState 已经执行，因为两次 setState 实际上都是 this.setState({val: 1})，所以第 3 次 setState 时的 val 是 1，且因为在setTimeOut中，setState会立即生效，因此第四次的setState时接收的val为3，打印的日志为3</p>
-<p>结果为0,0,2,3</p>
-<p>https://zhuanlan.zhihu.com/p/78516581</p>
-<p>Q8：props和state的区别，函数组件和类组件的区别，hooks，自定义hooks</p>
-<p>基本回答上，自定义hooks可以使用高级组件（HOC）实现，可以了解</p>
-<p>Q9：flatList与其他滑动组件的区别，flex布局的一些属性，margin和padding的区别</p>
-<p>了解flatList和ScrollView的区别，flatList的渲染数量问题 ## 后续学习进展</p>
-
+                                        <img class="kratos-entry-thumb-new-img">
                                     
+                                </a>
+                            </div>
+                            <div class="kratos-post-inner-new">
+                                <header class="kratos-entry-header-new">
+                                        <a class="label-link" href="/SmartBoyMB.github.io/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
+                                    <h2 class="kratos-entry-title-new"><a href="/SmartBoyMB.github.io/2022/09/02/RN%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94/">RN知识问答</a>
+                                </header>
+                                <div class="kratos-entry-content-new">
+                                    <p>
+                                        
+                                            Q&amp;A
+Q1:：对于react-redux的理解，是否在项目中使用
+reward：基本熟悉逻辑，但是对于api还是不了解
+Q2：flatList主要属性，使用到的属性
+reward：一些属性的作用记的不牢，比如keyE...
+                                        
+                                    </p>
                                 </div>
                             </div>
-                        </div>
-                        
                             <footer class="kratos-post-meta-new">
                                 <span class="pull-left">
                                     <a><i class="fa fa-calendar"></i></a><a>2022-09-02</a>
                                     <a><i class="fa fa-tags"></i></a>
-                                    
+                                    <a class="tag-none-link" href="/SmartBoyMB.github.io/tags/Q-A/" rel="tag">Q&A</a>, <a class="tag-none-link" href="/SmartBoyMB.github.io/tags/%E5%AE%9E%E4%B9%A0/" rel="tag">实习</a>
                                 </span>
                                 <span class="pull-right">
                                     <a class="read-more" href="/SmartBoyMB.github.io/2022/09/02/RN%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
                                 </span>
                             </footer>
-                        
+                        </div>
                     </article>
                 
             
                 
-                    <article class="kratos-hentry kratos-entry-border-new clearfix">
-                        <div class="kratos-status">
+                    <article class="kratos-hentry clearfix">
+                        <div class="kratos-entry-border-new clearfix">
                             
-                                <i class="fa fa-refresh"></i>
-                            
-                            <div class="kratos-status-inner">
-                                <div class="kratos-status-content">
+                            <div class="kratos-entry-thumb-new">
+                                <a href="/SmartBoyMB.github.io/2022/09/02/Android%20Studio%20problem/">
                                     
-                                        <h1 id="android-studio模拟器安装apk问题">Android Studio模拟器安装APK问题</h1>
-<h2 id="启动adb失败">启动adb失败：</h2>
-<h3 id="问题描述">问题描述：</h3>
-<p>Failed to start adb.</p>
-<p>Check settings to verify your chosen adb path is valid.</p>
-<h3 id="问题原因">问题原因：</h3>
-<p>sdk/adb路径找不到导致adb启动失败。</p>
-<h3 id="解决方案">解决方案：</h3>
-<p><img src="/imags/AndroidLearning/Q1-APK.png" /> 按图示顺序设置ADB location，路径在%SDK/platform-tools/adb（SDK的路径在Android Studio SDK Manager中查看，一般是/Users/{HostName}/Library/Android）</p>
-
+                                        <img class="kratos-entry-thumb-new-img">
                                     
+                                </a>
+                            </div>
+                            <div class="kratos-post-inner-new">
+                                <header class="kratos-entry-header-new">
+                                        <a class="label-link" href="/SmartBoyMB.github.io/categories/Android-Studio/">Android Studio</a>, <a class="label-link" href="/SmartBoyMB.github.io/categories/Android-Studio/%E5%AD%A6%E4%B9%A0/">学习</a>
+                                    <h2 class="kratos-entry-title-new"><a href="/SmartBoyMB.github.io/2022/09/02/Android%20Studio%20problem/">Android Studio模拟器安装APK问题</a>
+                                </header>
+                                <div class="kratos-entry-content-new">
+                                    <p>
+                                        
+                                            启动adb失败：
+问题描述：
+Failed to start adb.
+Check settings to verify your chosen adb path is valid.
+问题原因：
+sdk/adb路径找不到导致...
+                                        
+                                    </p>
                                 </div>
                             </div>
-                        </div>
-                        
                             <footer class="kratos-post-meta-new">
                                 <span class="pull-left">
                                     <a><i class="fa fa-calendar"></i></a><a>2022-09-02</a>
                                     <a><i class="fa fa-tags"></i></a>
-                                    
+                                    <a class="tag-none-link" href="/SmartBoyMB.github.io/tags/problem/" rel="tag">problem</a>, <a class="tag-none-link" href="/SmartBoyMB.github.io/tags/%E5%AE%A2%E6%88%B7%E7%AB%AF/" rel="tag">客户端</a>
                                 </span>
                                 <span class="pull-right">
                                     <a class="read-more" href="/SmartBoyMB.github.io/2022/09/02/Android%20Studio%20problem/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
                                 </span>
                             </footer>
-                        
+                        </div>
                     </article>
                 
             
                 
-                    <article class="kratos-hentry kratos-entry-border-new clearfix">
-                        <div class="kratos-status">
+                    <article class="kratos-hentry clearfix">
+                        <div class="kratos-entry-border-new clearfix">
                             
-                                <i class="fa fa-refresh"></i>
-                            
-                            <div class="kratos-status-inner">
-                                <div class="kratos-status-content">
+                            <div class="kratos-entry-thumb-new">
+                                <a href="/SmartBoyMB.github.io/2022/09/02/TS%E5%AD%A6%E4%B9%A0/">
                                     
-                                        <h1 id="ts-基础">TS 基础</h1>
-<h2 id="类型标注">类型标注</h2>
-<ul>
-<li><p>类型的标注主要通过类型后置语法来实现：“变量：类型”</p></li>
-<li><p>接口的作用就是为类型命名和为代码或第三方代码定义契约</p></li>
-</ul>
-<h2 id="类">类</h2>
-<ul>
-<li>基于类的程序设计中一种最基本的模式是允许使用继承来扩展现有的类</li>
-</ul>
-<h2 id="模块导入和导出">模块导入和导出</h2>
-<ul>
-<li><p>任何声明（比如变量，函数，类，类型别名或接口）都能够添加export关键字导出（使用as可以给声明导出为别名）</p></li>
-<li><p>使用import对模块进行导入，也可以通过as重命名</p></li>
-</ul>
-<h2 id="核心配置文件">核心配置文件</h2>
-<p><img src="/images/JS-TS学习/TS配置文件.png" /></p>
-<h2 id="总结">总结</h2>
-<p><img src="/images/JS-TS学习/TS总结.png" /></p>
-<h2 id="数据类型">数据类型</h2>
-<p>TypeScript 包含的数据类型： * <strong>any(任意类型)</strong>：<br />
-声明为 any 的变量可以赋予任意类型的值。 * <strong>number(数字类型)</strong>： 双精度 64 位浮点值。它可以用来表示整数和分数。 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> binaryLiteral: number = <span class="number">0b1010</span>; <span class="comment">// 二进制</span></span><br><span class="line"><span class="keyword">let</span> octalLiteral: number = <span class="number">0o744</span>;    <span class="comment">// 八进制</span></span><br><span class="line"><span class="keyword">let</span> decLiteral: number = <span class="number">6</span>;    <span class="comment">// 十进制</span></span><br><span class="line"><span class="keyword">let</span> hexLiteral: number = <span class="number">0xf00d</span>;    <span class="comment">// 十六进制</span></span><br></pre></td></tr></table></figure> * <strong>string(字符串类型)</strong>： 一个字符系列，使用单引号（'）或双引号（&quot;）来表示字符串类型。反引号（`）来定义多行文本和内嵌表达式。 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name: string = <span class="string">&quot;Runoob&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> years: number = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">let</span> words: string = <span class="string">`您好，今年是 <span class="subst">$&#123; name &#125;</span> 发布 <span class="subst">$&#123; years + <span class="number">1</span>&#125;</span> 周年`</span>;</span><br></pre></td></tr></table></figure> * <strong>boolean(布尔类型)</strong>： 表示逻辑值：true 和 false。 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> flag: boolean = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure> * <strong>数组类型(Array)</strong>: 声明变量为数组。 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在元素类型后面加上[]</span></span><br><span class="line"><span class="keyword">let</span> arr: number[] = [<span class="number">1</span>, <span class="number">2</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 或者使用数组泛型</span></span><br><span class="line"><span class="keyword">let</span> arr: <span class="built_in">Array</span>&lt;number&gt; = [<span class="number">1</span>, <span class="number">2</span>];</span><br></pre></td></tr></table></figure> * <strong>元组(Tuple)</strong>: 元组类型用来表示已知元素数量和类型的数组，各元素的类型不必相同，对应位置的类型需要相同。 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> x: [string, number];</span><br><span class="line">x = [<span class="string">&#x27;Runoob&#x27;</span>, <span class="number">1</span>];    <span class="comment">// 运行正常</span></span><br><span class="line">x = [<span class="number">1</span>, <span class="string">&#x27;Runoob&#x27;</span>];    <span class="comment">// 报错</span></span><br><span class="line"><span class="built_in">console</span>.log(x[<span class="number">0</span>]);    <span class="comment">// 输出 Runoob</span></span><br></pre></td></tr></table></figure> * <strong>枚举(enum)</strong>: 枚举类型用于定义数值集合。 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">enum Color &#123;Red, Green, Blue&#125;;</span><br><span class="line"><span class="keyword">let</span> c: Color = Color.Blue;</span><br><span class="line"><span class="built_in">console</span>.log(c);    <span class="comment">// 输出 2</span></span><br></pre></td></tr></table></figure> * <strong>void</strong>: 用于标识方法返回值的类型，表示该方法没有返回值。 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">hello</span>(<span class="params"></span>): <span class="title">void</span> </span>&#123;</span><br><span class="line">    alert(<span class="string">&quot;Hello Runoob&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> * <strong>null</strong>: 表示对象值缺失。</p>
-<ul>
-<li><p><strong>undefined</strong>: 用于初始化变量为一个未定义的值</p></li>
-<li><p><strong>never</strong>:<br />
-never 是其它类型（包括 null 和 undefined）的子类型，代表从不会出现的值。</p></li>
-</ul>
-<h2 id="与js的比较">与JS的比较</h2>
-<p>对于JS来说，TS严格定义了数据的类型，并且做了一些改进和划分，但也兼容了JS的松散定义。</p>
-<h3 id="新增-any">新增 any</h3>
-<p>any类型即为任意的类型。针对编程时类型不明确的变量使用的一种数据类型，应用于三种情况：</p>
-<ul>
-<li><p>变量的值会动态改变时，例如来自用户的输入。</p></li>
-<li><p>改写现有代码时，任意值允许在编译时可选择地包含或移除类型检查</p></li>
-<li><p>定义存储各种类型数据的数组时，例如any[]</p></li>
-</ul>
-<h3 id="改进-string">改进 string</h3>
-<p>增加了反引号（`）来定义多行文本和内嵌表达式。</p>
-<h3 id="数组类型分类">数组类型分类</h3>
-<p>JS中的数组规范宽松，TS重新分类定义了数组类型： * <strong>数组类型</strong>： 声明变量为数组，同种元素的集合，不能包含不同类型的元素。 两种声明方式： * number [ ] （类型 + [ ]） * Array <number> （范型 * <strong>元组类型</strong>： 元组类型可以包含不一样的类型元素，但需要严格按照定义好的类型顺序和元素数量赋值。 声明方式： * [string, number] * push()和pop()方法 * <strong>枚举类型</strong>： 枚举类型用于定义数值集合，可以定义初始递增值。 * <strong>数字类型枚举</strong>： <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">enum Color &#123;</span><br><span class="line">Red, <span class="comment">// 0</span></span><br><span class="line">Green, <span class="comment">// 1</span></span><br><span class="line">Blue <span class="comment">// 2</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> * <strong>字符串类型枚举</strong>： <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> enum EvidenceTypeEnum &#123;</span><br><span class="line">UNKNOWN = <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">PASSPORT_VISA = <span class="string">&#x27;passport_visa&#x27;</span>,</span><br><span class="line">PASSPORT = <span class="string">&#x27;passport&#x27;</span>,</span><br><span class="line">SIGHTED_STUDENT_CARD = <span class="string">&#x27;sighted_tertiary_edu_id&#x27;</span>,</span><br><span class="line">SIGHTED_KEYPASS_CARD = <span class="string">&#x27;sighted_keypass_card&#x27;</span>,</span><br><span class="line">SIGHTED_PROOF_OF_AGE_CARD = <span class="string">&#x27;sighted_proof_of_age_card&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> ### never类型 never 是其它类型（包括 null 和 undefined）的子类型，代表从不会出现的值。这意味着声明为 never 类型的变量只能被 never 类型所赋值，在函数中它通常表现为抛出异常或无法执行到终止点（例如无限循环） 例子： <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> x: never;</span><br><span class="line"><span class="keyword">let</span> y: number;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 编译错误，数字类型不能转为 never 类型</span></span><br><span class="line">x = <span class="number">123</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 运行正确，never 类型可以赋值给 never类型</span></span><br><span class="line">x = (<span class="function">()=&gt;</span>&#123; <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&#x27;exception&#x27;</span>)&#125;)();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 运行正确，never 类型可以赋值给 数字类型</span></span><br><span class="line">y = (<span class="function">()=&gt;</span>&#123; <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&#x27;exception&#x27;</span>)&#125;)();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 返回值为 never 的函数可以是抛出异常的情况</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">error</span>(<span class="params">message: string</span>): <span class="title">never</span> </span>&#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(message);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 返回值为 never 的函数可以是无法被执行到的终止点的情况</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">loop</span>(<span class="params"></span>): <span class="title">never</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (<span class="literal">true</span>) &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> ### TS中的循环 TypeScript还支持 for... of、 forEach、every 和 some 循环。以及其他方法的详细的描述 * <code>for ... of</code>｜<code>for ... in</code>: 常用于遍历对象和数组：</p>
-<ul>
-<li><p>for... in 循环读取键名</p></li>
-<li><p>for... of 循环读取键值 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> list:numeber[]=[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"><span class="comment">//for... in打印数组</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i <span class="keyword">in</span> list)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(list[i])</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//for...of打印数组</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i <span class="keyword">of</span> list)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p></li>
-<li><p><code>forEach()</code>: 常用于遍历数组和操作数组：</p>
-<ul>
-<li><p>forEach遍历没有返回值，需要返回值则可以使用every和some</p></li>
-<li>forEach不能遍历对象，遍历对象使用for方法。 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> list:numeber[]=[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"><span class="comment">//for... in打印数组</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i <span class="keyword">in</span> list)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(list[i])</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//for...of打印数组</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i <span class="keyword">of</span> list)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul></li>
-<li><p><code>every()</code>|<code>some()</code>: 常用于遍历数组和操作数组：</p>
-<ul>
-<li><p>两种方法都不能遍历对象，遍历对象可以使用for方法。</p></li>
-<li><p>方法与forEach类似，但包含返回值（true/false），false会终止迭代器。</p></li>
-<li><p>some(): 返回一个boolean，判断是否有元素是否符合func条件。数组里面所有的元素有一个符合条件就返回true。</p></li>
-<li><p>every():返回一个boolean，判断每个元素是否符合func条件。数组里面所有的元素都符合才返回true。</p></li>
-<li><p>every()和some()都通过控制return的值来跳出循环。</p></li>
-<li><p>every方法最终返回值为true需要每一次回调函数返回值都为true，当遍历出现返回false时，就会终止后续的遍历。</p></li>
-<li><p>some方法最终返回值为true只需要任意一次回调函数返回值为true就会结束对数组的遍历，如果每一次回调函数返回值都为false的话则some方法就会一直遍历辖区并返回false <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> list:number[]=[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"><span class="comment">//every方法遍历数组</span></span><br><span class="line"><span class="keyword">let</span> positionA=list.every(<span class="function">(<span class="params">val,index,array</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(val);</span><br><span class="line">    <span class="built_in">console</span>.log(index);</span><br><span class="line">    <span class="built_in">console</span>.log(array);</span><br><span class="line">    <span class="keyword">return</span> val==<span class="number">5</span>;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(positionA);</span><br><span class="line"><span class="comment">//结果</span></span><br><span class="line"><span class="comment">// 4</span></span><br><span class="line"><span class="comment">// 0</span></span><br><span class="line"><span class="comment">// [ 4, 5, 6 ]</span></span><br><span class="line"><span class="comment">// false</span></span><br><span class="line"><span class="comment">//some方法遍历数组</span></span><br><span class="line"><span class="keyword">let</span> positionB=list.some(<span class="function">(<span class="params">val,index,array</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(val);</span><br><span class="line">    <span class="built_in">console</span>.log(index);</span><br><span class="line">    <span class="built_in">console</span>.log(array);</span><br><span class="line">    <span class="keyword">return</span> val==<span class="number">6</span>;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(positionB);</span><br><span class="line"><span class="comment">//结果</span></span><br><span class="line"><span class="comment">// 4</span></span><br><span class="line"><span class="comment">// 0</span></span><br><span class="line"><span class="comment">// [ 4, 5, 6 ]</span></span><br><span class="line"><span class="comment">// 5</span></span><br><span class="line"><span class="comment">// 1</span></span><br></pre></td></tr></table></figure></p></li>
-</ul></li>
-</ul>
-<h2 id="ts函数">TS函数</h2>
-<h3 id="基础格式">基础格式</h3>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">function_name</span>(<span class="params"></span>):<span class="title">return_type</span> </span>&#123; </span><br><span class="line">    <span class="comment">// 语句</span></span><br><span class="line">    <span class="keyword">return</span> value; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="参数">参数</h3>
-<ul>
-<li><p><strong>可选参数</strong>：在 TypeScript 函数里，如果我们定义了参数，则我们必须传入这些参数，除非将这些参数设置为可选，可选参数使用问号标识 ？。注意：可选参数一定要放在必选参数后，必选参数一定要放在可选参数前。</p></li>
-<li><p><strong>默认参数</strong>：也可以设置参数的默认值，这样在调用函数的时候，如果不传入该参数的值，则使用默认参数。注意：参数不能同时设置为可选和默认。</p></li>
-<li><p><strong>剩余参数</strong>：不知道要向函数传入多少个参数时可以用剩余参数定义，不确定数量的参数作为一个数组传入，参数名以 ... 为前缀。(...出现在函数调用或类似函数中时，它被称为“扩展运算符”并将数组扩展为 list.) <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//可选参数和默认参数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">buildName</span>(<span class="params"> firstName: string, age:number=<span class="number">0</span>, lastName?: string</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (lastName)</span><br><span class="line">        <span class="keyword">return</span> firstName + <span class="string">&quot; &quot;</span> + lastName;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> firstName;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">let</span> result1 = buildName(<span class="string">&quot;Bob&quot;</span>);  <span class="comment">// 正确</span></span><br><span class="line"><span class="keyword">let</span> result2 =buildName(<span class="string">&quot;Bob&quot;</span>,<span class="number">18</span>); <span class="comment">//正确</span></span><br><span class="line"><span class="keyword">let</span> result3 = buildName(<span class="string">&quot;Bob&quot;</span>,<span class="number">18</span>,<span class="string">&quot;Adams&quot;</span>);  <span class="comment">// 正确</span></span><br><span class="line"><span class="keyword">let</span> result4 = buildName(<span class="string">&quot;Bob&quot;</span>,<span class="number">18</span>, <span class="string">&quot;Adams&quot;</span>, <span class="string">&quot;Sr.&quot;</span>);  <span class="comment">// 错误，参数太多了</span></span><br><span class="line"><span class="comment">//剩余参数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addNumbers</span>(<span class="params">...numbers:number[]</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> sum:number=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i <span class="keyword">of</span> numbers)&#123;</span><br><span class="line">        sum+=i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(sum);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">addNumbers(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);  <span class="comment">//正确</span></span><br><span class="line">addNumbers(<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>); <span class="comment">//正确</span></span><br></pre></td></tr></table></figure> ### 匿名函数 没有函数名，可以赋值给一个变量，也可以定义后自调用。 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//匿名函数</span></span><br><span class="line"><span class="keyword">var</span> res=<span class="function"><span class="keyword">function</span>(<span class="params">a:number,b:number</span>):<span class="title">number</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a*b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(res(<span class="number">2</span>,<span class="number">3</span>)); <span class="comment">//结果：6</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//匿名函数自调用</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;wo&quot;</span>);</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure></p></li>
-</ul>
-<h3 id="其他">其他</h3>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//构造函数</span></span><br><span class="line"><span class="comment">//var res = new Function ([arg1[, arg2[, ...argN]],] functionBody)</span></span><br><span class="line"><span class="keyword">var</span> myFunction=<span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">&quot;a&quot;</span>,<span class="string">&quot;b&quot;</span>,<span class="string">&quot;return a+b&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> result=myFunction(<span class="number">1</span>,<span class="number">1</span>);</span><br><span class="line"><span class="built_in">console</span>.log(result);    <span class="comment">//结果：2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//递归函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">factorial</span>(<span class="params">num:number</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(num&lt;=<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> num*factorial(num<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(factorial(<span class="number">4</span>));  <span class="comment">//结果： 24</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Lambda函数</span></span><br><span class="line"><span class="comment">//( [param1, parma2,…param n] )=&gt;statement;</span></span><br><span class="line"><span class="comment">// ( [param1, parma2,…param n] )=&gt; &#123;</span></span><br><span class="line"> </span><br><span class="line"><span class="comment">//     // 代码块</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"><span class="keyword">var</span> foo=<span class="function">(<span class="params">x:number</span>)=&gt;</span><span class="number">10</span>+x;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> foo1=<span class="function">(<span class="params">x</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">10</span>+x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> foo2=<span class="function"><span class="params">x</span>=&gt;</span><span class="number">10</span>+x;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(foo(<span class="number">10</span>));   <span class="comment">//结果：20 正确</span></span><br><span class="line"><span class="built_in">console</span>.log(foo1(<span class="number">10</span>));   <span class="comment">//结果：20 正确</span></span><br><span class="line"><span class="built_in">console</span>.log(foo2(<span class="number">10</span>));   <span class="comment">//结果：20 正确</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//函数重载：每个重载的方法（或者构造函数）都必须有一个独一无二的参数类型列表。</span></span><br><span class="line"><span class="comment">//函数重载先声明重载的方法，然后再写统一的实现。</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">disp</span>(<span class="params">s1:string</span>):<span class="title">void</span>;</span></span><br><span class="line"><span class="function"><span class="title">function</span> <span class="title">disp</span>(<span class="params">n1:number,s1:number</span>):<span class="title">void</span>;</span></span><br><span class="line"><span class="function"><span class="title">function</span> <span class="title">disp</span>(<span class="params">x:any,y?:any</span>):<span class="title">void</span> </span>&#123; </span><br><span class="line">    <span class="keyword">if</span>(y)</span><br><span class="line">        <span class="built_in">console</span>.log(x+y); </span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(x); </span><br><span class="line">    &#125;</span><br><span class="line">&#125; </span><br><span class="line">disp(<span class="string">&quot;abc&quot;</span>);    <span class="comment">//输出：abc 正常</span></span><br><span class="line">disp(<span class="number">1</span>,<span class="number">1</span>);  <span class="comment">//输出：2 正常</span></span><br></pre></td></tr></table></figure>
-<h2 id="number对象">Number对象</h2>
-<h3 id="属性">属性</h3>
-<ul>
-<li><p><strong>MAX_VALUE</strong>： 可表示的最大的数，MAX_VALUE 属性值接近于 1.79E+308。大于 MAX_VALUE 的值代表 &quot;Infinity&quot;。</p></li>
-<li><p><strong>MIN_VALUE</strong>： 可表示的最小的数，即最接近 0 的正数 (实际上不会变成 0)。最大的负数是 -MIN_VALUE，MIN_VALUE 的值约为 5e-324。小于 MIN_VALUE (&quot;underflow values&quot;) 的值将会转换为 0。</p></li>
-<li><p><strong>NaN</strong>： 非数字值（Not-A-Number）。</p></li>
-<li><p><strong>NEGATIVE_INFINITY</strong>： 负无穷大，溢出时返回该值。该值小于 MIN_VALUE。（-Infinity）</p></li>
-<li><p><strong>POSITIVE_INFINITY</strong>： 正无穷大，溢出时返回该值。该值大于 MAX_VALUE。（Infinity）</p></li>
-</ul>
-<h3 id="方法">方法</h3>
-<ul>
-<li>toExponential() 把对象的值转换为指数计数法 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num:number=<span class="number">1225.30</span>;</span><br><span class="line"><span class="keyword">var</span> val=num.toExponential();</span><br><span class="line"><span class="built_in">console</span>.log(val);   <span class="comment">//result: 1.2253e+3</span></span><br></pre></td></tr></table></figure></li>
-<li>toFixed() 把数字转换为字符串，并对小数点指定位数 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num:number=<span class="number">1225.2134</span>;</span><br><span class="line"><span class="keyword">var</span> val=num.toFixed();</span><br><span class="line"><span class="keyword">var</span> val1=num.toFixed(<span class="number">2</span>);</span><br><span class="line"><span class="built_in">console</span>.log(val);    <span class="comment">//result:1225</span></span><br><span class="line"><span class="built_in">console</span>.log(val1);    <span class="comment">//result:1223.21</span></span><br></pre></td></tr></table></figure></li>
-<li>toLocalString() 把数字转换为字符串，使用本地数字格式顺序 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num=<span class="number">1213413334.12323424</span>;</span><br><span class="line"><span class="built_in">console</span>.log(num.toLocaleString());  </span><br><span class="line"><span class="comment">//result:1,213,413,334.123</span></span><br></pre></td></tr></table></figure></li>
-<li>toPrecision() 把数字格式化为指定长度，遵循四舍五入原则。 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num=<span class="number">12.65</span>;</span><br><span class="line"><span class="built_in">console</span>.log(num.toPrecision(<span class="number">3</span>));  </span><br><span class="line"><span class="comment">//result: 12.7</span></span><br><span class="line"><span class="built_in">console</span>.log(num.toPrecision(<span class="number">4</span>));  </span><br><span class="line"><span class="comment">//result: 12.65</span></span><br></pre></td></tr></table></figure></li>
-<li>toString() 把数字转换为字符串，使用指定的进制数2-36 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num=<span class="number">20</span>;</span><br><span class="line"><span class="built_in">console</span>.log(num.toString(<span class="number">2</span>));  </span><br><span class="line"><span class="comment">//result: 10100</span></span><br><span class="line"><span class="built_in">console</span>.log(num.toString(<span class="number">8</span>));  </span><br><span class="line"><span class="comment">//result: 24</span></span><br></pre></td></tr></table></figure></li>
-<li>valueOf() 返回Number对象的数字值 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="keyword">new</span> <span class="built_in">Number</span>(<span class="number">10</span>); </span><br><span class="line"><span class="built_in">console</span>.log(num.valueOf()); <span class="comment">// 输出：10</span></span><br></pre></td></tr></table></figure> ## TS数组 ### 数组方法</li>
-<li><p>concat(): 连接两个或更多的数组，并返回结果。</p></li>
-<li><p>every(): 检测数值元素的每个元素是否都符合条件。</p></li>
-<li><p>filter(): 检测数值元素，并返回符合条件所有元素的数组。</p></li>
-<li><p>forEach(): 数组每个元素都执行一次回调函数。</p></li>
-<li><p>indexOf(): 搜索数组中的元素，并返回它所在的位置。 如果搜索不到，返回值 -1，代表没有此项</p></li>
-<li><p>join(): 把数组的所有元素放入一个字符串</p></li>
-<li><p>lastIndexOf(): 返回一个指定的字符串值最后出现的位置，在一个字符串中的指定位置从后向前搜索。</p></li>
-<li><p>map(): 通过指定函数处理数组的每个元素，并返回处理后的数组。</p></li>
-<li><p>pop(): 删除数组的最后一个元素并返回删除的元素。</p></li>
-<li><p>push(): 向数组的末尾添加一个或更多元素，并返回新的长度。</p></li>
-<li><p>reduce(): 将数组元素计算为一个值（从左到右）。</p></li>
-<li><p>reduceRight(): 将数组元素计算为一个值（从右到左）。</p></li>
-<li><p>reverse(): 反转数组的元素顺序。</p></li>
-<li><p>shift(): 删除并返回数组的第一个元素。</p></li>
-<li><p>slice(): 选取数组的的一部分，并返回一个新数组。</p></li>
-<li><p>some(): 检测数组元素中是否有元素符合指定条件。</p></li>
-<li><p>sort(): 对数组的元素进行排序。</p></li>
-<li><p>splice(): 从数组中添加或删除元素。</p></li>
-<li><p>toString(): 把数组转换为字符串，并返回结果。</p></li>
-<li><p>unshift(): 向数组的开头添加一个或更多元素，并返回新的长度。</p></li>
-</ul>
-<h2 id="数组结构">数组结构</h2>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr:number[]=[<span class="number">21</span>,<span class="number">13</span>];</span><br><span class="line"><span class="keyword">var</span>[x,y]=arr;  <span class="comment">//python中也有类似的方法</span></span><br><span class="line"><span class="built_in">console</span>.log(x);	<span class="comment">//21</span></span><br><span class="line"><span class="built_in">console</span>.log(y);	<span class="comment">//13</span></span><br></pre></td></tr></table></figure>
-<h2 id="ts-map">TS Map</h2>
-<p>存储键/值对的对象。.ts文件需要使用es6编译 (tsc --target es6 test.ts) ### Map的属性和方法： * <strong>clear()</strong>: 移除Map对象的所有键/值对。</p>
-<ul>
-<li><p><strong>set()</strong> 设置键/值对，返回该Map对象。</p></li>
-<li><p><strong>get()</strong> 返回对应键的值，不存在则返回undefined。</p></li>
-<li><p><strong>has()</strong> 返回一个布尔值，用于判断Map中是否有包含键的对应值。</p></li>
-<li><p><strong>delete()</strong> 删除Map中的元素，删除成功则返回true，否则返回false。</p></li>
-<li><p><strong>size()</strong> 返回Map对象存储的键/值对的数量。</p></li>
-<li><p><strong>keys()</strong> 返回一个Iterator对象，包含了 Map 对象中每个元素的键 。</p></li>
-<li><p><strong>values()</strong> 返回一个新的Iterator对象，包含了Map对象中每个元素的值 。</p></li>
-</ul>
-<h2 id="ts-联合类型">TS 联合类型</h2>
-<p>联合类型（Union Types）可以通过管道(|)将变量设置多种类型，赋值时可以根据设置的类型来赋值。</p>
-<p><code>注意</code>：只能赋值指定的类型，如果赋值其它类型就会报错。（函数表达式也是一种类型）</p>
-<p>格式：<code>Type1|Type2|Type3</code> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//联合类型</span></span><br><span class="line"><span class="keyword">var</span> val:string|number </span><br><span class="line">val = <span class="number">12</span> </span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;数字为 &quot;</span>+ val) </span><br><span class="line">val = <span class="string">&quot;Runoob&quot;</span> </span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;字符串为 &quot;</span> + val)</span><br><span class="line"><span class="comment">//联合类型数组</span></span><br><span class="line"><span class="keyword">var</span> arr:number[]|string[]; </span><br><span class="line"><span class="keyword">var</span> i:number; </span><br><span class="line">arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>] </span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;**数字数组**&quot;</span>)  </span><br><span class="line"> </span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>;i&lt;arr.length;i++) &#123; </span><br><span class="line">   <span class="built_in">console</span>.log(arr[i]) </span><br><span class="line">&#125;  </span><br><span class="line"> </span><br><span class="line">arr = [<span class="string">&quot;Runoob&quot;</span>,<span class="string">&quot;Google&quot;</span>,<span class="string">&quot;Taobao&quot;</span>] </span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;**字符串数组**&quot;</span>)  </span><br><span class="line"> </span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>;i&lt;arr.length;i++) &#123; </span><br><span class="line">   <span class="built_in">console</span>.log(arr[i]) </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> ### type type 修饰符可以创造类型的别名： <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">type Name = string;</span><br><span class="line">type NameResolver = <span class="function">() =&gt;</span> string;</span><br><span class="line">type NameOrResolver = Name | NameResolver;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getName</span>(<span class="params">n: NameOrResolver</span>): <span class="title">Name</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> n === <span class="string">&#x27;string&#x27;</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> n;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> n();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//类型别名常用于联合类型</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="keyof">keyof</h3>
-<p>keyof 可以返回一个接口，或者类内的属性的联合类型。 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">interface Person &#123;</span><br><span class="line">  name: string;</span><br><span class="line">  age: number;</span><br><span class="line">  location: string;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">type K1 = keyof Person; <span class="comment">// &quot;name&quot; | &quot;age&quot; | &quot;location&quot;</span></span><br><span class="line">type K2 = keyof Person[];  <span class="comment">// number | &quot;length&quot; | &quot;push&quot; | &quot;concat&quot; | ...</span></span><br><span class="line">type K3 = keyof &#123; [x: string]: Person &#125;;  <span class="comment">// string | number</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="ts修饰符">TS修饰符</h2>
-<h3 id="randonly">randonly</h3>
-<p>含义，用于修饰属性。它能让你以一种更安全的方式工作（不可预期的改变是很糟糕的） <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//在接口中使用</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFoo</span>(<span class="params">myConfig: &#123; readonly bar: number, readonly bas: number &#125;</span>) </span>&#123;</span><br><span class="line">    myConfig.bar=<span class="number">10</span>; <span class="comment">//错误</span></span><br><span class="line">    <span class="built_in">console</span>.log(myConfig.bar);</span><br><span class="line">    <span class="built_in">console</span>.log(myConfig.bas);</span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"><span class="keyword">const</span> myConfig = &#123; <span class="attr">bar</span>: <span class="number">123</span>, <span class="attr">bas</span>: <span class="number">123</span> &#125;;</span><br><span class="line">myConfig.bar=<span class="number">10</span>; <span class="comment">//正确</span></span><br><span class="line">myFoo(myConfig);</span><br><span class="line"></span><br><span class="line"><span class="comment">//在type中使用</span></span><br><span class="line">type Foo = &#123;</span><br><span class="line">    readonly bar: number;</span><br><span class="line">    readonly bas: number;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 初始化</span></span><br><span class="line"><span class="keyword">const</span> foo: Foo = &#123; <span class="attr">bar</span>: <span class="number">123</span>, <span class="attr">bas</span>: <span class="number">456</span> &#125;;</span><br><span class="line"><span class="comment">// 不能被改变</span></span><br><span class="line">foo.bar = <span class="number">456</span>; <span class="comment">// Error: foo.bar 为仅读属性</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//这有一个 Readonly 的映射类型，它接收一个泛型 T，用来把它的所有属性标记为只读类型：</span></span><br><span class="line">type Foo = &#123;</span><br><span class="line">    readonly bar: number;</span><br><span class="line">    readonly bas: number;</span><br><span class="line">&#125;;</span><br><span class="line">type FooReadonly = Readonly&lt;Foo&gt;;</span><br><span class="line"><span class="keyword">const</span> foo: Foo = &#123; <span class="attr">bar</span>: <span class="number">123</span>, <span class="attr">bas</span>: <span class="number">456</span> &#125;;</span><br><span class="line"><span class="keyword">const</span> fooReadonly: FooReadonly = &#123; <span class="attr">bar</span>: <span class="number">123</span>, <span class="attr">bas</span>: <span class="number">456</span> &#125;;</span><br><span class="line">foo.bar = <span class="number">456</span>; <span class="comment">// ok</span></span><br><span class="line">fooReadonly.bar = <span class="number">456</span>; <span class="comment">// Error: bar 属性只读</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//类内使用</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span> </span>&#123;</span><br><span class="line">    readonly bar = <span class="number">1</span>; <span class="comment">// OK</span></span><br><span class="line">    readonly baz: string;</span><br><span class="line">    <span class="keyword">constructor</span>() &#123;</span><br><span class="line">        <span class="built_in">this</span>.baz = <span class="string">&#x27;hello&#x27;</span>; <span class="comment">// OK</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> ### 与const 的比较 | const | randonly | |:----:|:----:| | 用于变量 | 用于属性| |变量不能赋值给其他任何事物|用于别名，可以修改属性|</p>
-<p>readonly 能确保“我”不能修改属性，但是当你把这个属性交给其他并没有这种保证的使用者（允许出于类型兼容性的原因），他们能改变它。当然，如果使用者明确的表示，他们的参数不可修改，那么编译器会发出错误警告： <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//实际编译中，readonly关键字仅做检查，不会出现在js代码中</span></span><br><span class="line"><span class="comment">//当一个被readonly修饰的类型的变量交给其他人的时候是可以修改的</span></span><br><span class="line"><span class="keyword">const</span> foo:&#123;</span><br><span class="line">   readonly bar:number,</span><br><span class="line">&#125;=&#123;</span><br><span class="line">    bar:<span class="number">1</span>,</span><br><span class="line">&#125;</span><br><span class="line">&#123;<span class="function"><span class="keyword">function</span> <span class="title">useFoo</span>(<span class="params">foo:&#123;bar:number&#125;</span>)</span>&#123;</span><br><span class="line">    foo.bar=<span class="number">2</span>; <span class="comment">//正确</span></span><br><span class="line">&#125;&#125;(foo);</span><br><span class="line"><span class="built_in">console</span>.log(foo);</span><br><span class="line"><span class="comment">//反之，在使用者严格定义后，即使原类型没有严格定义，编译器也会发出错误警告。</span></span><br><span class="line"><span class="keyword">const</span> foo:&#123;</span><br><span class="line">    bar:number,</span><br><span class="line">&#125;=&#123;</span><br><span class="line">    bar:<span class="number">1</span>,</span><br><span class="line">&#125;</span><br><span class="line">&#123;<span class="function"><span class="keyword">function</span> <span class="title">useFoo</span>(<span class="params">foo:&#123;readonly bar:number&#125;</span>)</span>&#123;</span><br><span class="line">    foo.bar=<span class="number">2</span>;  <span class="comment">// 错误</span></span><br><span class="line">&#125;&#125;(foo);</span><br><span class="line"><span class="built_in">console</span>.log(foo);</span><br></pre></td></tr></table></figure> ## TS面向对象 ### 类与接口的区别 |类|接口| |---|---| |class作为TS的一种变量类型存在于上下文之中，class中可以提供，变量、方法等的具体实现方式等，它的作用不仅仅是约束数据结构。|存于TS上下文中的一种虚拟结构，TS编译器依赖接口进行类型检查，编译成JS后，接口会被移除。只定义变量和方法的声明，不能有具体的实现。个人理解：可以理解为一种特殊的数据类型，只用来约束数据的结构，直接约束对象，和其他语言内的有区别。| |使用class约束数据结构性能差，因为会编译成JS代码。|使用interface约束数据结构性能好，因为不会被编译成JS代码。| |当需要使用class时，我通常会考虑三个方面：(1)是否需要创建多个实例;(2)是否需要使用继承;(3)是否需要特定的单例对象。| 对于从服务器端获取或者业务场景中模拟的数据，提倡使用interface去定义，这些数据通常是不会经常变化和调整的，这些数据可能仅仅只表示某些状态，或者是UI上的文本。|</p>
-<h3 id="鸭子类型duck-typing">鸭子类型(Duck Typing)</h3>
-<p><strong>鸭子类型（英语：duck typing）</strong>是动态类型的一种风格，是多态(polymorphism)的一种形式。</p>
-<p>在这种风格中，一个对象有效的语义，不是由继承自特定的类或实现特定的接口，而是由&quot;当前方法和属性的集合&quot;决定。</p>
-<p><strong>个人理解:</strong>是一种程序设计理念，就是不需要去限定相同的类型，而是能具有需要使用的属性和方法即可允许。 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">interface IPoint &#123; </span><br><span class="line">    x:number </span><br><span class="line">    y:number </span><br><span class="line">&#125; </span><br><span class="line"><span class="comment">//addPoints参数需要是IPoint类型，否则会报错，严格限制了输入。</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addPoints</span>(<span class="params">p1:IPoint,p2:IPoint</span>):<span class="title">IPoint</span> </span>&#123; </span><br><span class="line">    <span class="keyword">var</span> x = p1.x + p2.x </span><br><span class="line">    <span class="keyword">var</span> y = p1.y + p2.y </span><br><span class="line">    <span class="keyword">return</span> &#123;<span class="attr">x</span>:x,<span class="attr">y</span>:y&#125; </span><br><span class="line">&#125; </span><br><span class="line"> </span><br><span class="line"><span class="comment">// 正确</span></span><br><span class="line"><span class="keyword">var</span> newPoint = addPoints(&#123;<span class="attr">x</span>:<span class="number">3</span>,<span class="attr">y</span>:<span class="number">4</span>&#125;,&#123;<span class="attr">x</span>:<span class="number">5</span>,<span class="attr">y</span>:<span class="number">1</span>&#125;)  </span><br><span class="line"> </span><br><span class="line"><span class="comment">// 错误 </span></span><br><span class="line"><span class="keyword">var</span> newPoint2 = addPoints(&#123;<span class="attr">x</span>:<span class="number">1</span>&#125;,&#123;<span class="attr">x</span>:<span class="number">4</span>,<span class="attr">y</span>:<span class="number">3</span>&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//addPoints参数没有做限制，只要存在函数内需要的属性和方法即可使用（鸭子类型）。</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addPoints</span>(<span class="params">p1,p2</span>):<span class="title">IPoint</span> </span>&#123; </span><br><span class="line">    <span class="keyword">var</span> x = p1.x + p2.x </span><br><span class="line">    <span class="keyword">var</span> y = p1.y + p2.y </span><br><span class="line">    <span class="keyword">return</span> &#123;<span class="attr">x</span>:x,<span class="attr">y</span>:y&#125; </span><br><span class="line">&#125; </span><br><span class="line"><span class="comment">//正确</span></span><br><span class="line"><span class="keyword">var</span> newpoint=addPoints(&#123;<span class="attr">x</span>:<span class="number">1</span>,<span class="attr">y</span>:<span class="number">1</span>,<span class="attr">z</span>:<span class="number">1</span>&#125;,&#123;<span class="attr">x</span>:<span class="number">2</span>,<span class="attr">y</span>:<span class="number">2</span>&#125;);</span><br></pre></td></tr></table></figure> ## TS 命名空间 命名空间定义了标识符的可见范围，一个标识符可在多个名字空间中定义，它在不同名字空间中的含义是互不相干的。这样，在一个新的名字空间中可定义任何标识符，它们不会与任何已有的标识符发生冲突，因为已有的定义都处于其他名字空间中。</p>
-<p>TypeScript 中命名空间使用 <code>namespace</code> 来定义，语法格式如下： <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//如果我们需要在外部可以调用 SomeNameSpaceName 中的类和接口，</span></span><br><span class="line"><span class="comment">//则需要在类和接口添加 export 关键字。</span></span><br><span class="line">namespace SomeNameSpaceName &#123; </span><br><span class="line">   <span class="keyword">export</span> interface ISomeInterfaceName &#123;      &#125;  </span><br><span class="line">   <span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">SomeClassName</span> </span>&#123;      &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 同个命名空间在不同ts文件下要使用需要加上注释： <code>/// &lt;reference path = &quot;SomeFileName.ts&quot; /&gt;</code> 代码实例： <img src="/images/JS-TS学习/TS命名空间.png" /> ### 嵌套命名空间 <img src="/images/JS-TS学习/TS命名空间.png" /></p>
-<h2 id="ts模块">TS模块</h2>
-<p>TypeScript 模块的设计理念是可以更换的组织代码。</p>
-<p>模块是在其自身的作用域里执行，并不是在全局作用域，这意味着定义在模块里面的变量、函数和类等在模块外部是不可见的，除非明确地使用 export 导出它们。类似地，我们必须通过 import 导入其他模块导出的变量、函数、类等。</p>
-<p>两个模块之间的关系是通过在文件级别上使用 import 和 export 建立的。</p>
-<p>模块使用模块加载器去导入其它的模块。 在运行时，模块加载器的作用是在执行此模块代码前去查找并执行这个模块的所有依赖。 大家最熟知的JavaScript模块加载器是服务于 Node.js 的 CommonJS 和服务于 Web 应用的 Require.js。此外还有有 SystemJs 和 Webpack。所以在tsc -m 选项下可以选择使用不同的模块加载器。</p>
-<p>跨越模块调用： <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//被调用的模块</span></span><br><span class="line"><span class="keyword">export</span> interface SomeInterface &#123; <span class="comment">//调用的内容加上前缀</span></span><br><span class="line">   <span class="comment">// 代码部分</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//调用模块引入</span></span><br><span class="line"><span class="comment">//被调用的文件加上import，require内是文件路径。</span></span><br><span class="line"><span class="keyword">import</span> someInterfaceRef = <span class="built_in">require</span>(<span class="string">&quot;./SomeInterface&quot;</span>);	</span><br></pre></td></tr></table></figure> ## TS声明文件 TypeScript 作为 JavaScript 的超集，在开发过程中不可避免要引用其他第三方的 JavaScript 的库。虽然通过直接引用可以调用库的类和方法，但是却无法使用TypeScript 诸如类型检查等特性功能。为了解决这个问题，需要将这些库里的函数和方法体去掉后只保留导出类型声明，而产生了一个描述 JavaScript 库和模块信息的声明文件。通过引用这个声明文件，就可以借用 TypeScript 的各种特性来使用库文件了。</p>
-<p><strong>个人理解：为了调用系统库内描述JS的方法时，让方法能被TS识别，通过TS的参数检测。</strong> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&#x27;#foo&#x27;</span>);</span><br><span class="line"><span class="comment">// 或</span></span><br><span class="line">jQuery(<span class="string">&#x27;#foo&#x27;</span>);<span class="comment">// index.ts(1,1): error TS2304: Cannot find name &#x27;jQuery&#x27;.</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//这时，我们需要使用 declare 关键字来定义它的类型，</span></span><br><span class="line"><span class="comment">//帮助 TypeScript 判断我们传入的参数类型对不对</span></span><br><span class="line">declare <span class="keyword">var</span> jQuery: <span class="function">(<span class="params">selector: string</span>) =&gt;</span> any; <span class="comment">//只用户编译时的检查，不存在于编译结果</span></span><br><span class="line"></span><br><span class="line">jQuery(<span class="string">&#x27;#foo&#x27;</span>);</span><br></pre></td></tr></table></figure> ### 声明文件格式 * 文件以 .d.ts 结尾 * 语法格式: <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//声明文件或模块的语法格式如下：</span></span><br><span class="line">declare <span class="built_in">module</span> Module_Name &#123;&#125;</span><br><span class="line"><span class="comment">//TypeScript 引入声明文件语法格式：</span></span><br><span class="line"><span class="comment">/// &lt;reference path = &quot; runoob.d.ts&quot; /&gt;</span></span><br></pre></td></tr></table></figure> * 当然，很多流行的第三方库的声明文件不需要我们定义了，比如<a href="https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/jquery/index.d.ts">jQuery</a>就已经定义好了：</p>
+                                        <img class="kratos-entry-thumb-new-img">
+                                    
+                                </a>
+                            </div>
+                            <div class="kratos-post-inner-new">
+                                <header class="kratos-entry-header-new">
+                                        <a class="label-link" href="/SmartBoyMB.github.io/categories/TypeScript/">TypeScript</a>, <a class="label-link" href="/SmartBoyMB.github.io/categories/TypeScript/%E5%AD%A6%E4%B9%A0/">学习</a>
+                                    <h2 class="kratos-entry-title-new"><a href="/SmartBoyMB.github.io/2022/09/02/TS%E5%AD%A6%E4%B9%A0/">TS基础知识</a>
+                                </header>
+                                <div class="kratos-entry-content-new">
+                                    <p>
+                                        
+                                            JS数据类型
+类型标注
 
-                                    
+类型的标注主要通过类型后置语法来实现：“变量：类型”
+接口的作用就是为类型命名和为代码或第三方代码定义契约
+
+类
+
+基于类的程序设计中一种最基本的模式是允许使用继承来扩展现有的类
+
+模块导...
+                                        
+                                    </p>
                                 </div>
                             </div>
-                        </div>
-                        
                             <footer class="kratos-post-meta-new">
                                 <span class="pull-left">
                                     <a><i class="fa fa-calendar"></i></a><a>2022-09-02</a>
                                     <a><i class="fa fa-tags"></i></a>
-                                    
+                                    <a class="tag-none-link" href="/SmartBoyMB.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag">基础知识</a>
                                 </span>
                                 <span class="pull-right">
                                     <a class="read-more" href="/SmartBoyMB.github.io/2022/09/02/TS%E5%AD%A6%E4%B9%A0/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
                                 </span>
                             </footer>
-                        
+                        </div>
                     </article>
                 
             
                 
-                    <article class="kratos-hentry kratos-entry-border-new clearfix">
-                        <div class="kratos-status">
+                    <article class="kratos-hentry clearfix">
+                        <div class="kratos-entry-border-new clearfix">
                             
-                                <i class="fa fa-refresh"></i>
-                            
-                            <div class="kratos-status-inner">
-                                <div class="kratos-status-content">
+                            <div class="kratos-entry-thumb-new">
+                                <a href="/SmartBoyMB.github.io/2022/09/02/JS%E5%AD%A6%E4%B9%A0/">
                                     
-                                        <h1 id="js基础知识">JS基础知识</h1>
-<h2 id="js数据类型">JS数据类型</h2>
-<figure>
-<img src="/images/JS-TS学习/数据类型.png" alt="1" /><figcaption>1</figcaption>
-</figure>
-<p><strong>值类型(基本类型)</strong>：字符串（String）、数字(Number)、布尔(Boolean)、空（Null）、未定义（Undefined）、Symbol、BigInt。</p>
-<p><strong>引用数据类型（对象类型）</strong>：对象(Object)、数组(Array)、函数(Function)，还有两个特殊的对象：正则（RegExp）和日期（Date）。</p>
-<p><em>注：Symbol 是 ES6 引入了一种新的原始数据类型，表示独一无二的值。</em></p>
-<p>变量的数据类型可以使用 typeof 操作符来查看。</p>
-<p><strong>JS的浮点数运算是不精确的</strong>。</p>
-<h2 id="js的正则">JS的正则</h2>
-<p><strong>语法</strong>：/正则表达式主体/修饰符(可选)</p>
-<p><strong>例子</strong>：<code>var patt = /runoob/i</code></p>
-<figure>
-<img src="/images/JS-TS学习/正则表达式.png" alt="2" /><figcaption>2</figcaption>
-</figure>
-<p><strong>方法：</strong></p>
-<ul>
-<li><p><strong>search()</strong> 方法用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串，并返回子串的起始位置。</p></li>
-<li><p><strong>replace()</strong> 方法用于在字符串中用一替换另一些字符串，或替换一个与正则表达式匹配的子串。</p></li>
-<li><p><strong>test()</strong> 方法用于检测一个字符串是否匹配某个模式，如果字符串中含有匹配的文本，则返回 true，否则返回 false。</p></li>
-<li><p><strong>exec()</strong> 方法用于检索字符串中的正则表达式的匹配。该函数返回一个数组，其中存放匹配的结果。如果未找到匹配，则返回值为 null。</p></li>
-</ul>
-<h2 id="js-闭包">JS 闭包</h2>
-<p>私有变量可以使用到闭包 <strong>例子：</strong> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> add = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; </span><br><span class="line">    <span class="keyword">var</span> counter = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;<span class="keyword">return</span> counter += <span class="number">1</span>;&#125; </span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure> 变量<code>add</code>指定了函数自我调用的返回字值。自我调用函数只执行一次。 设置计数器为 0。并返回函数表达式。add变量可以作为一个函数使用。 非常棒的部分是它可以访问函数上一层作用域的计数器。 这个叫作 <strong>JavaScript 闭包</strong>。它使得函数拥有私有变量变成可能。 计数器受匿名函数的作用域保护，只能通过<code>add</code>方法修改。</p>
-<p><em>闭包是一种保护私有变量的机制，在函数执行时形成私有的作用域，保护里面的私有变量不受外界干扰。 直观的说就是形成一个不销毁的栈环境。</em></p>
-<h2 id="js函数">JS函数</h2>
-<h3 id="bindfunction.prototype.bind"><code>bind()：Function.prototype.bind()</code></h3>
-<p>语法：<code>function.bind(thisArg[, arg1[, arg2[, ...]]]) （参数thisArg即函数调用时this的绑定值，参数args则是函数调用时的参数绑定值）</code></p>
-<p><strong>参数</strong></p>
-<p><strong>thisArg:</strong> 调用绑定函数时作为 this 参数传递给目标函数的值。 如果使用new运算符构造绑定函数，则忽略该值。当使用 bind 在 setTimeout 中创建一个函数（作为回调提供）时，作为 thisArg 传递的任何原始值都将转换为 object。如果 bind 函数的参数列表为空，或者thisArg是null或undefined，执行作用域的 this 将被视为新函数的 thisArg。</p>
-<p><strong>arg1, arg2, ...：</strong> 当目标函数被调用时，被预置入绑定函数的参数列表中的参数。</p>
-<p><strong>返回值</strong></p>
-<p>返回一个原函数的拷贝，并拥有指定的 this 值和初始参数。</p>
-<p><strong>例子：</strong> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Toggle</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">    <span class="built_in">super</span>(props);</span><br><span class="line">    <span class="built_in">this</span>.state = &#123;<span class="attr">isToggleOn</span>: <span class="literal">true</span>&#125;;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// 这边绑定是必要的，这样 `this` 才能在回调函数中使用</span></span><br><span class="line">    <span class="built_in">this</span>.handleClick = <span class="built_in">this</span>.handleClick.bind(<span class="built_in">this</span>);</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line">  handleClick() &#123;</span><br><span class="line">    <span class="built_in">this</span>.setState(<span class="function"><span class="params">prevState</span> =&gt;</span> (&#123;</span><br><span class="line">      isToggleOn: !prevState.isToggleOn</span><br><span class="line">    &#125;));</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;button onClick=&#123;<span class="built_in">this</span>.handleClick&#125;&gt;</span><br><span class="line">        &#123;<span class="built_in">this</span>.state.isToggleOn ? <span class="string">&#x27;ON&#x27;</span> : <span class="string">&#x27;OFF&#x27;</span>&#125;</span><br><span class="line">      &lt;/button&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">ReactDOM.render(</span><br><span class="line">  &lt;Toggle /&gt;,</span><br><span class="line">  <span class="built_in">document</span>.getElementById(<span class="string">&#x27;example&#x27;</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure> ### 如何不使用bind() 你必须谨慎对待 JSX 回调函数中的 this，类的方法默认是不会绑定 this 的。如果你忘记绑定 this.handleClick 并把它传入 onClick, 当你调用这个函数的时候 this 的值会是 undefined。</p>
-<p>这并不是 React 的特殊行为；它是函数如何在 JavaScript 中运行的一部分。通常情况下，如果你没有在方法后面添加 () ，例如 <code>onClick=&#123;this.handleClick&#125;</code>，你应该为这个方法绑定 this。</p>
-<p>如果使用 bind 让你很烦，这里有两种方式可以解决。如果你正在使用实验性的属性初始化器语法，你可以使用属性初始化器来正确的绑定回调函数：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LoggingButton</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="comment">// 这个语法确保了 `this` 绑定在  handleClick 中</span></span><br><span class="line">  <span class="comment">// 这里只是一个测试</span></span><br><span class="line">  handleClick = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;this is:&#x27;</span>, <span class="built_in">this</span>);</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;button onClick=&#123;<span class="built_in">this</span>.handleClick&#125;&gt;</span><br><span class="line">        Click me</span><br><span class="line">      &lt;/button&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>如果你没有使用属性初始化器语法，你可以在回调函数中使用 箭头函数： <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LoggingButton</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  handleClick() &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;this is:&#x27;</span>, <span class="built_in">this</span>);</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="comment">//  这个语法确保了 `this` 绑定在  handleClick 中</span></span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;button onClick=&#123;<span class="function">(<span class="params">e</span>) =&gt;</span> <span class="built_in">this</span>.handleClick(e)&#125;&gt;</span><br><span class="line">        Click me</span><br><span class="line">      &lt;/button&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 使用这个语法有个问题就是每次 LoggingButton 渲染的时候都会创建一个不同的回调函数。在大多数情况下，这没有问题。然而如果这个回调函数作为一个属性值传入低阶组件，这些组件可能会进行额外的重新渲染。我们通常建议在构造函数中绑定或使用属性初始化器语法来避免这类性能问题。</p>
-<h2 id="js数组array">JS数组(Array)</h2>
-<p>数组对象的作用是：使用单独的变量名来存储一系列的值。</p>
-<ul>
-<li><p>数组可以通过索引访问和修改，例如：<img src="/images/JS-TS学习/数组1.png" alt="3" /></p></li>
-<li><p>数组中的对象可以是不同类型，例如：<img src="/images/JS-TS学习/数组2.png" alt="4" /></p></li>
-</ul>
-<p>数组的属性 | <strong>属性</strong> | <strong>描述</strong> | |:---:|:---:| |constructor|返回创建数组对象的原型函数（函数的引用| |length|设置或返回数组元素的个数| |prototype|允许你向数组类（数组类内）添加属性或方法 语法：Array.prototype.name=value|</p>
-<p>数组的方法（常用的，后续学习到继续补充）</p>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: center;"><strong>方法</strong></th>
-<th style="text-align: center;"><strong>描述</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">concat()</td>
-<td style="text-align: center;">连接两个或更多的数组，并返回结果</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">indexOf()</td>
-<td style="text-align: center;">搜索数组中的元素并返回所在的位置</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">fill()</td>
-<td style="text-align: center;">用一个指定的值填充数组</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">push()</td>
-<td style="text-align: center;">向数组的末尾添加一个或更多元素，返回新的长度</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">slice()</td>
-<td style="text-align: center;">选取数组的一部分，并返回一个新的数组</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">sort()</td>
-<td style="text-align: center;">数组排序</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">map()</td>
-<td style="text-align: center;">通过指定的函数处理数组中的每个元素，并返回处理后的数组 <img src="/images/JS-TS学习/数组3.png" alt="5" /></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">isArray()</td>
-<td style="text-align: center;">判断是否为数组</td>
-</tr>
-</tbody>
-</table>
-<h2 id="js-dom">JS DOM</h2>
-<p>当网页被加载时，浏览器会创建页面的文档对象模型（Document Object Model）。</p>
-<p><code>HTML DOM</code>模型被构造为<strong>对象</strong>的树： <img src="/images/JS-TS学习/DOM.png" alt="6" /> 找到HTML元素。有三种方法来做这件事：</p>
-<ul>
-<li><p>通过 id 找到 HTML 元素：var x=document.getElementById(&quot;intro&quot;);</p></li>
-<li><p>通过标签名找到 HTML 元素：var y=x.getElementsByTagName(&quot;p&quot;);</p></li>
-<li><p>通过类名找到 HTML 元素：var x=document.getElementsByClassName(&quot;intro&quot;);</p></li>
-</ul>
-<h3 id="js-dom事件">JS DOM事件</h3>
-<ul>
-<li><strong>onload 和 onunload 事件</strong>：
-<ul>
-<li>onload 和 onunload 事件会在用户进入或离开页面时被触发。</li>
-<li>onload 事件可用于检测访问者的浏览器类型和浏览器版本，并基于这些信息来加载网页的正确版本。</li>
-<li>onload 和 onunload 事件可用于处理 cookie。</li>
-</ul></li>
-<li><strong>onchange 事件</strong>
-<ul>
-<li>onchange 事件常结合对输入字段的验证来使用。</li>
-<li>当用户改变输入字段的内容时，会调用指定的函数。</li>
-</ul></li>
-<li><strong>onmouseover 和 onmouseout 事件</strong>
-<ul>
-<li>onmouseover 和 onmouseout 事件可用于在用户的鼠标移至 HTML 元素上方或移出元素时触发函数。</li>
-</ul></li>
-<li><strong>onmousedown、onmouseup 以及 onclick 事件</strong>
-<ul>
-<li>onmousedown, onmouseup 以及 onclick 构成了鼠标点击事件的所有部分。首先当点击鼠标按钮时，会触发 onmousedown 事件，当释放鼠标按钮时，会触发 onmouseup 事件，最后，当完成鼠标点击时，会触发 onclick 事件。</li>
-</ul></li>
-</ul>
-<h3 id="dom与refs">DOM与Refs</h3>
-<p>Refs 提供了一种访问在 render 方法中创建的 DOM 节点或 React 元素的方法。</p>
-<p>在典型的 React 数据流中，<code>props</code>是父组件与其子组件交互的唯一方式。要修改一个孩子，你可以用新的道具重新渲染它。但是，在某些情况下，您需要在典型数据流之外强制修改子项。要修改的子元素可以是 React 组件的实例，也可以是 DOM 元素。</p>
-<h4 id="创建refs">创建Refs</h4>
-<p>以下示例已更新为使用React.createRef()React 16.3 中引入的 API。如果您使用的是早期版本的 React，我们建议使用回调 refs。</p>
-<h4 id="react.createref">React.createRef()</h4>
-<p>Refs 是使用属性创建React.createRef()并附加到 React 元素的。refRefs 通常在构建组件时分配给实例属性，以便可以在整个组件中引用它们。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">    <span class="built_in">super</span>(props);</span><br><span class="line">    <span class="built_in">this</span>.myRef = React.createRef();</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">ref</span>=<span class="string">&#123;this.myRef&#125;</span> /&gt;</span></span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="回调">回调</h4>
-<p>React 还支持另一种设置 refs 的方法，称为“回调 refs”，它可以更细粒度地控制何时设置和取消设置 refs。</p>
-<p>不是传递由ref创建的属性createRef()，而是传递一个函数。该函数接收 React 组件实例或 HTML DOM 元素作为其参数，可以在其他地方存储和访问。 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CustomTextInput</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">    <span class="built_in">super</span>(props);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">this</span>.textInput = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">this</span>.setTextInputRef = <span class="function"><span class="params">element</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">this</span>.textInput = element;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">this</span>.focusTextInput = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// Focus the text input using the raw DOM API</span></span><br><span class="line">      <span class="keyword">if</span> (<span class="built_in">this</span>.textInput) <span class="built_in">this</span>.textInput.focus();</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  componentDidMount() &#123;</span><br><span class="line">    <span class="comment">// autofocus the input on mount</span></span><br><span class="line">    <span class="built_in">this</span>.focusTextInput();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="comment">// Use the `ref` callback to store a reference to the text input DOM</span></span><br><span class="line">    <span class="comment">// element in an instance field (for example, this.textInput).</span></span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;input</span><br><span class="line">          type=<span class="string">&quot;text&quot;</span></span><br><span class="line">          ref=&#123;<span class="built_in">this</span>.setTextInputRef&#125;</span><br><span class="line">        /&gt;</span><br><span class="line">        &lt;input</span><br><span class="line">          type=<span class="string">&quot;button&quot;</span></span><br><span class="line">          value=<span class="string">&quot;Focus the text input&quot;</span></span><br><span class="line">          onClick=&#123;<span class="built_in">this</span>.focusTextInput&#125;</span><br><span class="line">        /&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> #### 访问Refs 当 ref 被传递给 render 中的元素时，对节点的引用可以在 ref 的current属性处访问。 <code>const node = this.myRef.current;</code> Ref 的值因节点的类型而异：</p>
-<ul>
-<li><p>当在 HTML 元素上使用 ref 属性时，使用 React.createRef() 在构造函数中创建的 ref 接收底层 DOM 元素作为其当前属性。</p></li>
-<li><p>当 ref 属性用于自定义类组件时，ref 对象接收组件的已安装实例作为其当前实例。</p></li>
-<li><p>你不能在函数组件上使用 ref 属性，因为它们没有实例。</p></li>
-</ul>
-<p>下面的示例演示了这些差异。</p>
-<h4 id="dom组件中使用ref">DOM组件中使用Ref</h4>
-<p>此代码使用 ref 来存储对 DOM 节点的引用： <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CustomTextInput</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">    <span class="built_in">super</span>(props);</span><br><span class="line">    <span class="comment">// create a ref to store the textInput DOM element</span></span><br><span class="line">    <span class="built_in">this</span>.textInput = React.createRef();</span><br><span class="line">    <span class="built_in">this</span>.focusTextInput = <span class="built_in">this</span>.focusTextInput.bind(<span class="built_in">this</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  focusTextInput() &#123;</span><br><span class="line">    <span class="comment">// Explicitly focus the text input using the raw DOM API</span></span><br><span class="line">    <span class="comment">// Note: we&#x27;re accessing &quot;current&quot; to get the DOM node</span></span><br><span class="line">    <span class="built_in">this</span>.textInput.current.focus();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="comment">// tell React that we want to associate the &lt;input&gt; ref</span></span><br><span class="line">    <span class="comment">// with the `textInput` that we created in the constructor</span></span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;input</span><br><span class="line">          type=<span class="string">&quot;text&quot;</span></span><br><span class="line">          ref=&#123;<span class="built_in">this</span>.textInput&#125; /&gt;</span><br><span class="line">        &lt;input</span><br><span class="line">          type=<span class="string">&quot;button&quot;</span></span><br><span class="line">          value=<span class="string">&quot;Focus the text input&quot;</span></span><br><span class="line">          onClick=&#123;<span class="built_in">this</span>.focusTextInput&#125;</span><br><span class="line">        /&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> #### 类组件中使用Ref 如果我们想包装上面的 CustomTextInput 以模拟它在安装后立即被点击，我们可以使用 ref 来访问自定义输入并手动调用其 focusTextInput 方法 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">AutoFocusTextInput</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">    <span class="built_in">super</span>(props);</span><br><span class="line">    <span class="built_in">this</span>.textInput = React.createRef();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  componentDidMount() &#123;</span><br><span class="line">    <span class="built_in">this</span>.textInput.current.focusTextInput();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;CustomTextInput ref=&#123;<span class="built_in">this</span>.textInput&#125; /&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//请注意，这仅在将 CustomTextInput 声明为类时才有效：</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CustomTextInput</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> #### 函数组件中使用Ref 如果你想让人们把一个ref组件带到你的函数中，你可以使用forwardRef（结合useImperativeHandle），或者你可以将组件转换为一个类。 但是，只要您引用 DOM 元素或类组件，您就可以在函数组件中使用该属性：ref <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">CustomTextInput</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// textInput must be declared here so the ref can refer to it</span></span><br><span class="line">  <span class="keyword">const</span> textInput = useRef(<span class="literal">null</span>);</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">handleClick</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    textInput.current.focus();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;input</span><br><span class="line">        type=<span class="string">&quot;text&quot;</span></span><br><span class="line">        ref=&#123;textInput&#125; /&gt;</span><br><span class="line">      &lt;input</span><br><span class="line">        type=<span class="string">&quot;button&quot;</span></span><br><span class="line">        value=<span class="string">&quot;Focus the text input&quot;</span></span><br><span class="line">        onClick=&#123;handleClick&#125;</span><br><span class="line">      /&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> #### 将DOM Refs暴露给父组件 在极少数情况下，您可能希望从父组件访问子组件的 DOM 节点。通常不建议这样做，因为它会破坏组件封装，但它有时对触发焦点或测量子 DOM 节点的大小或位置很有用。</p>
-<p>虽然您可以向子组件添加 ref，但这不是一个理想的解决方案，因为您只会获得组件实例而不是 DOM 节点。此外，这不适用于功能组件。</p>
-<p>如果您使用 React 16.3 或更高版本，我们建议在这些情况下使用ref 转发（forwardRef）。<strong>Ref 转发允许组件选择将任何子组件的 ref 公开为它们自己的 ref</strong>。您可以在 ref 转发文档中找到有关如何将子 DOM 节点公开给父组件的详细示例。 ## JS BOM 浏览器对象模型 (BOM) 使 JavaScript 有能力与浏览器&quot;对话&quot;。</p>
-<h3 id="window-对象">Window 对象</h3>
-<p>所有浏览器都支持 window 对象。它表示浏览器窗口。</p>
-<p>所有 JavaScript 全局对象、函数以及变量均自动成为 window 对象的成员。</p>
-<p>全局变量是 window 对象的属性。</p>
-<p>全局函数是 window 对象的方法。</p>
-<p>甚至 HTML DOM 的 document 也是 window 对象的属性之一：</p>
-<p><code>window.document.getElementById(&quot;header&quot;);</code></p>
-<p>与此相同：</p>
-<p><code>document.getElementById(&quot;header&quot;);</code></p>
-<p>方法和方法</p>
-<ul>
-<li><p>window.innerHeight - 浏览器窗口的内部高度(包括滚动条)</p></li>
-<li><p>window.innerWidth - 浏览器窗口的内部宽度(包括滚动条)</p></li>
-<li><p>window.open() - 打开新窗口</p></li>
-<li><p>window.close() - 关闭当前窗口</p></li>
-<li><p>window.moveTo() - 移动当前窗口</p></li>
-<li><p>window.resizeTo() - 调整当前窗口的尺寸</p></li>
-</ul>
-<h3 id="window-screen">Window Screen</h3>
-<p><strong>window.screen</strong>对象在编写时可以不使用 window 这个前缀。</p>
-<p>一些属性：</p>
-<ul>
-<li><p>screen.availWidth - 可用的屏幕宽度</p></li>
-<li><p>screen.availHeight - 可用的屏幕高度</p></li>
-</ul>
-<h3 id="window-location">Window Location</h3>
-<p><strong>window.location</strong> 对象在编写时可不使用 window 这个前缀</p>
-<ul>
-<li><p>location.hostname 返回 web 主机的域名</p></li>
-<li><p>location.pathname 返回当前页面的路径和文件名</p></li>
-<li><p>location.port 返回 web 主机的端口 （80 或 443）</p></li>
-<li><p>location.protocol 返回所使用的 web 协议（http: 或 https:）</p></li>
-</ul>
-<h3 id="window-history">Window History</h3>
-<p><strong>window.history</strong>对象在编写时可不使用 window 这个前缀。</p>
-<p>为了保护用户隐私，对 JavaScript 访问该对象的方法做出了限制。</p>
-<p>一些方法：</p>
-<ul>
-<li><p>history.back() - 与在浏览器点击后退按钮相同</p></li>
-<li><p>history.forward() - 与在浏览器中点击向前按钮相同</p></li>
-</ul>
-<h3 id="window-navigator">Window Navigator</h3>
-<p>window.navigator 对象包含有关访问者浏览器的信息。 window.navigator 对象在编写时可不使用 window 这个前缀。</p>
-<h1 id="js-进阶">JS 进阶</h1>
-<h2 id="js-对象">JS 对象</h2>
-<p>JavaScript 中的所有事物都是对象：字符串、数值、数组、函数...。此外，JavaScript 允许自定义对象。 ### 创建对象</p>
-<p>通过 JavaScript，您能够定义并创建自己的对象。</p>
-<p>创建新对象有两种不同的方法：</p>
-<ul>
-<li><p>使用 Object 定义并创建对象的实例。</p></li>
-<li><p>使用函数来定义对象，然后创建新的对象实例。</p></li>
-<li><p>使用字面量创建对象。（var obj={ }）。</p></li>
-<li><p>使用类创建对象。</p>
-<ul>
-<li><p>JavaScript 基于 prototype，而不是基于类的。</p></li>
-<li><p>ES6之后类其实在底层还是使用了 JavaScript 的函数和原型链。</p></li>
-<li><p>所以尽量不使用。</p></li>
-</ul></li>
-</ul>
-<h3 id="使用对象">使用对象</h3>
-<p>在 JavaScript 中，几乎所有的对象都是 Object 类型的实例，它们都会从 Object.prototype 继承属性和方法。</p>
-<p>Object 构造函数创建一个对象包装器。</p>
-<p>Object 构造函数，会根据给定的参数创建对象，具体有以下情况：</p>
-<ul>
-<li><p>如果给定值是 null 或 undefined，将会创建并返回一个空对象。</p></li>
-<li><p>如果传进去的是一个基本类型的值，则会构造其包装类型的对象。</p></li>
-<li><p>如果传进去的是引用类型的值，仍然会返回这个值，经他们复制的变量保有和源对象相同的引用地址。</p></li>
-<li><p>当以非构造函数形式被调用时，Object 的行为等同于 new Object()。(例如 <code>var num=Object(1)</code>)。 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">person=<span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">person.firstname=<span class="string">&quot;John&quot;</span>;</span><br><span class="line">person.lastname=<span class="string">&quot;Doe&quot;</span>;</span><br><span class="line">person.age=<span class="number">50</span>;</span><br><span class="line">person.eyecolor=<span class="string">&quot;blue&quot;</span>;</span><br></pre></td></tr></table></figure> ### 使用函数作为对象构造器 可以在函数内定义对象的属性和方法： <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">person</span>(<span class="params">firstname,lastname,age,eyecolor</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.firstname=firstname;</span><br><span class="line">    <span class="built_in">this</span>.lastname=lastname;</span><br><span class="line">    <span class="built_in">this</span>.age=age;</span><br><span class="line">    <span class="built_in">this</span>.eyecolor=eyecolor;</span><br><span class="line">    <span class="built_in">this</span>.changeName=changeName;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">changeName</span>(<span class="params">name</span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.lastname=name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; </span><br><span class="line"><span class="comment">//创建对象实例</span></span><br><span class="line"><span class="keyword">var</span> myFather=<span class="keyword">new</span> person(<span class="string">&quot;John&quot;</span>,<span class="string">&quot;Doe&quot;</span>,<span class="number">50</span>,<span class="string">&quot;blue&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> myMother=<span class="keyword">new</span> person(<span class="string">&quot;Sally&quot;</span>,<span class="string">&quot;Rally&quot;</span>,<span class="number">48</span>,<span class="string">&quot;green&quot;</span>);</span><br><span class="line"><span class="comment">//使用函数</span></span><br><span class="line">myMother.changeName(<span class="string">&quot;Doe&quot;</span>);</span><br><span class="line"><span class="comment">//向对象实例添加属性（构造器不能直接添加）</span></span><br><span class="line">myMother.work=(<span class="string">&quot;teacher&quot;</span>);</span><br></pre></td></tr></table></figure></p></li>
-</ul>
-<h2 id="原型对象">原型对象</h2>
-<p>每一个javascript对象(除null外)创建的时候，都会与之关联另一个对象，这个<strong>对象</strong>就是我们所说的原型，每一个对象都会从原型中“继承”属性。</p>
-<h3 id="prototype">prototype</h3>
-<p>在JavaScript中，每个函数都有一个prototype属性，这个属性指向函数的原型对象。（ps：函数其实也是一个对象）</p>
-<p>所有 JavaScript 中的对象都是位于原型链顶端的 Object 的实例。</p>
-<p>JavaScript 对象有一个指向一个原型对象的链。当试图访问一个对象的属性时，它不仅仅在该对象上搜寻，还会搜寻该对象的原型，以及该对象的原型的原型，依次层层向上搜索，直到找到一个名字匹配的属性或到达原型链的末尾。 <img src="/images/JS-TS学习/原型对象1.png" /> 通过prototype添加属性和方法 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">Animal</span>(<span class="params">weight</span>) </span>&#123;</span><br><span class="line">   <span class="built_in">this</span>.weight = weight</span><br><span class="line"> &#125;</span><br><span class="line"><span class="comment">//实质是在animal的对象原型内添加了height属性，在animal内没找到该属性时会顺着原型链查找。</span></span><br><span class="line">Animal.prototype.height = <span class="number">10</span></span><br><span class="line"><span class="keyword">var</span> cat1 = <span class="keyword">new</span> Animal()</span><br><span class="line"><span class="keyword">var</span> cat2 = <span class="keyword">new</span> Animal()</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;cat1&#x27;</span>,cat1.height)<span class="comment">//10</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;cat2&#x27;</span>,cat2.height)<span class="comment">//10</span></span><br><span class="line"></span><br><span class="line">Animal.prototype.setweight=<span class="function"><span class="keyword">function</span> (<span class="params">newWeight</span>)</span>&#123;</span><br><span class="line">	weight=newWeight;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> ### <strong>proto</strong> __proto__是实例（引用类型）指向原型的属性。prototype是对象或者构造函数指向原型的属性。 <img src="/images/JS-TS学习/原型对象2.png" /> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Animal</span>(<span class="params">weight</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.weight = weight</span><br><span class="line"> &#125;</span><br><span class="line">Animal.prototype.height = <span class="number">10</span></span><br><span class="line"><span class="keyword">var</span> cat1 = <span class="keyword">new</span> Animal()</span><br><span class="line"><span class="keyword">var</span> cat2 = <span class="keyword">new</span> Animal()</span><br><span class="line"><span class="comment">//全为true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;cat1.__proto__ === Animal.prototype&#x27;</span>,cat1.__proto__ === Animal.prototype)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;cat2.__proto__ === Animal.prototype&#x27;</span>,cat2.__proto__ === Animal.prototype)</span><br></pre></td></tr></table></figure> ### Constructor 每个原型都有一个constructor属性，指向该关联的构造函数。 <img src="/images/JS-TS学习/原型对象3.png" /> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Animal</span>(<span class="params">weight</span>) </span>&#123;</span><br><span class="line">     <span class="built_in">this</span>.weight = weight</span><br><span class="line">  &#125;</span><br><span class="line">  Animal.prototype.height = <span class="number">10</span></span><br><span class="line">  <span class="keyword">var</span> cat1 = <span class="keyword">new</span> Animal()</span><br><span class="line">  <span class="keyword">var</span> cat2 = <span class="keyword">new</span> Animal()</span><br><span class="line"> <span class="comment">//结果都是true</span></span><br><span class="line"> <span class="built_in">console</span>.log(<span class="string">&#x27;cat1.__proto__ === Animal.prototype&#x27;</span>,cat1.__proto__ === Animal.prototype)</span><br><span class="line"> <span class="built_in">console</span>.log(<span class="string">&#x27;Animal===Animal.prototype.constructor&#x27;</span>,Animal===Animal.prototype.constructor)</span><br><span class="line"><span class="comment">// 获取原型对象</span></span><br><span class="line"> <span class="built_in">console</span>.log(<span class="string">&#x27;Object.getPrototypeOf(cat1) === Animal.prototype&#x27;</span>,<span class="built_in">Object</span>.getPrototypeOf(cat1) === Animal.prototype)</span><br></pre></td></tr></table></figure> ### 原型链 当读取实例的属性时，如果找不到，就会查找与对象关联的原型中的属性，如果还查不到，就去找原型的原型，一直找到最顶层为止。这样就形成了原型链。 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Animal</span>(<span class="params">weight</span>) </span>&#123;</span><br><span class="line">   <span class="built_in">this</span>.weight = weight</span><br><span class="line">&#125;</span><br><span class="line">Animal.prototype.name = <span class="string">&#x27;animal&#x27;</span></span><br><span class="line"><span class="keyword">var</span> cat1 = <span class="keyword">new</span> Animal()</span><br><span class="line">cat1.name = <span class="string">&#x27;littleCat&#x27;</span></span><br><span class="line"><span class="comment">//输出littleCat</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;cat1.name&#x27;</span>,cat1.name)</span><br><span class="line"><span class="keyword">delete</span> cat1.name;</span><br><span class="line"><span class="comment">//输出animal</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;cat1.name&#x27;</span>,cat1.name)</span><br></pre></td></tr></table></figure> 结构图 <img src="/images/JS-TS学习/原型对象4.png" /> <img src="/images/JS-TS学习/原型对象5.png" /></p>
-<h3 id="拓展原型链">拓展原型链</h3>
-<p>该<strong>Object.create()</strong>方法创建一个新对象，使用现有对象作为新创建对象的原型。 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  isHuman: <span class="literal">false</span>,</span><br><span class="line">  printIntroduction: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`My name is <span class="subst">$&#123;<span class="built_in">this</span>.name&#125;</span>. Am I human? <span class="subst">$&#123;<span class="built_in">this</span>.isHuman&#125;</span>`</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> me = <span class="built_in">Object</span>.create(person);</span><br><span class="line"><span class="comment">// 输出：Object&#123;isHuman: false,</span></span><br><span class="line"><span class="comment">// printIntroduction: function() &#123;</span></span><br><span class="line"><span class="comment">//  console.log(`My name is $&#123;this.name&#125;. Am I human? $&#123;this.isHuman&#125;`);</span></span><br><span class="line"><span class="comment">//&#125;&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(me.__proto__);</span><br><span class="line"><span class="comment">//即引用对象me的__proto__指向对象person。</span></span><br></pre></td></tr></table></figure> ## 异步编程 Promise Promise 是异步编程的一种解决方案，其实是一个构造函数，自己身上有all、reject、resolve这几个方法，原型上有then、catch等方法。</p>
-<p>Promise对象有以下两个特点。</p>
-<p>（1）对象的状态不受外界影响。Promise对象代表一个异步操作，有三种状态：pending（进行中）、fulfilled（已成功）和rejected（已失败）。只有异步操作的结果，可以决定当前是哪一种状态，任何其他操作都无法改变这个状态。这也是Promise这个名字的由来，它的英语意思就是“承诺”，表示其他手段无法改变。</p>
-<p>（2）一旦状态改变，就不会再变，任何时候都可以得到这个结果。Promise对象的状态改变，只有两种可能：从pending变为fulfilled和从pending变为rejected。只要这两种情况发生，状态就凝固了，不会再变了，会一直保持这个结果，这时就称为 resolved（已定型）。如果改变已经发生了，你再对Promise对象添加回调函数，也会立即得到这个结果。这与事件（Event）完全不同，事件的特点是，如果你错过了它，再去监听，是得不到结果的。</p>
-<h3 id="使用then方法">使用+then方法</h3>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">promiseClick</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="comment">//revolve 是sucess的回调，reject是fail的回调。</span></span><br><span class="line">  <span class="keyword">let</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve, reject</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="keyword">var</span> num = <span class="built_in">Math</span>.ceil(<span class="built_in">Math</span>.random()*<span class="number">20</span>); <span class="comment">//生成1-10的随机数</span></span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&#x27;随机数生成的值：&#x27;</span>,num)</span><br><span class="line">      <span class="keyword">if</span>(num&lt;=<span class="number">10</span>)&#123;</span><br><span class="line">        resolve(num);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">else</span>&#123;</span><br><span class="line">        reject(<span class="string">&#x27;数字太于10了即将执行失败回调&#x27;</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;, <span class="number">2000</span>);</span><br><span class="line">    <span class="comment">//then(resolve,reject)：定义两种状态的解决方法，return值会传递到后续。</span></span><br><span class="line">  &#125;).then(<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data);</span><br><span class="line">    <span class="keyword">return</span> runAsync2();</span><br><span class="line">  &#125;,<span class="function">(<span class="params">err</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(err);</span><br><span class="line">	&#125;).then(<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data);</span><br><span class="line">    <span class="keyword">return</span> runAsync3();</span><br><span class="line">    <span class="comment">//catch是可以捕捉err的信息解决的。</span></span><br><span class="line">	&#125;).catch(err)&#123;</span><br><span class="line">  	<span class="built_in">console</span>.log(err);</span><br><span class="line">  &#125;</span><br><span class="line">  .then(<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data);</span><br><span class="line">	&#125;);	</span><br><span class="line">&#125;;	</span><br></pre></td></tr></table></figure>
-<h3 id="其他方法">其他方法</h3>
-<h4 id="all方法">all方法：</h4>
-<p>与then同级的另一个方法，all方法，该方法提供了并行执行异步操作的能力，并且在所有异步操作执行完后并且执行结果都是成功的时候才执行回调。</p>
-<h4 id="race方法">race方法</h4>
-<p>all是等所有的异步操作都执行完了再执行then方法，那么race方法就是相反的，谁先执行完成就先执行回调。先执行完的不管是进行了race的成功回调还是失败回调，其余的将不会再进入race的任何回调。 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">promiseClick1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve, reject</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="keyword">var</span> num = <span class="built_in">Math</span>.ceil(<span class="built_in">Math</span>.random()*<span class="number">20</span>); <span class="comment">//生成1-10的随机数</span></span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&#x27;随机数生成的值：&#x27;</span>,num)</span><br><span class="line">      <span class="keyword">if</span>(num&lt;=<span class="number">10</span>)&#123;</span><br><span class="line">        resolve(num);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">else</span>&#123;</span><br><span class="line">        reject(<span class="string">&#x27;数字太于10了即将执行失败回调&#x27;</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;, <span class="number">2000</span>);</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">return</span> p</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">promiseClick2</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve, reject</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="keyword">var</span> num = <span class="built_in">Math</span>.ceil(<span class="built_in">Math</span>.random()*<span class="number">20</span>); <span class="comment">//生成1-10的随机数</span></span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&#x27;随机数生成的值：&#x27;</span>,num)</span><br><span class="line">      <span class="keyword">if</span>(num&lt;=<span class="number">10</span>)&#123;</span><br><span class="line">        resolve(num);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">else</span>&#123;</span><br><span class="line">        reject(<span class="string">&#x27;数字太于10了即将执行失败回调&#x27;</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;, <span class="number">2000</span>);</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">return</span> p</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">promiseClick3</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve, reject</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="keyword">var</span> num = <span class="built_in">Math</span>.ceil(<span class="built_in">Math</span>.random()*<span class="number">20</span>); <span class="comment">//生成1-10的随机数</span></span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&#x27;随机数生成的值：&#x27;</span>,num)</span><br><span class="line">      <span class="keyword">if</span>(num&lt;=<span class="number">10</span>)&#123;</span><br><span class="line">        resolve(num);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">else</span>&#123;</span><br><span class="line">        reject(<span class="string">&#x27;数字太于10了即将执行失败回调&#x27;</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;, <span class="number">2000</span>);</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">return</span> p</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//all方法</span></span><br><span class="line"><span class="built_in">Promise</span></span><br><span class="line">  .all([promiseClick3(), promiseClick2(), promiseClick1()])</span><br><span class="line">  .then(<span class="function"><span class="keyword">function</span>(<span class="params">results</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(results);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//race方法</span></span><br><span class="line"><span class="built_in">Promise</span></span><br><span class="line">  .race([promiseClick3(), promiseClick2(), promiseClick1()])</span><br><span class="line">  .then(<span class="function"><span class="keyword">function</span>(<span class="params">results</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;成功&#x27;</span>,results);</span><br><span class="line">&#125;,<span class="function"><span class="keyword">function</span>(<span class="params">reason</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;失败&#x27;</span>,reason);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure> #### all方法结果： <img src="/images/JS-TS学习/promise1.png" /> #### race方法结果： <img src="/images/JS-TS学习/promise2.png" /></p>
+                                        <img class="kratos-entry-thumb-new-img">
+                                    
+                                </a>
+                            </div>
+                            <div class="kratos-post-inner-new">
+                                <header class="kratos-entry-header-new">
+                                        <a class="label-link" href="/SmartBoyMB.github.io/categories/JavaScript/">JavaScript</a>, <a class="label-link" href="/SmartBoyMB.github.io/categories/JavaScript/%E5%AD%A6%E4%B9%A0/">学习</a>
+                                    <h2 class="kratos-entry-title-new"><a href="/SmartBoyMB.github.io/2022/09/02/JS%E5%AD%A6%E4%B9%A0/">JS基础知识</a>
+                                </header>
+                                <div class="kratos-entry-content-new">
+                                    <p>
+                                        
+                                            JS数据类型
 
-                                    
+1
+
+值类型(基本类型)：字符串（String）、数字(Number)、布尔(Boolean)、空（Null）、未定义（Undefined）、Symbol、BigInt。
+引用数据类型（对象类型）：对象(Ob...
+                                        
+                                    </p>
                                 </div>
                             </div>
-                        </div>
-                        
                             <footer class="kratos-post-meta-new">
                                 <span class="pull-left">
                                     <a><i class="fa fa-calendar"></i></a><a>2022-09-02</a>
                                     <a><i class="fa fa-tags"></i></a>
-                                    
+                                    <a class="tag-none-link" href="/SmartBoyMB.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag">基础知识</a>
                                 </span>
                                 <span class="pull-right">
                                     <a class="read-more" href="/SmartBoyMB.github.io/2022/09/02/JS%E5%AD%A6%E4%B9%A0/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
                                 </span>
                             </footer>
-                        
+                        </div>
                     </article>
                 
             
@@ -1075,7 +686,7 @@ hexo本身并不支持LaTex格式的数学公式的渲染，一般都是通过ma
                     
   <aside id="krw-categories" class="widget widget-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">10</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/Android-Studio/">Android Studio</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/Android-Studio/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/JavaScript/">JavaScript</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/JavaScript/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/React/">React</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/React/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/React-Native/">React Native</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/React-Native/Navigater/">Navigater</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/React-Native/Navigater/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/React-Native/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/TypeScript/">TypeScript</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/TypeScript/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/SmartBoyMB.github.io/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">12</span></li></ul>
   </aside>
 
 
@@ -1084,7 +695,7 @@ hexo本身并不支持LaTex格式的数学公式的渲染，一般都是通过ma
   <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
     <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
       <div class="tag-clouds">
-        <a href="/SmartBoyMB.github.io/tags/LaTeX/" style="font-size: 0.6em;">LaTeX</a> <a href="/SmartBoyMB.github.io/tags/blog/" style="font-size: 0.67em;">blog</a> <a href="/SmartBoyMB.github.io/tags/folder/" style="font-size: 0.6em;">folder</a> <a href="/SmartBoyMB.github.io/tags/hexo/" style="font-size: 0.67em;">hexo</a> <a href="/SmartBoyMB.github.io/tags/mathjax/" style="font-size: 0.6em;">mathjax</a> <a href="/SmartBoyMB.github.io/tags/python/" style="font-size: 0.6em;">python</a> <a href="/SmartBoyMB.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 0.6em;">机器学习</a> <a href="/SmartBoyMB.github.io/tags/%E6%A6%82%E5%BF%B5/" style="font-size: 0.73em;">概念</a> <a href="/SmartBoyMB.github.io/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/" style="font-size: 0.8em;">知识图谱</a> <a href="/SmartBoyMB.github.io/tags/%E8%AE%BA%E6%96%87%E5%AD%A6%E4%B9%A0/" style="font-size: 0.6em;">论文学习</a>
+        <a href="/SmartBoyMB.github.io/tags/Hooks/" style="font-size: 0.6em;">Hooks</a> <a href="/SmartBoyMB.github.io/tags/LaTeX/" style="font-size: 0.6em;">LaTeX</a> <a href="/SmartBoyMB.github.io/tags/Q-A/" style="font-size: 0.6em;">Q&A</a> <a href="/SmartBoyMB.github.io/tags/blog/" style="font-size: 0.67em;">blog</a> <a href="/SmartBoyMB.github.io/tags/flexbox/" style="font-size: 0.6em;">flexbox</a> <a href="/SmartBoyMB.github.io/tags/folder/" style="font-size: 0.6em;">folder</a> <a href="/SmartBoyMB.github.io/tags/hexo/" style="font-size: 0.67em;">hexo</a> <a href="/SmartBoyMB.github.io/tags/mathjax/" style="font-size: 0.6em;">mathjax</a> <a href="/SmartBoyMB.github.io/tags/problem/" style="font-size: 0.6em;">problem</a> <a href="/SmartBoyMB.github.io/tags/problems/" style="font-size: 0.67em;">problems</a> <a href="/SmartBoyMB.github.io/tags/python/" style="font-size: 0.6em;">python</a> <a href="/SmartBoyMB.github.io/tags/%E4%BA%A4%E4%BA%92/" style="font-size: 0.6em;">交互</a> <a href="/SmartBoyMB.github.io/tags/%E4%BC%98%E5%8C%96/" style="font-size: 0.6em;">优化</a> <a href="/SmartBoyMB.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 0.73em;">基础知识</a> <a href="/SmartBoyMB.github.io/tags/%E5%AE%9E%E4%B9%A0/" style="font-size: 0.67em;">实习</a> <a href="/SmartBoyMB.github.io/tags/%E5%AE%A2%E6%88%B7%E7%AB%AF/" style="font-size: 0.8em;">客户端</a> <a href="/SmartBoyMB.github.io/tags/%E5%AF%BC%E8%88%AA%E5%99%A8/" style="font-size: 0.6em;">导航器</a> <a href="/SmartBoyMB.github.io/tags/%E5%B8%83%E5%B1%80/" style="font-size: 0.6em;">布局</a>
       </div>
   </aside>
 
@@ -1098,79 +709,64 @@ hexo本身并不支持LaTex格式的数学公式的渲染，一般都是通过ma
         
           
           
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            <a class="list-group-item" href="/SmartBoyMB.github.io/2021/05/10/MachineLearning/"><i class="fa  fa-book"></i> MachineLearning</a>
+            <a class="list-group-item" href="/SmartBoyMB.github.io/2022/09/02/%E7%BB%84%E4%BB%B6%E5%9F%BA%E7%A1%80/"><i class="fa  fa-book"></i> React Native的基础组件</a>
             
           
         
           
           
-            <a class="list-group-item" href="/SmartBoyMB.github.io/2020/11/21/pythonLearning/"><i class="fa  fa-book"></i> pythonLearning</a>
+            <a class="list-group-item" href="/SmartBoyMB.github.io/2022/09/02/%E4%BC%98%E5%8C%96%E6%80%A7%E8%83%BD/"><i class="fa  fa-book"></i> React Native的性能优化</a>
             
           
         
           
           
-            <a class="list-group-item" href="/SmartBoyMB.github.io/2020/11/06/longtailrelation/"><i class="fa  fa-book"></i> long tail Relation</a>
+            <a class="list-group-item" href="/SmartBoyMB.github.io/2022/09/02/%E9%A1%B5%E9%9D%A2%E5%AF%BC%E8%88%AA/"><i class="fa  fa-book"></i> React Native的页面导航</a>
             
           
         
           
           
-            <a class="list-group-item" href="/SmartBoyMB.github.io/2020/11/04/xiaoyangbenzhishitupu/"><i class="fa  fa-book"></i> 少样本知识图谱推理</a>
+            <a class="list-group-item" href="/SmartBoyMB.github.io/2022/09/02/%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1/"><i class="fa  fa-book"></i> React Native的网络通信</a>
             
           
         
           
           
-            <a class="list-group-item" href="/SmartBoyMB.github.io/2020/11/04/howtosetmathjax/"><i class="fa  fa-book"></i> hexo 主题使用mathjax插件渲染LaTeX数学公式的问题</a>
+            <a class="list-group-item" href="/SmartBoyMB.github.io/2022/09/02/%E6%89%8B%E5%8A%BF%E4%BA%A4%E4%BA%92/"><i class="fa  fa-book"></i> React Native的手势交互</a>
             
           
         
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
           
             
           
